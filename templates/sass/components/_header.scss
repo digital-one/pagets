@@ -1,0 +1,75 @@
+#header{
+	position: relative;
+	height:140px;
+	#home-link{
+		margin:0;
+		width:198px;
+		height:79px;
+		display:block;
+		@include abs-pos(34px,auto,auto,0);
+		img{
+			@include fit-grid(width);
+		}
+	}
+	#ribbon{
+		background-color: $green;
+		color: white;
+		@include abs-pos(62px,0,auto,auto);
+		padding: 0 23px 0 0;
+		display: inline-block;
+		min-width: 235px;
+		height:52px;
+		text-align:right;
+		@include font-size(15);
+		&:before{
+			content:"";
+			height:100%;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		&:after{
+			content:"";
+			height:100%;
+			width:29px;
+			display: block;
+			@include abs-pos(0,auto,auto,-29px);
+			background:url('../images/ribbon-end.png') left top no-repeat;
+		}
+		div{
+			vertical-align: middle;
+          	display: inline-block;
+          	width: 99%;
+          	span{
+          		display: block;
+          		line-height: 100%;
+          		padding:2px 0;
+          	}
+		}
+		a:link,a:visited{
+			font-family: $proximanova-bold;
+		}
+	}
+	#search{
+		@include abs-pos(13px,0,auto,auto);
+		width: 162px;
+		input{
+			height:30px;
+			line-height: 1;
+			font-family: $proximanova-bold;
+			@include font-size(16);
+			padding: 0 32px 0 0;
+			@include placeholder {
+    			color: #929292;
+    			@include opacity(1);
+  			}
+		}
+		button{
+			@include abs-pos(0,0,auto,auto);
+			height:30px;
+			width:30px;
+			background:url('../images/search-icon.svg') left top no-repeat;
+			border: none;
+			@extend %ir;
+		}
+	}
+}

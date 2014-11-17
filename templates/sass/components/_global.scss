@@ -1,0 +1,44 @@
+#breadcrumb{
+	background-color: $light-grey;
+	height:60px;
+	line-height: 60px;
+	@include font-size(15);
+	.container{
+		padding:0 12px;
+	}
+}
+.button{
+	height:40px;
+	line-height:40px;
+	background-color: $blue;
+	color: white !important;
+	@include font-size(16);
+	text-align: center;
+	display:inline-block;
+	@include border-radius(6px);
+	text-transform:uppercase;
+	padding: 0 55px;
+	font-family: $proximanova-bold;
+	@include transition(background-color 0.3s ease-in-out);
+	&:hover,&:active{
+		background-color: lighten($blue,10);
+	}
+}
+.arrows ul{
+	li{
+		padding-left:50px;
+		margin-bottom: 38px;
+		position: relative;
+		&:before{
+			content:"";
+			width:10px;
+			height:15px;
+			background:url('../images/slider-next.svg') left top no-repeat;
+			background-size: 10px 15px;
+			@include abs-pos(4px,auto,auto,0);
+			.ie8 &{
+				background:url('../images/bullet-point.jpg') left top no-repeat;
+			}
+		}
+	}
+}

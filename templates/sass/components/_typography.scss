@@ -1,0 +1,45 @@
+h1,h2,h3,h4,h5{
+	@include font-size(38);
+	line-height: 100%;
+	margin: 0 0 50px;
+	color: $green;
+	font-weight: normal;
+}
+h2,h3{
+	@include font-size(28);
+}
+h4{
+	@include font-size(24);
+}
+h5{
+	@include font-size(20);
+}
+strong{
+	font-weight: normal;
+	font-family: $proximanova-bold;
+}
+p,ul{
+	margin-bottom: 35px;	
+}
+blockquote{
+	p{
+		@include font-size(25)
+	}
+}
+a{
+	text-decoration:none;
+	@include transition(color 0.3s ease-in-out);
+	&:link{
+		color: $blue;
+	}
+	&:visited{
+		color: $mid-grey;
+	}
+	&:hover,&:active{
+		color: black;
+		text-decoration: none;
+		p &{
+			border-bottom:1px dotted black;
+		}
+	}
+}

@@ -1,0 +1,79 @@
+nav#nav{
+	font-family: $proximanova-bold;
+	@include font-size(20);
+	@extend .clearfix;
+	padding:0 15px;
+	ul{
+		@include wp-current-page-links{
+			background-color: $light-grey;
+			color: $green;
+		}
+		float: left;
+		margin-bottom: 0;
+		@include inline-menu;
+		li{
+			a{
+				@include transition(all 0.3s ease-in-out);
+				&:link,&:visited{
+					color: $blue;
+					height: 50px;
+					line-height: 50px;
+					padding:0 20px;
+					background-color:transparent;
+				}
+				&:hover,&:active{
+					background-color: black;
+					color: white;
+				}
+			}
+		}
+	}
+	.container{
+		padding: 0 12px;
+	}
+	a.donate{
+		background-color: $orange;
+		height:50px;
+		line-height: 50px;
+		color: white;
+		display: inline-block;
+		padding:0 20px;
+		@include border-radiuses(6px,0,0,6px);
+		float: right;
+		@include transition(background-color 0.3s ease-in-out);
+		&:hover,&:active{
+			background-color: lighten($orange,10);
+		}
+	}
+}
+nav#secondary-nav{
+	@include abs-pos(12px,162px,auto,auto);
+	ul{
+		@include inline-menu;
+		@include font-size(16);
+		li{
+			margin-right: 20px;
+			a{
+				height:30px;
+				line-height: 30px;
+			}
+		}
+	}
+}
+nav#footer-nav{
+	@include inline-menu;
+	@extend %clearfix;
+	ul{
+		@extend %clearfix;
+		margin-bottom: 20px;
+	}
+	li{
+		margin-right: 20px;
+	}
+	a:link,a:visited{
+		color: white;
+	}
+	a:hover,a:active{
+		color: $light-blue;
+	}
+}

@@ -1,0 +1,216 @@
+#slider{
+	height:426px;
+	display:block;
+	background-color:$light-grey;
+	nav{
+		width:auto;
+		display: inline-block;
+		width:100%;
+		@include abs-pos(auto,auto,25px,0);
+		text-align:center;
+		a{
+			display: inline-block;
+			width:15px;
+			height:15px;
+			@include border-radius(50%);
+			margin:0 3px;
+			border: 2px solid white;
+			@extend %ir;
+			&.active{
+				background-color: white;
+			}
+		}
+	}
+	.slide{
+		height:426px;
+		position: relative;
+		aside{
+			display: inline-block;
+			@include abs-pos(0,auto,auto,0);
+			background-color: $green;
+			padding: 48px 20px 36px 36px;
+			width:33%;
+			height: 100%;
+			color: white;
+			a.button{
+				@include abs-pos(auto,auto,36px,36px);
+			}
+			h3{
+				color: white;
+				text-transform: uppercase;
+				margin-bottom: 34px;
+				line-height: 120%;
+			}
+			&:after{
+				content:"";
+				@include abs-pos(0,-64px,auto,auto);
+				width:64px;
+				height:100%;
+				background: url('../images/slider-panel-angle.png') left top no-repeat;
+
+			}
+		}
+		.image{
+			width:67%;
+			height:100%;
+			float: right;
+			background-color: black;
+			@include bg-cover;
+		}
+	}
+}
+#signposts{
+	padding: 50px 0 12px;
+	@extend %clearfix;
+	div{
+		@include span-columns(4);
+		padding: 0 40px;
+		ul{
+
+		}
+	}
+}
+
+h3{
+	#signposts &,#news-events &{
+		@include font-size(36);
+		text-transform: uppercase;
+		text-align:center;
+		margin-bottom: 40px;
+	}
+	#signposts &{
+		padding-bottom:12px;
+		border-bottom: 1px solid $light-grey;
+		margin-bottom: 35px;
+		text-align:left;
+	}
+}
+#news-events{
+	margin-bottom: 50px;
+	footer{
+		display: block;
+		width:100%;
+		text-align: center;
+		margin:10px 0 0;
+		a{
+			display: inline-block;
+			width: 62px;
+			height: 62px;
+			@include border-radius(50%);
+			background-color: $blue;
+			color: white;
+			text-align:center;
+			margin: 0 auto;
+			position: relative;
+			@include transition(background-color 0.3s ease-in-out);
+			&:before{
+				content:"";
+				height:100%;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			&:hover,&:active{
+				background-color: lighten($blue,10);
+			}
+			span{
+				vertical-align: middle;
+          		display: inline-block;
+          		width: 99%;
+          		line-height: 99%;
+          		font-family: $proximanova-bold;
+          		text-transform: uppercase;
+          		@include font-size(16);
+			}
+		}
+	}
+}
+a#newsletter{
+	background-color: $green;
+	color: white;
+	position: relative;
+	text-align:center;
+	padding:34px;
+	margin-bottom:50px;
+	display: block;
+	@include transition(background-color 0.3s ease-in-out);
+	&:after{
+		content: "";
+		width:88px;
+		height:88px;
+		display: inline-block;
+		background:url('../images/click-here-page-fold.jpg') left top no-repeat;
+		@include abs-pos(0,0,auto,auto);
+	}
+	h4{
+		color: white;
+		text-transform: uppercase;
+		@include font-size(30);
+		margin-bottom: 15px;
+		strong{
+			color: $blue;
+		}
+	}
+	p{
+		margin-bottom: 0;
+	}
+	&:hover,&:active{
+		background-color: lighten($green,5);
+	}
+}
+#social-links{
+	text-align: center;
+	h5{
+		margin-bottom: 30px;
+		font-family: $proximanova-bold;
+		text-transform: uppercase;
+		color: $mid-grey;
+	}
+	nav{
+		@include centered-menu;
+		li{
+			margin: 0 5px;
+		}
+		a{
+			width:67px;
+			height:67px;
+			display: block;
+			background-image:url('../images/google-plus.svg');
+			background-position:left top;
+			background-repeat: no-repeat;
+			background-size:67px 67px;
+			@include transition(opacity 0.3s ease-in-out);
+			@extend %ir;
+			&:hover,&:active{
+				@include opacity(.8);
+			}
+			.ie8 &{
+				background-image: url('../images/google-plus.png');
+			}
+			&.facebook{
+				background-image: url('../images/facebook.svg');	
+				.ie8 &{
+					background-image: url('../images/facebook.png');		
+				}
+			}
+			&.twitter{
+				background-image: url('../images/twitter.svg');	
+				.ie8 &{
+					background-image: url('../images/twitter.png');		
+				}
+			}
+			&.pinterest{
+				background-image: url('../images/pinterest.svg');	
+				.ie8 &{
+					background-image: url('../images/pinterest.png');		
+				}
+			}
+			&.linkedin{
+				background-image: url('../images/linkedin.svg');	
+				.ie8 &{
+					background-image: url('../images/linkedin.png');		
+				}
+			}
+		}
+	}
+
+}

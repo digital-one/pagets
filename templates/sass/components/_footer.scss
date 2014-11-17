@@ -1,0 +1,62 @@
+footer#footer{
+	background-color: $blue;
+	color: white;
+	padding:35px 0 50px;
+	@include font-size(16);
+	.column{
+		height:190px;
+		position: relative;
+		&.left{
+			@include span-columns(6);
+		}
+		&.right{
+			@include span-columns(5);
+			@include shift(1);
+		}
+		.fit-to-base{
+			@include abs-pos(auto,auto,0,0);
+			display: block;
+			width:100%;
+		}
+	}
+	small,address{
+		@include font-size(14);
+		color: $light-blue;
+		font-style: normal;
+		display: block;
+		line-height: 140%;
+	}
+	a.ama{
+		width:66px;
+		height:24px;
+		display: block;
+		background:url('../images/ama.svg') left top no-repeat;
+		background-size:66px 24px;
+		float:right;
+		@extend %ir;
+		.ie8 &{
+			background:url('../images/ama.png') left top no-repeat;
+		}
+	}
+	#logos{
+		@extend %clearfix;
+		a{
+			span.logo{
+				display: block;
+				padding:0 25px;
+			}
+			display: inline-block;
+			float:left;
+			width: 50%;
+			text-align:center;
+			color:white;
+			@include font-size(14);
+			line-height: 110%;
+			img{
+				margin-bottom: 10px;
+				width:100%;
+				max-width: 100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,47 @@
+//font face
+
+@font-face {
+    font-family: 'proximanova-bold-webfont';
+    src: url('../fonts/proximanova-bold-webfont.eot');
+    src: url('../fonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-bold-webfont.woff') format('woff'),
+         url('../fonts/proximanova-bold-webfont.ttf') format('truetype'),
+         url('../fonts/proximanova-bold-webfont.svg#proximanova-bold-webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'proximanova-regular-webfont';
+    src: url('../fonts/proximanova-regular-webfont.eot');
+    src: url('../fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-regular-webfont.woff') format('woff'),
+         url('../fonts/proximanova-regular-webfont.ttf') format('truetype'),
+         url('../fonts/proximanova-regular-webfont.svg#proximanova-regular-webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//neat overrides
+$max-width: 1280px; //overide neat outer container width
+$visual-grid: false; 
+
+//colours
+$blue: #005baa;
+$light-blue: #b4d6f1;
+$green: #50b848;
+$orange: #f1b000;
+$grey: #373737;
+$light-grey: #e4e4e4;
+$mid-grey: #8b8b8b;
+
+//font face
+
+//fonts
+$proximanova-bold: "proximanova-bold-webfont", sans-serif;
+$proximanova-regular: "proximanova-regular-webfont", sans-serif;
+//break points
+$break-small: 640px;
+$break-medium: 767px; //ipad 
+$break-large: 979px;
+$break-xlarge: 1132px;
+$break-nav: 1200px;
