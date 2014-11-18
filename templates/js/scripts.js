@@ -36,7 +36,21 @@ $(function(){
         slidesToShow: 1,
         slidesToScroll: 1
       }
-    }
-  ]
-});
+    	}
+ 	 ]
+	});
+
+	var $handles = $('.accordion dt');
+	var $blocks = $('.accordion dd');
+	$handles.eq(0).addClass('active');
+	$blocks.eq(0).slideDown(200);
+	$handles.on('click',function(){
+		if($(this).hasClass('active')){
+			$(this).removeClass('active');
+			$(this).next('dd').slideUp(100);
+		} else {
+			$(this).addClass('active');
+			$(this).next('dd').slideDown(200);
+		}
+	})
 });

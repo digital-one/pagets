@@ -24,6 +24,7 @@ nav#nav{
 				&:hover,&:active{
 					background-color: black;
 					color: white;
+					text-decoration: none;
 				}
 			}
 		}
@@ -43,6 +44,7 @@ nav#nav{
 		@include transition(background-color 0.3s ease-in-out);
 		&:hover,&:active{
 			background-color: lighten($orange,10);
+			text-decoration: none;
 		}
 	}
 }
@@ -75,5 +77,68 @@ nav#footer-nav{
 	}
 	a:hover,a:active{
 		color: $light-blue;
+	}
+}
+nav#sub-nav{
+	ul{
+		margin:0;
+		li{
+			a{
+				background-color: $green;
+				display: block;
+				padding: 12px 10px 12px 25px;
+				color: white;
+				@include font-size(17);
+				line-height: 130%;
+				@include transition(background-color 0.2s ease-in-out);
+				&:link,&:visited{
+					
+				}
+				&:hover,&:active{
+					text-decoration: none;
+					background-color:black;
+				}
+			}
+			&.current-menu-item{
+				a{
+					background-color: $light-green;
+					font-family: $proximanova-bold;
+				}
+				.sub-menu{
+					li{
+						a{
+							background-color: $dark-green;
+							font-family: $proximanova-regular;
+							@include font-size(15);
+							&:hover,&:active{
+								background-color: black;
+							}
+						}
+					}
+				}
+			}
+			&.menu-item-has-children.current-page-ancestor{
+				a{
+					background-color: $dark-green;
+					font-family: $proximanova-bold;
+				}
+				.sub-menu{
+					li{
+						a{
+							font-family: $proximanova-regular;
+							@include font-size(15);
+							&:hover,&:active{
+								background-color: black;
+							}
+						}
+						&.current-menu-item{
+							a{
+								background-color: $light-green;
+							}
+						}
+					}	
+				}
+			}
+		}	
 	}
 }

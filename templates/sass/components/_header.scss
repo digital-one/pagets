@@ -48,6 +48,9 @@
 		a:link,a:visited{
 			font-family: $proximanova-bold;
 		}
+		a:hover,a:active{
+			text-decoration: none;
+		}
 	}
 	#search{
 		@include abs-pos(13px,0,auto,auto);

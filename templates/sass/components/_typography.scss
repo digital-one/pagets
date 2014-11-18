@@ -1,7 +1,7 @@
 h1,h2,h3,h4,h5{
 	@include font-size(38);
 	line-height: 100%;
-	margin: 0 0 50px;
+	margin: 0 0 40px;
 	color: $green;
 	font-weight: normal;
 }
@@ -37,9 +37,6 @@ a{
 	}
 	&:hover,&:active{
 		color: black;
-		text-decoration: none;
-		p &{
-			border-bottom:1px dotted black;
-		}
+		text-decoration: underline;
 	}
 }

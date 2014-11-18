@@ -59,26 +59,14 @@
 		}
 	}
 }
-#signposts{
-	padding: 50px 0 12px;
-	@extend %clearfix;
-	div{
-		@include span-columns(4);
-		padding: 0 40px;
-		ul{
-
-		}
-	}
-}
-
 h3{
-	#signposts &,#news-events &{
+	#index &,#news-events &{
 		@include font-size(36);
 		text-transform: uppercase;
 		text-align:center;
 		margin-bottom: 40px;
 	}
-	#signposts &{
+	#index &{
 		padding-bottom:12px;
 		border-bottom: 1px solid $light-grey;
 		margin-bottom: 35px;
@@ -123,94 +111,4 @@ h3{
 			}
 		}
 	}
-}
-a#newsletter{
-	background-color: $green;
-	color: white;
-	position: relative;
-	text-align:center;
-	padding:34px;
-	margin-bottom:50px;
-	display: block;
-	@include transition(background-color 0.3s ease-in-out);
-	&:after{
-		content: "";
-		width:88px;
-		height:88px;
-		display: inline-block;
-		background:url('../images/click-here-page-fold.jpg') left top no-repeat;
-		@include abs-pos(0,0,auto,auto);
-	}
-	h4{
-		color: white;
-		text-transform: uppercase;
-		@include font-size(30);
-		margin-bottom: 15px;
-		strong{
-			color: $blue;
-		}
-	}
-	p{
-		margin-bottom: 0;
-	}
-	&:hover,&:active{
-		background-color: lighten($green,5);
-	}
-}
-#social-links{
-	text-align: center;
-	h5{
-		margin-bottom: 30px;
-		font-family: $proximanova-bold;
-		text-transform: uppercase;
-		color: $mid-grey;
-	}
-	nav{
-		@include centered-menu;
-		li{
-			margin: 0 5px;
-		}
-		a{
-			width:67px;
-			height:67px;
-			display: block;
-			background-image:url('../images/google-plus.svg');
-			background-position:left top;
-			background-repeat: no-repeat;
-			background-size:67px 67px;
-			@include transition(opacity 0.3s ease-in-out);
-			@extend %ir;
-			&:hover,&:active{
-				@include opacity(.8);
-			}
-			.ie8 &{
-				background-image: url('../images/google-plus.png');
-			}
-			&.facebook{
-				background-image: url('../images/facebook.svg');	
-				.ie8 &{
-					background-image: url('../images/facebook.png');		
-				}
-			}
-			&.twitter{
-				background-image: url('../images/twitter.svg');	
-				.ie8 &{
-					background-image: url('../images/twitter.png');		
-				}
-			}
-			&.pinterest{
-				background-image: url('../images/pinterest.svg');	
-				.ie8 &{
-					background-image: url('../images/pinterest.png');		
-				}
-			}
-			&.linkedin{
-				background-image: url('../images/linkedin.svg');	
-				.ie8 &{
-					background-image: url('../images/linkedin.png');		
-				}
-			}
-		}
-	}
-
 }
