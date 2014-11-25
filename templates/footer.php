@@ -63,6 +63,8 @@
 <script src="//maps.google.com/maps/api/js?sensor=true"></script>
 <script src="js/jquery.easing.min.js"></script>
 <script src="js/slick/slick.min.js"></script>
+<script src="js/jquery.selectbox.min.js"></script>
+<script src="js/masonry.pkgd.min.js"></script>
 <script src="js/scripts.js"></script>
 <!--/scripts-->
 </body>

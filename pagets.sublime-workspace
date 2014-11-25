@@ -4,6 +4,82 @@
 		"selected_items":
 		[
 			[
+				"pad",
+				"padding-bottom"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"backg",
+				"background-position"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"fon",
+				"font-family"
+			],
+			[
+				"pr",
+				"proximanova-bold"
+			],
+			[
+				"current-",
+				"current-menu-item"
+			],
+			[
+				"te",
+				"text-transform"
+			],
+			[
+				"fo",
+				"font-family"
+			],
+			[
+				"pa",
+				"padding-bottom"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"fot",
+				"font-family"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"border-",
+				"border-bottom"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"bord",
+				"border"
+			],
+			[
 				"curr",
 				"currentTarget"
 			],
@@ -52,26 +128,6 @@
 				"padding-top"
 			],
 			[
-				"pad",
-				"padding-top"
-			],
-			[
-				"ba",
-				"background-color"
-			],
-			[
-				"padd",
-				"padding-right"
-			],
-			[
-				"fo",
-				"font-weight"
-			],
-			[
-				"mar",
-				"margin-left"
-			],
-			[
 				"wr",
 				"break-word"
 			],
@@ -80,16 +136,8 @@
 				"border"
 			],
 			[
-				"te",
-				"text-align"
-			],
-			[
 				"ur",
 				"urlencode"
-			],
-			[
-				"pa",
-				"padding-right"
 			],
 			[
 				"rep",
@@ -114,10 +162,6 @@
 			[
 				"n",
 				"nowrap"
-			],
-			[
-				"fon",
-				"font-size"
 			],
 			[
 				"ma",
@@ -168,16 +212,8 @@
 				"gutter-2x"
 			],
 			[
-				"backg",
-				"background-color"
-			],
-			[
 				"margi",
 				"margin-top"
-			],
-			[
-				"font",
-				"font-weight"
 			],
 			[
 				"paddi",
@@ -196,28 +232,12 @@
 				"dark-grey"
 			],
 			[
-				"max",
-				"max-width"
-			],
-			[
 				"visi",
 				"visible"
 			],
 			[
-				"back",
-				"background"
-			],
-			[
 				"aside",
 				"asideHeight"
-			],
-			[
-				"marg",
-				"margin"
-			],
-			[
-				"tex",
-				"text-transform"
 			],
 			[
 				"bu",
@@ -499,6 +519,169 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "templates/sass/templates/_all.scss",
+			"settings":
+			{
+				"buffer_size": 32,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "templates/sass/components/_grid.scss",
+			"file_size": 8045,
+			"file_write_time": 1416216539000000,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/sass/helpers/mixins/_border-radius.scss",
+			"settings":
+			{
+				"buffer_size": 1047,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/sass/_base.scss",
+			"settings":
+			{
+				"buffer_size": 209,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/sass/_reset.scss",
+			"settings":
+			{
+				"buffer_size": 93,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/sass/components/_slider.scss",
+			"settings":
+			{
+				"buffer_size": 1590,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/centre-of-excellence.php",
+			"settings":
+			{
+				"buffer_size": 3486,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/footer.php",
+			"settings":
+			{
+				"buffer_size": 2750,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/header.php",
+			"settings":
+			{
+				"buffer_size": 2449,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Applications/MAMP/htdocs/shark/templates/index.php",
+			"settings":
+			{
+				"buffer_size": 11592,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/sass/templates/_home.scss",
+			"settings":
+			{
+				"buffer_size": 2166,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/sass/_variables.scss",
+			"settings":
+			{
+				"buffer_size": 1579,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/sass/components/_typography.scss",
+			"settings":
+			{
+				"buffer_size": 562,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/sass/components/_global.scss",
+			"settings":
+			{
+				"buffer_size": 4895,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/index.php",
+			"settings":
+			{
+				"buffer_size": 3853,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/sass/components/_navigation.scss",
+			"settings":
+			{
+				"buffer_size": 2558,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/sass/components/_footer.scss",
+			"settings":
+			{
+				"buffer_size": 1178,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/sass/components/_container.scss",
+			"settings":
+			{
+				"buffer_size": 184,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/sass/helpers/mixins/_rgba-bg.scss",
+			"settings":
+			{
+				"buffer_size": 705,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/js/scripts.js",
+			"settings":
+			{
+				"buffer_size": 1056,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -528,6 +711,26 @@
 	},
 	"file_history":
 	[
+		"/Applications/MAMP/htdocs/ama/pagets/templates/js/scripts.js",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/helpers/mixins/_wp-current-page-links.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/components/_header.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/components/_navigation.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/components/_footer.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/helpers/mixins/_inline-menu.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/components/_container.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/helpers/_placeholders.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/components/_typography.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/layout.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/index.php",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/components/_global.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/templates/_home.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/components/_all.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/components/_slider.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/js/slick/slick.css",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/helpers/mixins/_centered-menu.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/_variables.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/_base.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/components/_forms.scss",
 		"/Users/neilmills/Library/Caches/Cleanup At Startup/Transmit/12A20691-7910-4A2C-83F3-6CEAB3680264/_scripts.js",
 		"/Applications/MAMP/htdocs/bowman-riley/wp-content/themes/bowmanriley/archive-news.php",
 		"/Applications/MAMP/htdocs/bowman-riley/wp-content/themes/bowmanriley/functions.php",
@@ -635,27 +838,7 @@
 		"/Applications/MAMP/htdocs/bowman-riley/js/scripts.js",
 		"/Applications/MAMP/htdocs/bowman-riley/wp-content/themes/bowmanriley/index.php",
 		"/Applications/MAMP/htdocs/bowman-riley/sass/templates/_all.scss",
-		"/Applications/MAMP/htdocs/bowman-riley/media.php",
-		"/Applications/MAMP/htdocs/bowman-riley/news-single.php",
-		"/Applications/MAMP/htdocs/bowman-riley/case-studies.php",
-		"/Applications/MAMP/htdocs/bowman-riley/sass/templates/_case-studies.scss",
-		"/Applications/MAMP/htdocs/bowman-riley/case-study-single.php",
-		"/Applications/MAMP/htdocs/bowman-riley/secondary-nav-home.php",
-		"/Applications/MAMP/htdocs/bowman-riley/latest-news.php",
-		"/Applications/MAMP/htdocs/bowman-riley/sass/components/_grid.scss",
-		"/Applications/MAMP/htdocs/bowman-riley/about.php",
-		"/Applications/MAMP/htdocs/bowman-riley/secondary-nav.php",
-		"/Applications/MAMP/htdocs/bowman-riley/images/tape-measure.svg",
-		"/Applications/MAMP/htdocs/bowman-riley/sass/templates/_home.scss",
-		"/Applications/MAMP/htdocs/bowman-riley/sass/_base.scss",
-		"/Applications/MAMP/htdocs/bowman-riley/footer.php",
-		"/Applications/MAMP/htdocs/bowman-riley/sass/components/_all.scss",
-		"/Applications/MAMP/htdocs/bowman-riley/architects.php",
-		"/Applications/MAMP/htdocs/bowman-riley/building-consultancy.php",
-		"/Applications/MAMP/htdocs/bowman-riley/sass/_variables.scss",
-		"/Applications/MAMP/htdocs/bowman-riley/healthcare.php",
-		"/Applications/MAMP/htdocs/bowman-riley/work-with-us.php",
-		"/Applications/MAMP/htdocs/bowman-riley/js/jquery.easing.min.js"
+		"/Applications/MAMP/htdocs/bowman-riley/media.php"
 	],
 	"find":
 	{
@@ -676,6 +859,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"secondary-nav",
 			"current-menu-item",
 			"current",
 			"initPopState",
@@ -802,8 +986,7 @@
 			"mouseenter",
 			"menu",
 			"sub-menu",
-			"overlay",
-			"loader"
+			"overlay"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -949,8 +1132,552 @@
 	"groups":
 	[
 		{
+			"selected": 5,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "templates/sass/templates/_all.scss",
+					"settings":
+					{
+						"buffer_size": 32,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								16,
+								16
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "templates/sass/components/_grid.scss",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "templates/sass/helpers/mixins/_border-radius.scss",
+					"settings":
+					{
+						"buffer_size": 1047,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								527,
+								527
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "templates/sass/_base.scss",
+					"settings":
+					{
+						"buffer_size": 209,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								157,
+								157
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "templates/sass/_reset.scss",
+					"settings":
+					{
+						"buffer_size": 93,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "templates/sass/components/_slider.scss",
+					"settings":
+					{
+						"buffer_size": 1590,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								998,
+								966
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 274.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "templates/centre-of-excellence.php",
+					"settings":
+					{
+						"buffer_size": 3486,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2009,
+								2009
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 100.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "templates/footer.php",
+					"settings":
+					{
+						"buffer_size": 2750,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								691,
+								691
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "templates/header.php",
+					"settings":
+					{
+						"buffer_size": 2449,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								1130
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/Applications/MAMP/htdocs/shark/templates/index.php",
+					"settings":
+					{
+						"buffer_size": 11592,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "templates/sass/templates/_home.scss",
+					"settings":
+					{
+						"buffer_size": 2166,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2166,
+								2166
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 782.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "templates/sass/_variables.scss",
+					"settings":
+					{
+						"buffer_size": 1579,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1384,
+								1326
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "templates/sass/components/_typography.scss",
+					"settings":
+					{
+						"buffer_size": 562,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								76,
+								76
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "templates/sass/components/_global.scss",
+					"settings":
+					{
+						"buffer_size": 4895,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4881,
+								4881
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3025.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "templates/index.php",
+					"settings":
+					{
+						"buffer_size": 3853,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1027,
+								1027
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "templates/sass/components/_navigation.scss",
+					"settings":
+					{
+						"buffer_size": 2558,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1590,
+								1645
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1358.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "templates/sass/components/_footer.scss",
+					"settings":
+					{
+						"buffer_size": 1178,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								283,
+								283
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "templates/sass/components/_container.scss",
+					"settings":
+					{
+						"buffer_size": 184,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								93,
+								93
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "templates/sass/helpers/mixins/_rgba-bg.scss",
+					"settings":
+					{
+						"buffer_size": 705,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								57,
+								7
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "templates/js/scripts.js",
+					"settings":
+					{
+						"buffer_size": 1056,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								823,
+								823
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 40.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],

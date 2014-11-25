@@ -7,8 +7,36 @@
 }
 aside{
 	@include span-columns(3);
+	&#right-sidebar{
+		margin-left: -2.35765%;
+		width: calc(23.2318% + 2.35765%);
+	}
+	.wide-sidebar &{
+		@include span-columns(4);
+	}
 }
 #main{
-	@include span-columns(9);
-	@include omega;
+	.two-column &{
+		@include span-columns(9);
+	}
+	.two-column.main-right &{
+		@include omega;
+		
+	}
+	.two-column.wide-sidebar &{
+		@include span-columns(8);
+	}
+	.three-column &{
+		@include span-columns(6);	
+	}
+	
+}
+.gutter-left{
+	padding:0 0 0 4%;
+}
+.gutter-right{
+	padding:0 4% 0 0;
+}
+.gutter-mid{
+	padding: 0 8% 0 4%;
 }

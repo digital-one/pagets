@@ -1,7 +1,8 @@
 h1,h2,h3,h4,h5{
 	@include font-size(38);
-	line-height: 100%;
-	margin: 0 0 40px;
+	line-height: 80%;
+	padding:0;
+	margin: 0 0 46px;
 	color: $green;
 	font-weight: normal;
 }
@@ -14,12 +15,53 @@ h4{
 h5{
 	@include font-size(20);
 }
+
+//heading styles
+
+.header-style-1,.header-style-2,.header-style-3,.header-style-4,.header-style-5,.header-style-6{
+	h1,h2,h3,h4,h5{
+		line-height: 90%;
+		font-weight: normal;
+		@include font-size(38);
+		color: $green;
+		margin-bottom: 46px;
+	}
+}
+.header-style-2,.header-style-3,.header-style-4,.header-style-5,.header-style-6{
+	h2,h3,h4,h5{
+		@include font-size(30);
+		margin-bottom: 36px;
+	}
+}
+.header-style-3,.header-style-4{
+	h2,h3,h4,h5{
+		@include font-size(24);
+		font-family: $proximanova-bold;
+	}
+}
+.header-style-4{
+	h2,h3,h4,h5{
+		font-family: $proximanova-regular;
+		text-transform: uppercase;
+	}
+}
+.header-style-5{
+	h2,h3,h4,h5{
+		@include font-size(20);
+	}
+}
+.header-style-6{
+	h2,h3,h4,h5{
+		@include font-size(20);
+		font-style: italic;
+	}
+}
 strong{
 	font-weight: normal;
 	font-family: $proximanova-bold;
 }
 p,ul{
-	margin-bottom: 35px;	
+	margin-bottom: 25px;	
 }
 blockquote{
 	p{

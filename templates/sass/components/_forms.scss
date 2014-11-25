@@ -7,17 +7,17 @@ select,
 textarea,
 .selectBox-dropdown{
 	line-height: 1;
-	height: 30px;
+	height: 34px;
 	font-family: $proximanova-regular;  
 	font-weight:400;
-	background-color: lighten(black,90);
-	padding: 0 7px;
+	background-color: $light-grey;
+	padding: 0 10px;
 	@include font-size(12);
 	border: none;
 	width: 100%;
 	@include transition (background-color .1s linear 0s);
 	&:focus{
-		background-color: darken(white,10);
+		background-color: darken($light-grey,10);
 	}
 	@include placeholder {
     color: black;
@@ -61,16 +61,19 @@ textarea{
 
 //selectbox
 
-/*
+
 .selectBox-dropdown{
 	position: relative;
 	cursor: pointer;
+	@include border-radius(5px);
+
 	&:hover, &:active, &:focus{
 		border-style: none;
-		background-color: darken(white,10);
+		background-color: darken($light-grey,10);
+		text-decoration: none;
 	}
 	&.selectBox-menuShowing{
-    	background-color: darken(white,10);
+    	background-color: darken($light-grey,10);
     }
     &.selectBox-menuShowing-bottom{
 
@@ -79,18 +82,19 @@ textarea{
     	
     }
 	.selectBox-label{
-		height: 46px;
-		line-height: 46px;
-		@include font-size(14);
+		height: 34px;
+		line-height: 34px;
+		@include font-size(15);
 		display: block;
-		font-family: $varela;
-		color: black;
+		font-family: $proximanova-bold;
+		color: $grey;
 	}
 	.selectBox-arrow{
-		height: 17px;
-    	width: 27px;
+		height: 6px;
+    	width: 9px;
     	background: url('../images/selectbox-arrow.png') center center no-repeat;
-    	@include abs-pos(15px,15px,auto,auto);
+    	@include abs-pos(50%,15px,auto,auto);
+    	margin-top:-3px;
     	display: block;
 	}
 }
@@ -196,4 +200,3 @@ textarea{
 		line-height: 38px;
 	}
 }
-*/

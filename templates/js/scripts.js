@@ -1,4 +1,7 @@
 $(function(){
+
+//slider and carousels
+
 	$('#slider').slick({
 		dots: true,
 		autoplay: true,
@@ -40,6 +43,8 @@ $(function(){
  	 ]
 	});
 
+//accordion
+
 	var $handles = $('.accordion dt');
 	var $blocks = $('.accordion dd');
 	$handles.eq(0).addClass('active');
@@ -53,4 +58,17 @@ $(function(){
 			$(this).next('dd').slideDown(200);
 		}
 	})
+
+// selectbox replacement
+
+$('select').selectBox();
+
+//masonry
+
+if($('#news-events-archive').length){
+var msnry = new Masonry( '#news-events-archive #posts', {
+  itemSelector: 'article'
+});
+}
+
 });

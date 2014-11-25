@@ -18,7 +18,7 @@
 	display:inline-block;
 	@include border-radius(6px);
 	text-transform:uppercase;
-	padding: 0 55px;
+	padding: 0 30px;
 	font-family: $proximanova-bold;
 	@include transition(background-color 0.3s ease-in-out);
 	&:hover,&:active{
@@ -67,13 +67,14 @@
 	}
 }
 .box{
-	padding: 25px 25px 5px;
+	padding: 22px 22px 2px;
 	display: block;
+	margin-bottom: 34px;
 	@include font-size(16);
 	line-height: 135%;
 	h4{
 		font-family: $proximanova-bold;
-		@include font-size(25);
+		@include font-size(22);
 		margin-bottom: 25px;
 	}
 	p,ul{

@@ -2,6 +2,7 @@
 	height:426px;
 	display:block;
 	background-color:$light-grey;
+	@extend %clearfix;
 	nav{
 		width:auto;
 		display: inline-block;

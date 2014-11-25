@@ -64,34 +64,7 @@
 <p><strong>General Enquiries:</strong> <a href="tel:01617994646">0161 799 4646</a></p></div></div>
 </section>
   <!--/signposts-->
-<!--newsletter-->
-<a href="" id="newsletter">
-<h4><strong>Free</strong> paget’s newsletter</h4>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
-</a>
-<!--/newsletter-->
-<!--social-->
-<section id="social-links">
-<nav>
-  <h5>Follow us</h5>
-<ul>
-  <li><a href="">Google Plus</a></li>
-    <li><a href="" class="facebook">Facebook</a></li>
-      <li><a href="" class="twitter">Twitter</a></li>
-        <li><a href="" class="pinterest">Pinterest</a></li>
-          <li><a href="" class="linkedin">Linkedin</a></li>
-        </ul>
-      </nav>
-</section>
-<!--sidebar-->
-<aside id="sidebar">
-</aside>
-<!--/sidebar-->
-<!--main-->
-<div id="main" role="main">
 
-</div>
-<!--/main-->
 </div>
 <!--/content-->
 <?php include_once('footer.php') ?> 
