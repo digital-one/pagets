@@ -85,11 +85,13 @@
 	}
 	#search{
 		@include abs-pos(13px,0,auto,auto);
-		width: 162px;
+		width: 142px;
 		input{
 			height:30px;
 			line-height: 1;
 			font-family: $proximanova-bold;
+			background-color: transparent;
+			@include box-shadow(none);
 			@include font-size(16);
 			padding: 0 32px 0 0;
 			@include placeholder {
@@ -101,12 +103,13 @@
 			@include abs-pos(0,0,auto,auto);
 			height:30px;
 			width:30px;
-			background:url('../images/search-icon.svg') left top no-repeat;
+			background:url('../images/search-icon.svg') center center no-repeat;
+			background-size: 15px 15px;
 			border: none;
 			@extend %ir;
 		}
 		@media screen and (max-width: $break-medium) {
-			display: none;
+			display: none; 
 		}
 	}
 }
@@ -115,23 +118,22 @@
 	background-color: $blue;
 	color: white;
 	margin-top:-10px;
-	//position: relative;
-	@include abs-pos(82px,0,0,0);
+	position: relative;
+	//@include abs-pos(82px,0,0,0);
 	z-index: 999;
 	padding: 20px 15px;
 	width: 100%;
-	display: block;
+	//display: block;
 	height: 100%;
 	h3{
 		color: white;
-		@include font-size(20);
+		@include font-size(24);
 		font-family: $proximanova-bold;
 	}
 }
 #mobile-contact-panel{
 	background-color: $green;
-	display: block;
 	address{
-		margin-bottom: 10px;
+		margin-bottom: 10px;  
 	}
 }

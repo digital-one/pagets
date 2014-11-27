@@ -1179,13 +1179,17 @@ aside#right-sidebar {
   bottom: auto;
   left: auto;
   position: absolute;
-  width: 162px;
+  width: 142px;
 }
 /* line 89, ../sass/components/_header.scss */
 #header #search input {
   height: 30px;
   line-height: 1;
   font-family: "proximanova-bold-webfont", sans-serif;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
   font-size: 16px;
   font-size: 1.6rem;
   padding: 0 32px 0 0;
@@ -1222,7 +1226,7 @@ aside#right-sidebar {
   -khtml-opacity: 1;
   filter: alpha(opacity=100);
 }
-/* line 100, ../sass/components/_header.scss */
+/* line 102, ../sass/components/_header.scss */
 #header #search button {
   top: 0;
   right: 0;
@@ -1231,7 +1235,8 @@ aside#right-sidebar {
   position: absolute;
   height: 30px;
   width: 30px;
-  background: url("../images/search-icon.svg") left top no-repeat;
+  background: url("../images/search-icon.svg") center center no-repeat;
+  background-size: 15px 15px;
   border: none;
 }
 @media screen and (max-width: 768px) {
@@ -1241,37 +1246,31 @@ aside#right-sidebar {
   }
 }
 
-/* line 113, ../sass/components/_header.scss */
+/* line 116, ../sass/components/_header.scss */
 #mobile-search-panel, #mobile-contact-panel {
   display: none;
   background-color: #005baa;
   color: white;
   margin-top: -10px;
-  top: 82px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  position: absolute;
+  position: relative;
   z-index: 999;
   padding: 20px 15px;
   width: 100%;
-  display: block;
   height: 100%;
 }
-/* line 125, ../sass/components/_header.scss */
+/* line 128, ../sass/components/_header.scss */
 #mobile-search-panel h3, #mobile-contact-panel h3 {
   color: white;
-  font-size: 20px;
-  font-size: 2rem;
+  font-size: 24px;
+  font-size: 2.4rem;
   font-family: "proximanova-bold-webfont", sans-serif;
 }
 
-/* line 131, ../sass/components/_header.scss */
+/* line 134, ../sass/components/_header.scss */
 #mobile-contact-panel {
   background-color: #50b848;
-  display: block;
 }
-/* line 134, ../sass/components/_header.scss */
+/* line 136, ../sass/components/_header.scss */
 #mobile-contact-panel address {
   margin-bottom: 10px;
 }
@@ -1287,10 +1286,48 @@ nav#nav {
 @media screen and (max-width: 768px) {
   /* line 1, ../sass/components/_navigation.scss */
   nav#nav {
+    background-color: #50b848;
+    margin-top: -10px;
+    z-index: 9999;
+    position: relative;
+    padding: 66px 0 0;
     display: none;
   }
 }
-/* line 10, ../sass/components/_navigation.scss */
+@media screen and (max-width: 768px) {
+  /* line 1, ../sass/components/_navigation.scss */
+  nav#nav {
+    font-family: "proximanova-regular-webfont", sans-serif;
+    font-size: 15px;
+    font-size: 1.5rem;
+  }
+}
+/* line 19, ../sass/components/_navigation.scss */
+nav#nav a#mobile-prev {
+  top: 24px;
+  right: auto;
+  bottom: auto;
+  left: 15px;
+  position: absolute;
+  z-index: 9999;
+  text-transform: uppercase;
+  color: white;
+  display: none;
+  height: 22px;
+  line-height: 22px;
+  background: url("../images/arrow-white-prev.png") left center no-repeat;
+  background-size: 8px 12px;
+  padding-left: 15px;
+}
+/* line 30, ../sass/components/_navigation.scss */
+nav#nav a#mobile-prev:hover, nav#nav a#mobile-prev:active {
+  opacity: 0.8;
+  -moz-opacity: 0.8;
+  -khtml-opacity: 0.8;
+  filter: alpha(opacity=80);
+  text-decoration: none;
+}
+/* line 35, ../sass/components/_navigation.scss */
 nav#nav ul {
   float: left;
   margin-bottom: 0;
@@ -1300,26 +1337,59 @@ nav#nav ul li.current-menu-item a:link, nav#nav ul li.current-menu-item a:visite
   background-color: #e4e4e4;
   color: #50b848;
 }
-/* line 2, ../sass/helpers/mixins/_inline-menu.scss */
-nav#nav ul li, nav#nav ul a {
-  float: left;
+@media screen and (max-width: 768px) {
+  /* line 5, ../sass/helpers/mixins/_wp-current-page-links.scss */
+  nav#nav ul li.current-menu-item a:link, nav#nav ul li.current-menu-item a:visited, nav#nav ul li.current-page-ancestor a:link, nav#nav ul li.current-page-ancestor a:visited, nav#nav ul li.hover a:link, nav#nav ul li.hover a:visited {
+    background-color: #73c66d;
+    color: white;
+    font-family: "proximanova-bold-webfont", sans-serif;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 35, ../sass/components/_navigation.scss */
+  nav#nav ul {
+    width: 100%;
+    display: block;
+    float: none;
+  }
+}
+@media screen and (min-width: 769px) {
+  /* line 2, ../sass/helpers/mixins/_inline-menu.scss */
+  nav#nav ul li, nav#nav ul a {
+    float: left;
+    position: relative;
+  }
+  /* line 6, ../sass/helpers/mixins/_inline-menu.scss */
+  nav#nav ul li {
+    display: inline;
+  }
+  /* line 8, ../sass/helpers/mixins/_inline-menu.scss */
+  nav#nav ul li a {
+    display: block;
+  }
+}
+/* line 56, ../sass/components/_navigation.scss */
+nav#nav ul li.menu-item-has-children {
   position: relative;
 }
-/* line 6, ../sass/helpers/mixins/_inline-menu.scss */
-nav#nav ul li {
-  display: inline;
+/* line 58, ../sass/components/_navigation.scss */
+nav#nav ul li.menu-item-has-children a {
+  background-image: url("../images/arrow-white.png");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 15px) center;
+  background-size: 8px 12px;
 }
-/* line 8, ../sass/helpers/mixins/_inline-menu.scss */
-nav#nav ul li a {
-  display: block;
+/* line 64, ../sass/components/_navigation.scss */
+nav#nav ul li.menu-item-has-children ul a {
+  background-image: none;
 }
-/* line 19, ../sass/components/_navigation.scss */
+/* line 68, ../sass/components/_navigation.scss */
 nav#nav ul li a {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 21, ../sass/components/_navigation.scss */
+/* line 70, ../sass/components/_navigation.scss */
 nav#nav ul li a:link, nav#nav ul li a:visited {
   color: #005baa;
   height: 50px;
@@ -1327,17 +1397,62 @@ nav#nav ul li a:link, nav#nav ul li a:visited {
   padding: 0 20px;
   background-color: transparent;
 }
-/* line 28, ../sass/components/_navigation.scss */
+@media screen and (max-width: 768px) {
+  /* line 70, ../sass/components/_navigation.scss */
+  nav#nav ul li a:link, nav#nav ul li a:visited {
+    color: white;
+  }
+}
+/* line 80, ../sass/components/_navigation.scss */
 nav#nav ul li a:hover, nav#nav ul li a:active {
   background-color: black;
   color: white;
   text-decoration: none;
 }
-/* line 36, ../sass/components/_navigation.scss */
+@media screen and (max-width: 768px) {
+  /* line 80, ../sass/components/_navigation.scss */
+  nav#nav ul li a:hover, nav#nav ul li a:active {
+    background-color: #73c66d;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 68, ../sass/components/_navigation.scss */
+  nav#nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 10px 15px !important;
+    height: auto !important;
+    line-height: 100% !important;
+    color: white;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 55, ../sass/components/_navigation.scss */
+  nav#nav ul li {
+    display: block;
+    width: 100%;
+  }
+}
+/* line 101, ../sass/components/_navigation.scss */
+nav#nav ul li .sub-menu {
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  position: absolute;
+  display: none;
+}
+/* line 107, ../sass/components/_navigation.scss */
 nav#nav .container {
   padding: 0 12px;
 }
-/* line 39, ../sass/components/_navigation.scss */
+@media screen and (max-width: 768px) {
+  /* line 107, ../sass/components/_navigation.scss */
+  nav#nav .container {
+    padding: 0;
+  }
+}
+/* line 113, ../sass/components/_navigation.scss */
 nav#nav a.donate {
   background-color: #f1b000;
   height: 50px;
@@ -1365,13 +1480,34 @@ nav#nav a.donate {
   -moz-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
-/* line 49, ../sass/components/_navigation.scss */
+/* line 123, ../sass/components/_navigation.scss */
 nav#nav a.donate:hover, nav#nav a.donate:active {
-  background-color: #ffc425;
+  background-color: black;
   text-decoration: none;
 }
+@media screen and (max-width: 768px) {
+  /* line 113, ../sass/components/_navigation.scss */
+  nav#nav a.donate {
+    top: -52px;
+    right: 15px;
+    bottom: auto;
+    left: 15px;
+    position: absolute;
+    height: 40px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "proximanova-bold-webfont", sans-serif;
+  }
+}
 
-/* line 55, ../sass/components/_navigation.scss */
+/* line 139, ../sass/components/_navigation.scss */
 nav#secondary-nav {
   top: 12px;
   right: 162px;
@@ -1379,7 +1515,7 @@ nav#secondary-nav {
   left: auto;
   position: absolute;
 }
-/* line 57, ../sass/components/_navigation.scss */
+/* line 141, ../sass/components/_navigation.scss */
 nav#secondary-nav ul {
   font-size: 16px;
   font-size: 1.6rem;
@@ -1397,23 +1533,23 @@ nav#secondary-nav ul li {
 nav#secondary-nav ul li a {
   display: block;
 }
-/* line 60, ../sass/components/_navigation.scss */
+/* line 144, ../sass/components/_navigation.scss */
 nav#secondary-nav ul li {
   margin-right: 20px;
 }
-/* line 62, ../sass/components/_navigation.scss */
+/* line 146, ../sass/components/_navigation.scss */
 nav#secondary-nav ul li a {
   height: 30px;
   line-height: 30px;
 }
 @media screen and (max-width: 768px) {
-  /* line 55, ../sass/components/_navigation.scss */
+  /* line 139, ../sass/components/_navigation.scss */
   nav#secondary-nav {
     display: none;
   }
 }
 
-/* line 72, ../sass/components/_navigation.scss */
+/* line 156, ../sass/components/_navigation.scss */
 nav#footer-nav {
   margin-bottom: 20px;
 }
@@ -1431,7 +1567,7 @@ nav#footer-nav li a {
   display: block;
 }
 @media screen and (max-width: 659px) {
-  /* line 72, ../sass/components/_navigation.scss */
+  /* line 156, ../sass/components/_navigation.scss */
   nav#footer-nav {
     width: 100%;
     position: relative;
@@ -1453,30 +1589,30 @@ nav#footer-nav li a {
     right: 50%;
   }
 }
-/* line 79, ../sass/components/_navigation.scss */
+/* line 163, ../sass/components/_navigation.scss */
 nav#footer-nav li {
   margin-right: 20px;
 }
 @media screen and (max-width: 659px) {
-  /* line 79, ../sass/components/_navigation.scss */
+  /* line 163, ../sass/components/_navigation.scss */
   nav#footer-nav li {
     margin: 0 10px;
   }
 }
-/* line 85, ../sass/components/_navigation.scss */
+/* line 169, ../sass/components/_navigation.scss */
 nav#footer-nav a:link, nav#footer-nav a:visited {
   color: white;
 }
-/* line 88, ../sass/components/_navigation.scss */
+/* line 172, ../sass/components/_navigation.scss */
 nav#footer-nav a:hover, nav#footer-nav a:active {
   color: #b4d6f1;
 }
 
-/* line 93, ../sass/components/_navigation.scss */
+/* line 177, ../sass/components/_navigation.scss */
 nav#sub-nav ul {
   margin: 0;
 }
-/* line 96, ../sass/components/_navigation.scss */
+/* line 180, ../sass/components/_navigation.scss */
 nav#sub-nav ul li a {
   background-color: #50b848;
   display: block;
@@ -1489,54 +1625,54 @@ nav#sub-nav ul li a {
   -moz-transition: background-color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out;
 }
-/* line 107, ../sass/components/_navigation.scss */
+/* line 191, ../sass/components/_navigation.scss */
 nav#sub-nav ul li a:hover, nav#sub-nav ul li a:active {
   text-decoration: none;
   background-color: black;
 }
-/* line 113, ../sass/components/_navigation.scss */
+/* line 197, ../sass/components/_navigation.scss */
 nav#sub-nav ul li.current-menu-item a {
   background-color: #61ce59;
   font-family: "proximanova-bold-webfont", sans-serif;
 }
-/* line 119, ../sass/components/_navigation.scss */
+/* line 203, ../sass/components/_navigation.scss */
 nav#sub-nav ul li.current-menu-item .sub-menu li a {
   background-color: #40a639;
   font-family: "proximanova-regular-webfont", sans-serif;
   font-size: 15px;
   font-size: 1.5rem;
 }
-/* line 123, ../sass/components/_navigation.scss */
+/* line 207, ../sass/components/_navigation.scss */
 nav#sub-nav ul li.current-menu-item .sub-menu li a:hover, nav#sub-nav ul li.current-menu-item .sub-menu li a:active {
   background-color: black;
 }
-/* line 131, ../sass/components/_navigation.scss */
+/* line 215, ../sass/components/_navigation.scss */
 nav#sub-nav ul li.menu-item-has-children.current-page-ancestor a {
   background-color: #40a639;
   font-family: "proximanova-bold-webfont", sans-serif;
 }
-/* line 137, ../sass/components/_navigation.scss */
+/* line 221, ../sass/components/_navigation.scss */
 nav#sub-nav ul li.menu-item-has-children.current-page-ancestor .sub-menu li a {
   font-family: "proximanova-regular-webfont", sans-serif;
   font-size: 15px;
   font-size: 1.5rem;
 }
-/* line 140, ../sass/components/_navigation.scss */
+/* line 224, ../sass/components/_navigation.scss */
 nav#sub-nav ul li.menu-item-has-children.current-page-ancestor .sub-menu li a:hover, nav#sub-nav ul li.menu-item-has-children.current-page-ancestor .sub-menu li a:active {
   background-color: black;
 }
-/* line 145, ../sass/components/_navigation.scss */
+/* line 229, ../sass/components/_navigation.scss */
 nav#sub-nav ul li.menu-item-has-children.current-page-ancestor .sub-menu li.current-menu-item a {
   background-color: #61ce59;
 }
 @media screen and (max-width: 768px) {
-  /* line 92, ../sass/components/_navigation.scss */
+  /* line 176, ../sass/components/_navigation.scss */
   nav#sub-nav {
     display: none;
   }
 }
 
-/* line 158, ../sass/components/_navigation.scss */
+/* line 242, ../sass/components/_navigation.scss */
 nav#mobile-controls {
   top: 0;
   right: 20px;
@@ -1546,13 +1682,13 @@ nav#mobile-controls {
   display: none;
 }
 @media screen and (max-width: 768px) {
-  /* line 158, ../sass/components/_navigation.scss */
+  /* line 242, ../sass/components/_navigation.scss */
   nav#mobile-controls {
     display: block;
   }
 }
 @media screen and (max-width: 659px) {
-  /* line 158, ../sass/components/_navigation.scss */
+  /* line 242, ../sass/components/_navigation.scss */
   nav#mobile-controls {
     top: 0;
     right: 15px;
@@ -1561,7 +1697,7 @@ nav#mobile-controls {
     position: absolute;
   }
 }
-/* line 167, ../sass/components/_navigation.scss */
+/* line 251, ../sass/components/_navigation.scss */
 nav#mobile-controls li {
   display: inline;
   width: 44px;
@@ -1570,12 +1706,12 @@ nav#mobile-controls li {
   margin-left: 10px;
 }
 @media screen and (max-width: 659px) {
-  /* line 167, ../sass/components/_navigation.scss */
+  /* line 251, ../sass/components/_navigation.scss */
   nav#mobile-controls li {
     height: 72px;
   }
 }
-/* line 176, ../sass/components/_navigation.scss */
+/* line 260, ../sass/components/_navigation.scss */
 nav#mobile-controls li a {
   width: 44px;
   height: 44px;
@@ -1596,36 +1732,36 @@ nav#mobile-controls li a {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
-/* line 189, ../sass/components/_navigation.scss */
+/* line 273, ../sass/components/_navigation.scss */
 nav#mobile-controls li.menu a:hover, nav#mobile-controls li.menu a:active {
   background-color: black;
 }
-/* line 194, ../sass/components/_navigation.scss */
+/* line 278, ../sass/components/_navigation.scss */
 nav#mobile-controls li.search a, nav#mobile-controls li.tel a {
   background-size: 21px 21px;
   background-color: transparent;
   background-image: url("../images/search-icon.png");
 }
-/* line 199, ../sass/components/_navigation.scss */
+/* line 283, ../sass/components/_navigation.scss */
 nav#mobile-controls li.search.active, nav#mobile-controls li.tel.active {
   background-image: url("../images/mobile-menu-pointer-blue.jpg");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: 18px 9px;
 }
-/* line 204, ../sass/components/_navigation.scss */
+/* line 288, ../sass/components/_navigation.scss */
 nav#mobile-controls li.search.active a, nav#mobile-controls li.tel.active a {
   background-image: url("../images/close-icon.png");
 }
-/* line 210, ../sass/components/_navigation.scss */
+/* line 294, ../sass/components/_navigation.scss */
 nav#mobile-controls li.tel a {
   background-image: url("../images/telephone-icon.png");
 }
-/* line 213, ../sass/components/_navigation.scss */
+/* line 297, ../sass/components/_navigation.scss */
 nav#mobile-controls li.tel.active {
   background-image: url("../images/mobile-menu-pointer-green.jpg");
 }
-/* line 215, ../sass/components/_navigation.scss */
+/* line 299, ../sass/components/_navigation.scss */
 nav#mobile-controls li.tel.active a {
   background-image: url("../images/close-icon.png");
 }
@@ -3122,13 +3258,17 @@ input, textarea {
   transition: all 0.2s ease;
   border: none;
 }
+/* line 120, ../sass/components/_slider.scss */
+#slider .slick-prev, #slider .slick-next {
+  display: none !important;
+}
 @media screen and (max-width: 659px) {
   /* line 106, ../sass/components/_slider.scss */
   .slick-prev, .slick-next {
     display: none !important;
   }
 }
-/* line 123, ../sass/components/_slider.scss */
+/* line 126, ../sass/components/_slider.scss */
 .slick-prev:hover, .slick-prev:active, .slick-next:hover, .slick-next:active {
   -webkit-transform: scale(1.3);
   -moz-transform: scale(1.3);
@@ -3137,7 +3277,7 @@ input, textarea {
   transform: scale(1.3);
 }
 
-/* line 127, ../sass/components/_slider.scss */
+/* line 130, ../sass/components/_slider.scss */
 .slick-next {
   top: 50%;
   right: 30px;

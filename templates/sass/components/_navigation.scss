@@ -1,21 +1,70 @@
 nav#nav{
 	display: block;
 	@media screen and (max-width: $break-medium) {
+		background-color: $green;
+		margin-top:-10px;
+		z-index: 9999;
+		position: relative;
+		padding:66px 0 0;
 		display: none;
 	}
 	font-family: $proximanova-bold;
 	@include font-size(20);
 	@extend .clearfix;
 	padding:0 15px;
+	@media screen and (max-width: $break-medium) {
+		font-family: $proximanova-regular;
+		@include font-size(15);
+	}
+	a#mobile-prev{
+		@include abs-pos(24px,auto,auto,15px); 
+		z-index: 9999;
+		text-transform: uppercase;
+		color: white;
+		display: none;
+		height: 22px;
+		line-height: 22px;
+		background:url('../images/arrow-white-prev.png') left center no-repeat;
+		background-size: 8px 12px;
+		padding-left:15px;
+		&:hover,&:active{
+			@include opacity(.8);
+			text-decoration: none;
+		}
+	}
 	ul{
 		@include wp-current-page-links{
 			background-color: $light-grey;
 			color: $green;
+			@media screen and (max-width: $break-medium) {
+				background-color: lighten($green,10);
+				color: white;
+				font-family: $proximanova-bold;
+			}
 		}
 		float: left;
 		margin-bottom: 0;
-		@include inline-menu;
+		@media screen and (max-width: $break-medium) {
+			width:100%;
+			display: block;
+			float: none; 
+		}
+		@media screen and (min-width: $break-medium+1) {
+			@include inline-menu;
+		}
 		li{
+			&.menu-item-has-children{
+				position: relative;
+				a{
+					background-image:url('../images/arrow-white.png');
+					background-repeat: no-repeat;
+					background-position: calc(100% - 15px) center;
+					background-size: 8px 12px;
+				}
+				ul a{
+					background-image:none;
+				}
+			}
 			a{
 				@include transition(all 0.3s ease-in-out);
 				&:link,&:visited{
@@ -24,17 +73,42 @@ nav#nav{
 					line-height: 50px;
 					padding:0 20px;
 					background-color:transparent;
+					@media screen and (max-width: $break-medium) {
+						color: white;
+					}
 				}
 				&:hover,&:active{
 					background-color: black;
 					color: white;
 					text-decoration: none;
+					@media screen and (max-width: $break-medium) {
+						background-color: lighten($green,10);
+					}
 				}
+				@media screen and (max-width: $break-medium) {
+					display: block;
+					width:100%;
+					padding:10px 15px !important;
+					height:auto !important;
+					line-height: 100% !important; 
+					color: white;
+				}
+			}
+			@media screen and (max-width: $break-medium) {
+				display: block;
+				width:100%;
+			}
+			.sub-menu{
+				@include abs-pos(0,auto,auto,0);
+				display: none;
 			}
 		}
 	}
 	.container{
 		padding: 0 12px;
+		@media screen and (max-width: $break-medium) {
+			padding:0;
+		}
 	}
 	a.donate{
 		background-color: $orange;
@@ -47,8 +121,18 @@ nav#nav{
 		float: right;
 		@include transition(background-color 0.3s ease-in-out);
 		&:hover,&:active{
-			background-color: lighten($orange,10);
+			//background-color: lighten($orange,10);
+			background-color: black;
 			text-decoration: none;
+		}
+		@media screen and (max-width: $break-medium) {
+			@include abs-pos(-52px,15px,auto,15px);
+			height:40px;
+			@include border-radius(0);
+			line-height: 40px;
+			text-align: center;
+			text-transform: uppercase;
+			font-family: $proximanova-bold;
 		}
 	}
 }

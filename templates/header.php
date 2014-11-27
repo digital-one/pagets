@@ -36,14 +36,14 @@
 </header>
 <!--/header-->
 <!-- mobile search panel -->
-<div id="mobile-search-panel">
+<div id="mobile-search-panel" class="panel">
 <h3>What are you looking for?</h3>
 <form method="post" action="">
 <input type="text" name="s" id="s" placeholder="Search the site" />
     </form>
 </div>
 <!-- /mobile search panel-->
-<div id="mobile-contact-panel">
+<div id="mobile-contact-panel" class="panel">
 <h3>Contact Us</h3>
 <p class="tel-numbers">
 <span>General Number: <a href="tel:01617994646"><strong>0161 799 4646</strong></a></span>
@@ -71,12 +71,13 @@ M27 0EW
       </nav>
 </div>
 <!-- mobile nav -->
-<nav id="mobile-controls"><ul><li class="search active"><a href="">Search</a></li><li class="tel active"><a href="">Telephone</a></li><li class="menu"><a href="">Menu</a></li></ul></nav>
+<nav id="mobile-controls"><ul><li class="search"><a href="" rel="mobile-search-panel">Search</a></li><li class="tel"><a href="" rel="mobile-contact-panel">Telephone</a></li><li class="menu"><a href="" rel="nav">Menu</a></li></ul></nav>
 <!-- /mobile nav -->
 <!--main nav-->
-<nav id="nav" role="navigation">
+<nav id="nav" role="navigation" class="panel">
+    <a href="#" id="mobile-prev">Previous</a>
   <div class="container">
-<ul><li class="current-menu-item"><a href="">Home</a></li><li><a href="">Information &amp; Support</a></li><li><a href="">Research</a></li><li><a href="">Professionals</a></li><li><a href="">News &amp; Events</a></li><li><a href="">Get Involved</a></li></ul>
+<ul><li class="current-menu-item"><a href="">Home</a></li><li class="menu-item-has-children"><a href="">Information &amp; Support</a><ul class="sub-menu"><li><a href="#">Sub link</a></li><li><a href="#">Sub link</a></li><li><a href="#">Sub link</a></li><li><a href="#">Sub link</a></li></ul></li><li><a href="">Research</a></li><li><a href="">Professionals</a></li><li><a href="">News &amp; Events</a></li><li><a href="">Get Involved</a></li></ul>
 <a href="" class="donate">Donate</a>
 </div>
 </nav>
