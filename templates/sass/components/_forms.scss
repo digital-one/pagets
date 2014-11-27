@@ -30,7 +30,9 @@ textarea{
 	resize: none;
 	height:150px;
 }
-
+input,textarea{
+	@include box-shadow (inset 0px 2px 2px 0px rgba(0, 0, 0, 0.1));
+}
 .popup-form{
 	min-width:300px;
 	h3{
@@ -207,9 +209,7 @@ textarea{
 			padding-left:4px;
 		}
 	}
-	input,textarea{
-		@include box-shadow (inset 0px 2px 2px 0px rgba(0, 0, 0, 0.1));
-	}
+	
 	select{
 		width: 70%;
 		@media screen and (max-width: $break-small) {

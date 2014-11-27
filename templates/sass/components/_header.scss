@@ -110,3 +110,28 @@
 		}
 	}
 }
+#mobile-search-panel,#mobile-contact-panel{
+	display: none;
+	background-color: $blue;
+	color: white;
+	margin-top:-10px;
+	//position: relative;
+	@include abs-pos(82px,0,0,0);
+	z-index: 999;
+	padding: 20px 15px;
+	width: 100%;
+	display: block;
+	height: 100%;
+	h3{
+		color: white;
+		@include font-size(20);
+		font-family: $proximanova-bold;
+	}
+}
+#mobile-contact-panel{
+	background-color: $green;
+	display: block;
+	address{
+		margin-bottom: 10px;
+	}
+}

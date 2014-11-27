@@ -201,6 +201,9 @@ nav#mobile-controls{
 				background-repeat: no-repeat;
 				background-position: center bottom;
 				background-size: 18px 9px;
+				a{
+					background-image: url('../images/close-icon.png');
+				}
 			}
 		}
 		&.tel{
@@ -209,6 +212,9 @@ nav#mobile-controls{
 			}
 			&.active{
 				background-image:url('../images/mobile-menu-pointer-green.jpg');
+				a{
+					background-image: url('../images/close-icon.png');
+				}
 			}
 		}
 	}

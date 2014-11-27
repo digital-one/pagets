@@ -47,11 +47,23 @@
 			}
 		}
 	}
-	a.map{
-		display: inline-block;
-		height:49px;
-		line-height: 49px;
-		padding: 0 0 0 45px;
-		background:url('../images/map-pin.png') left center no-repeat;
+}
+p.tel-numbers{
+	span{
+		display: block;
+		margin-bottom: 7px;
+	}
+}
+a.map{
+	display: inline-block;
+	height:49px;
+	line-height: 49px;
+	padding: 0 0 0 45px;
+	background:url('../images/map-pin.png') left center no-repeat;
+	#mobile-contact-panel &{
+		background-size: 14px 27px;
+		padding-left:20px;
+		height:27px;
+		line-height: 27px;
 	}
 }

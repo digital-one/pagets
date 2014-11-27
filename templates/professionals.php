@@ -9,8 +9,6 @@
 <h1>Professionals</h1>
 <p>Typi non habent claritatem insitam; est usus legentis in is qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima.</p>
 </section>
-
-
 <ul><li><a href=""><figure><img src="" /></figure><h4>Treatment for my patient</h4></a></li>
 <li><a href=""><figure><img src="" /></figure><h4>Centre of Excellence Awards</h4></a></li>
 <li><a href=""><figure><img src="" /></figure><h4>Useful Reference Documents</h4></a></li>

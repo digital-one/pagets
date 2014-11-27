@@ -10,8 +10,8 @@
 </a>
 <!--/newsletter-->
 <!--social-->
-<section id="social-links">
-<nav>
+
+<nav class="social-links">
   <h5>Follow us</h5>
 <ul>
   <li><a href="">Google Plus</a></li>
@@ -21,7 +21,7 @@
           <li><a href="" class="linkedin">Linkedin</a></li>
         </ul>
       </nav>
-</section>
+
 <!--/social-->
 
 

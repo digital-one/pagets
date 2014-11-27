@@ -35,7 +35,44 @@
 </div>
 </header>
 <!--/header-->
+<!-- mobile search panel -->
+<div id="mobile-search-panel">
+<h3>What are you looking for?</h3>
+<form method="post" action="">
+<input type="text" name="s" id="s" placeholder="Search the site" />
+    </form>
+</div>
+<!-- /mobile search panel-->
+<div id="mobile-contact-panel">
+<h3>Contact Us</h3>
+<p class="tel-numbers">
+<span>General Number: <a href="tel:01617994646"><strong>0161 799 4646</strong></a></span>
+<span>Nurse Helpline: <a href="tel:07713568197"><strong>07713 568197</strong></a></span>
+</p>
+<address>
+The Paget’s Association<br />
+Suite 5, Moorfield House<br />
+Moorside Road<br />
+Swinton<br />
+Manchester<br />
+M27 0EW
+</address>
+<p><a href="#map" class="map">Open Map</a> </p>
+<p><a href="#" class="full-width button">Email Us</a></p>
+<nav class="social-links">
+  <h5>Follow us</h5>
+<ul>
+  <li><a href="">Google Plus</a></li>
+    <li><a href="" class="facebook">Facebook</a></li>
+      <li><a href="" class="twitter">Twitter</a></li>
+        <li><a href="" class="pinterest">Pinterest</a></li>
+          <li><a href="" class="linkedin">Linkedin</a></li>
+        </ul>
+      </nav>
+</div>
+<!-- mobile nav -->
 <nav id="mobile-controls"><ul><li class="search active"><a href="">Search</a></li><li class="tel active"><a href="">Telephone</a></li><li class="menu"><a href="">Menu</a></li></ul></nav>
+<!-- /mobile nav -->
 <!--main nav-->
 <nav id="nav" role="navigation">
   <div class="container">

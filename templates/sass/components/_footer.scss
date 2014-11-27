@@ -191,9 +191,10 @@ a#newsletter{
 		}
 	}
 }
-#social-links{
+.social-links{
 	text-align: center;
 	padding-bottom: 15px;
+	@include centered-menu;
 	h5{
 		margin-bottom: 30px;
 		font-family: $proximanova-bold;
@@ -203,11 +204,27 @@ a#newsletter{
 			@include font-size(15);
 			margin-bottom: 20px;
 		}
+		#mobile-contact-panel &{
+			display: inline-block;
+			float:left;
+			@include font-size(15);
+			line-height: 32px;
+			height:32px;
+			color: white;
+		}
 	}
-	nav{
-		@include centered-menu;
+	ul{
+		#mobile-contact-panel &{
+			left:auto;
+			float:right;
+			clear:none;
+		}
 		li{
 			margin: 0 5px;
+			#mobile-contact-panel &{
+				margin: 0 3px;
+				right:auto;
+			}
 		}
 		a{
 			width:67px;
@@ -217,13 +234,19 @@ a#newsletter{
 			background-position:left top;
 			background-repeat: no-repeat;
 			background-size:67px 67px;
+			@include transition(opacity 0.3s ease-in-out);
+			@extend %ir;
+			#mobile-contact-panel &{
+				width:32px;
+				height:32px;
+				background-image: url('../images/gplus-white.png');
+				background-size:32px 32px;
+			} 
 			@media screen and (max-width: $break-medium) {
 				width:50px;
 				height:50px;
 				background-size: 50px 50px;
 			}
-			@include transition(opacity 0.3s ease-in-out);
-			@extend %ir;
 			&:hover,&:active{
 				@include opacity(.8);
 			}
@@ -235,11 +258,17 @@ a#newsletter{
 				.ie8 &{
 					background-image: url('../images/facebook.png');		
 				}
+				#mobile-contact-panel &{
+					background-image: url('../images/facebook-white.png');	
+				}
 			}
 			&.twitter{
 				background-image: url('../images/twitter.svg');	
 				.ie8 &{
 					background-image: url('../images/twitter.png');		
+				}
+				#mobile-contact-panel &{
+					background-image: url('../images/twitter-white.png');	
 				}
 			}
 			&.pinterest{
@@ -247,11 +276,17 @@ a#newsletter{
 				.ie8 &{
 					background-image: url('../images/pinterest.png');		
 				}
+				#mobile-contact-panel &{
+					background-image: url('../images/pinterest-white.png');	
+				}
 			}
 			&.linkedin{
 				background-image: url('../images/linkedin.svg');	
 				.ie8 &{
 					background-image: url('../images/linkedin.png');		
+				}
+				#mobile-contact-panel &{
+					background-image: url('../images/linkedin-white.png');	
 				}
 			}
 		}
