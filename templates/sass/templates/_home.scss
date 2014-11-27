@@ -1,8 +1,19 @@
+#slider-wrap{
+	@media screen and (max-width: $break-medium) {
+		padding:0 !important;
+	}
+}
 #slider{
 	height:426px;
 	display:block;
-	background-color:$light-grey;
+	background-color:$grey;
 	@extend %clearfix;
+	@media screen and (max-width: $break-medium) {
+		height:256px;
+	}
+	@media screen and (max-width: $break-small) {
+		height:395px;
+	}
 	nav{
 		width:auto;
 		display: inline-block;
@@ -24,8 +35,15 @@
 	}
 	.slide{
 		height:426px;
+		@media screen and (max-width: $break-medium) {
+			height:256px;
+		}
+		@media screen and (max-width: $break-small) {
+			height:395px;
+		}
 		position: relative;
 		aside{
+			float: left;
 			display: inline-block;
 			@include abs-pos(0,auto,auto,0);
 			background-color: $green;
@@ -33,22 +51,55 @@
 			width:33%;
 			height: 100%;
 			color: white;
+			@media screen and (max-width: $break-medium) {
+				padding:20px 0 0 20px;
+				@include omega;
+			}
+			@media screen and (max-width: $break-small){
+				width:100%;
+				height:245px;
+				background-color: white;
+				color: black;
+				float: none;
+				position: relative;
+				padding: 20px 20px 0;
+			}
 			a.button{
 				@include abs-pos(auto,auto,36px,36px);
+				@media screen and (max-width: $break-medium) {
+					@include abs-pos(auto,auto,20px,20px);
+				}
 			}
 			h3{
 				color: white;
 				text-transform: uppercase;
 				margin-bottom: 34px;
 				line-height: 120%;
+				@media screen and (max-width: $break-medium) {
+					@include font-size(16);
+					margin-bottom: 15px;
+				}
+				@media screen and (max-width: $break-small){
+					color: $blue;
+					@include font-size(20);
+				}
+			}
+			p{
+				@media screen and (max-width: $break-medium) {
+					@include font-size(13);
+					line-height: 120%;
+				}
 			}
 			&:after{
 				content:"";
 				@include abs-pos(0,-64px,auto,auto);
 				width:64px;
 				height:100%;
-				background: url('../images/slider-panel-angle.png') left top no-repeat;
-
+				background: url('../images/slider-panel-angle.png') right 50% no-repeat;
+				@media screen and (max-width: $break-medium) {
+					width:40px;
+					@include abs-pos(0,-40px,auto,auto);
+				}
 			}
 		}
 		.image{
@@ -57,6 +108,11 @@
 			float: right;
 			background-color: black;
 			@include bg-cover;
+			@media screen and (max-width: $break-small){
+				width:100%;
+				height: 150px;
+				float: none;
+			}
 		}
 	}
 }
@@ -66,21 +122,86 @@ h3{
 		text-transform: uppercase;
 		text-align:center;
 		margin-bottom: 40px;
+		@media screen and (max-width: $break-medium) {
+			@include font-size(24);
+		}
 	}
 	#index &{
 		padding-bottom:12px;
 		border-bottom: 1px solid $light-grey;
 		margin-bottom: 35px;
 		text-align:left;
+		@media screen and (max-width: $break-small) {
+			margin-bottom: 3px;
+			cursor:pointer;
+			background-color: $light-grey;
+			font-family: $proximanova-bold; 
+			text-transform: uppercase;
+			position: relative;
+			color: $grey;
+			height:45px;
+			line-height: 45px; 
+			display: block;
+			margin-bottom: 6px;
+			@include transition(background-color 0.2s ease-in-out);
+			@include font-size(15);
+			margin-bottom: 0;
+			padding:0 15px;
+			&:after{
+				content:"";
+				@include abs-pos(50%,15px,auto,auto);
+				display: block;
+				width:17px;
+				height:11px;
+				margin-top: -5px;
+				background-image:url('../images/accordion-arrow.svg');
+				.ie8 &{
+					background-image:url('../images/accordion-arrow.png');	
+				}
+				background-position: 0 0;
+				background-repeat: no-repeat;
+				background-size:100% auto;
+			}
+			&:hover,&:active{
+				background-color: black;
+				color: white;
+				&:after{
+					background-position: 0 -11px;
+				}
+			}
+			&.active{
+				background-color: $green;
+				color: white;
+				&:after{
+					background-position: 0 -22px;
+				}
+				&:hover,&:active{
+					background-color: $dark-green;
+				}
+			}
+		}
 	}
 }
 #news-events{
-	margin-bottom: 50px;
+	background-color: #f3f3f3;
+	padding: 48px 0 0;
+	margin-bottom: 80px;
+	@media screen and (max-width: $break-medium) {
+		padding: 35px 0 0;
+		margin-bottom: 70px;
+	}
+	h3{
+		margin-bottom: 35px;
+		@media screen and (max-width: $break-medium) {
+			margin-bottom: 20px;
+		}
+	}
 	footer{
 		display: block;
 		width:100%;
 		text-align: center;
 		margin:10px 0 0;
+		margin-bottom: -31px;
 		a{
 			display: inline-block;
 			width: 62px;
@@ -99,7 +220,7 @@ h3{
 				vertical-align: middle;
 			}
 			&:hover,&:active{
-				background-color: lighten($blue,10);
+				background-color: black;
 			}
 			span{
 				vertical-align: middle;

@@ -1,6 +1,6 @@
 <?php include_once('header.php') ?>
 <!--content-->
-<div id="content" class="container">
+<div class="content container">
   <!--intro-->
 <section id="news-events-archive">
   <header>

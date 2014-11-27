@@ -1,6 +1,6 @@
 <?php include_once('header.php') ?>
 <!--content-->
-<div id="content" class="container two-column main-right">
+<div  class="content container two-column main-right">
  <!--left sidebar -->
 <aside id="left-sidebar">
 <nav id="sub-nav">
@@ -44,6 +44,7 @@ Typi non habent claritatem insitam; est usus legentis in is qui facit eorum clar
   </section>
 </div>
 <!--/main-->
+</div>
 </div>
 <!--/content-->
 <?php include_once('footer.php') ?> 

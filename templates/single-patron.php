@@ -1,6 +1,6 @@
 <?php include_once('header.php') ?>
 <!--content-->
-<div id="content" class="container two-column main-left wide-sidebar"> 
+<div class="content container two-column main-left wide-sidebar"> 
 <!--main-->
 
 	<section id="single-patron">
@@ -13,6 +13,11 @@
 <h2>Board of Trustees</h2>
 </div>
 </header>
+<aside id="right-sidebar-wide">
+	<figure>
+<img src="" />
+	</figure>
+</aside>
 <div id="main" role="main"> 
 	<div class="gutter-right">
 <p>Typi non habent claritatem insitam est usus legentis in is qui facit eorum claritatem. Investigationes demon straverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. </p>
@@ -22,11 +27,7 @@
 </p>
 </div>
 </div>
-<aside id="right-sidebar-wide">
-	<figure>
-<img src="" />
-	</figure>
-</aside>
+
 </section>
 
 

@@ -6,6 +6,7 @@
 <a href="" id="newsletter">
 <h4><strong>Free</strong> paget’s newsletter</h4>
 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+<span class="button">Find out more</span>
 </a>
 <!--/newsletter-->
 <!--social-->
@@ -29,26 +30,27 @@
 	<div id="bottom">
 <div class="container">
   <!--left column-->
+  <div class="top">
 <div class="column left">
 <nav id="footer-nav"><ul><li><a href="">Site Map</a></li><li><a href="">Privacy Policy</a></li><li><a href="">Terms of Use</a></li></ul></nav>
 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip.</p>
-<div class="copyright fit-to-base">
-<small>&copy; Paget's Association Charity No: 266071</small>
-<address>Suite 5, Moorfield House, Moorside Road, Swinton, Manchester M27 0EW</address>
 </div>
-</div>
-<!--/left column-->
-<!--right column-->
 <div class="column right">
   <div id="logos" class="row">
 <a href=""><span class="logo"><img src="images/the-best-of-salford.png" alt="the best of salford" /></span></a>
 <a href=""><span class="logo"><img src="images/health-unlocked.jpg" alt="Health Unlocked" /></span><span>Connect with others who understand Paget’s disease - <strong>Join today!</strong></span></a>
 </div>
-<div class="row fit-to-base">
+  </div>
+</div>
+<div class="base">
+<div class="copyright fit-to-base">
+<small>&copy; Paget's Association Charity No: 266071</small>
+<address>Suite 5, Moorfield House, Moorside Road, Swinton, Manchester M27 0EW</address>
+</div>
+<div class="share-links">
 <a href="" class="ama">AMA</a>
 </div>
-  </div>
-<!--/right column-->
+</div>
 </div>
 </div>
 </footer>
@@ -67,5 +69,7 @@
 <script src="js/masonry.pkgd.min.js"></script>
 <script src="js/scripts.js"></script>
 <!--/scripts-->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5476fa7267076160" async="async"></script>
+
 </body>
 </html>

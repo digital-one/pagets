@@ -1,6 +1,6 @@
 <?php include_once('header.php') ?>
 <!--content-->
-<div id="content" class="container two-column main-right">
+<div id="patron-archive" class="content container two-column main-right">
  <!--left sidebar -->
 <aside id="left-sidebar">
 <nav id="sub-nav">

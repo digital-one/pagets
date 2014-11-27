@@ -1,0 +1,57 @@
+#contact{
+	.alpha,.beta{
+		@include span-columns(6);
+		@media screen and (max-width: $break-medium) {
+			@include span-columns(12);
+			.box{
+				width: 100%;
+				margin-bottom: 25px;
+				&.keyline{
+					@media screen and (max-width: $break-small) {
+						margin: 0 15px 25px;
+						display: block;
+						width: auto;
+					}
+				}
+			}
+			.alpha,.beta{
+				@include span-columns(6);
+				@media screen and (max-width: $break-small) {
+					@include span-columns(12);
+				}
+			}
+			.alpha{
+				@media screen and (max-width: $break-small) {
+					margin-bottom: 25px;
+				}
+			}
+			.beta{
+				@media screen and (max-width: $break-small) {
+					p{
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+		header{
+			height: 70px;
+			@media screen and (max-width: $break-medium) {
+				height: auto;
+				margin-bottom: 25px;
+			}
+			@media screen and (max-width: $break-small) {
+				padding:0 15px;
+			}
+			p{
+				margin-bottom: 0;
+			}
+		}
+	}
+	a.map{
+		display: inline-block;
+		height:49px;
+		line-height: 49px;
+		padding: 0 0 0 45px;
+		background:url('../images/map-pin.png') left center no-repeat;
+	}
+}

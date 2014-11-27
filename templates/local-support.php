@@ -1,6 +1,6 @@
 <?php include_once('header.php') ?>
 <!--content-->
-<div id="content" class="container three-column">
+<div class="content container three-column">
  <!--left sidebar -->
 <aside id="left-sidebar">
 <nav id="sub-nav">
@@ -34,7 +34,7 @@
 <!--right sidebar -->
 <aside id="right-sidebar">
 	<!--box-->
-  <div class="box keyline"><h4>Free Booklets</h4><ul>
+  <div class="box keyline dashed-list"><h4>Free Booklets</h4><ul>
   <li>Paget’s Disease: The Facts</li>
   <li>Paget’s Disease and Pain</li>
   <li>Paget’s Disease: Investigations Explained</li>

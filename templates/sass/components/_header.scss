@@ -1,15 +1,43 @@
 #header{
 	position: relative;
+	@extend %clearfix;
 	height:140px;
+	@media screen and (max-width: $break-medium) {
+		height: 96px;
+		padding-bottom:10px;
+		background:url('../images/mobile-header-divide.jpg') center bottom repeat-x;
+		#home &{
+			height:86px;
+			padding-bottom:0;
+			background:none;
+		}
+	}
+	@media screen and (max-width: $break-small){
+		height: 82px;
+		&#home &{
+			height: 72px;
+		}
+	}
 	#home-link{
 		margin:0;
 		width:198px;
 		height:79px;
 		display:block;
 		@include abs-pos(34px,auto,auto,0);
+		@media screen and (max-width: $break-medium) {
+			width:114px;
+			height:45px;
+			@include abs-pos(20px,auto,auto,20px);
+		}
+		@media screen and (max-width: $break-small){
+			width: 101px;
+			height: 41px;
+			@include abs-pos(20px,auto,auto,15px);
+		}
 		img{
 			@include fit-grid(width);
 		}
+
 	}
 	#ribbon{
 		background-color: $green;
@@ -51,6 +79,9 @@
 		a:hover,a:active{
 			text-decoration: none;
 		}
+		@media screen and (max-width: $break-medium) {
+			display: none;
+		}
 	}
 	#search{
 		@include abs-pos(13px,0,auto,auto);
@@ -73,6 +104,9 @@
 			background:url('../images/search-icon.svg') left top no-repeat;
 			border: none;
 			@extend %ir;
+		}
+		@media screen and (max-width: $break-medium) {
+			display: none;
 		}
 	}
 }

@@ -1,0 +1,69 @@
+.remembrance-garden{
+	#intro{
+		border-bottom:1px solid $light-grey;
+		padding-bottom:45px;
+		margin-bottom: 50px;
+		@media screen and (max-width: $break-small) {
+			margin-bottom: 30px;
+			padding-bottom: 0;
+			border-bottom: none;
+		}
+
+	}
+}
+ul.post-list{
+	@media screen and (max-width: $break-small) {
+		padding:0 15px;
+	}
+	li{ 
+		padding:0 0 40px;
+		margin-bottom: 40px;
+		@extend %clearfix;
+		border-bottom:1px solid $light-grey;
+		h3{
+			@include font-size(20);
+			margin-bottom: 30px;
+			@media screen and (max-width: $break-small) {
+				@include font-size(18);
+				margin-bottom: 25px;
+			}
+		}
+		p{
+			margin-bottom: 0;
+			@include font-size(15);
+		}
+		.alpha{
+			padding-right: 4%;
+			width:100%;
+		}
+		&.has-feature{
+			.alpha{
+				@include span-columns(8);
+				float:left;
+				@media screen and (max-width: $break-small) {
+					@include span-columns(12);
+				}
+			}
+		}
+		.beta{
+			@include span-columns(4);
+			@include omega;
+			float:right;
+			@media screen and (max-width: $break-small) {
+				@include span-columns(12);
+			}
+		}
+		figure{
+			@include fixed-ratio(100%,66.66%,img);
+			background-color: $grey;
+			@media screen and (min-width: $break-small+1) and (max-width: $break-medium) {
+				&:before{
+					padding-top:100%;
+				}
+			}
+			@media screen and (max-width: $break-small) {
+				margin-bottom: 25px;
+			}
+		}
+	}
+}

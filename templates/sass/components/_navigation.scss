@@ -1,4 +1,8 @@
 nav#nav{
+	display: block;
+	@media screen and (max-width: $break-medium) {
+		display: none;
+	}
 	font-family: $proximanova-bold;
 	@include font-size(20);
 	@extend .clearfix;
@@ -61,16 +65,22 @@ nav#secondary-nav{
 			}
 		}
 	}
+	@media screen and (max-width: $break-medium) {
+		display: none;
+	}
 }
 nav#footer-nav{
 	@include inline-menu;
 	@extend %clearfix;
-	ul{
-		@extend %clearfix;
-		margin-bottom: 20px;
+	margin-bottom: 20px;
+	@media screen and (max-width: $break-small) {
+		@include centered-menu;
 	}
 	li{
 		margin-right: 20px;
+		@media screen and (max-width: $break-small) {
+			margin: 0 10px;
+		}
 	}
 	a:link,a:visited{
 		color: white;
@@ -140,5 +150,66 @@ nav#sub-nav{
 				}
 			}
 		}	
+	}
+	@media screen and (max-width: $break-medium) {
+		display: none;
+	}
+}
+nav#mobile-controls{ 
+	@include abs-pos(0,20px,auto,auto);
+	display: none;
+	@media screen and (max-width: $break-medium) {
+		display: block; 
+	}
+	@media screen and (max-width: $break-small){
+		@include abs-pos(0,15px,auto,auto);
+	}
+	li{
+		display:inline;
+		width: 44px;
+		height: 86px;
+		@media screen and (max-width: $break-small){
+			height: 72px;
+		}
+		float: left;
+		margin-left:10px;
+		a{
+			width:44px;
+			height:44px;
+			@include vertical-align;
+			display: block;
+			@extend %ir;
+			background-image:url('../images/mobile-nav-icon.png');
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-color: $blue;
+			@include border-radius(5px);
+		}
+		&.menu{
+			a:hover,a:active{
+				background-color: black;
+			}
+		}
+		&.search,&.tel{
+			a{
+				background-size: 21px 21px;
+				background-color: transparent;
+				background-image:url('../images/search-icon.png');	
+			}
+			&.active{
+				background-image:url('../images/mobile-menu-pointer-blue.jpg');
+				background-repeat: no-repeat;
+				background-position: center bottom;
+				background-size: 18px 9px;
+			}
+		}
+		&.tel{
+			a{
+				background-image:url('../images/telephone-icon.png');		
+			}
+			&.active{
+				background-image:url('../images/mobile-menu-pointer-green.jpg');
+			}
+		}
 	}
 }

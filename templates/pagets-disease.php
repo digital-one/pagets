@@ -1,6 +1,6 @@
 <?php include_once('header.php') ?>
 <!--content-->
-<div id="content" class="container two-column main-left"> 
+<div class="content container two-column main-left"> 
 <!--main-->
 <div id="main" role="main"> 
 	<section id="intro">
@@ -28,7 +28,7 @@ Typi non habent claritatem insitam; est usus legentis in is qui facit eorum clar
 <!--right sidebar -->
 <aside id="right-sidebar">
 	<!--box-->
-  <div class="box keyline"><h4>Free Booklets</h4><ul>
+  <div class="box keyline dashed-list"><h4>Free Booklets</h4><ul>
   <li>Paget’s Disease: The Facts</li>
   <li>Paget’s Disease and Pain</li>
   <li>Paget’s Disease: Investigations Explained</li>

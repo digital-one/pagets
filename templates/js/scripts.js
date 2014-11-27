@@ -5,12 +5,12 @@ $(function(){
 	$('#slider').slick({
 		dots: true,
 		autoplay: true,
-  		autoplaySpeed: 2000,
-  		arrows: false
+  		autoplaySpeed: 5000,
+  		arrows: true
 	});
 
 	$('#carousel').slick({
-  		dots: false,
+  		dots: true,
   		arrows: true,
   		infinite: true,
   		speed: 300,
@@ -27,7 +27,7 @@ $(function(){
       	}
     },
     	{
-      		breakpoint: 600,
+      		breakpoint: 769,
       		settings: {
         	slidesToShow: 2,
         	slidesToScroll: 1

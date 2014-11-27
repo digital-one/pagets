@@ -35,6 +35,7 @@
 </div>
 </header>
 <!--/header-->
+<nav id="mobile-controls"><ul><li class="search active"><a href="">Search</a></li><li class="tel active"><a href="">Telephone</a></li><li class="menu"><a href="">Menu</a></li></ul></nav>
 <!--main nav-->
 <nav id="nav" role="navigation">
   <div class="container">

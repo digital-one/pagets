@@ -1,10 +1,18 @@
 h1,h2,h3,h4,h5{
 	@include font-size(38);
-	line-height: 80%;
+	line-height: 100%;
 	padding:0;
 	margin: 0 0 46px;
 	color: $green;
 	font-weight: normal;
+	@media screen and (max-width: $break-medium) {
+		@include font-size(36);
+		margin-bottom: 36px;
+	}
+	@media screen and (max-width: $break-small){
+		@include font-size(26);
+		margin-bottom: 25px;
+	}
 }
 h2,h3{
 	@include font-size(28);
@@ -61,7 +69,10 @@ strong{
 	font-family: $proximanova-bold;
 }
 p,ul{
-	margin-bottom: 25px;	
+	margin-bottom: 25px;
+	@media screen and (max-width: $break-small) {
+		margin-bottom: 20px;
+	}	
 }
 blockquote{
 	p{
@@ -81,4 +92,8 @@ a{
 		color: black;
 		text-decoration: underline;
 	}
+}
+address{
+	font-style: normal;
+	margin-bottom: 25px;
 }

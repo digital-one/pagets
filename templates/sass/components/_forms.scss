@@ -7,6 +7,7 @@ select,
 textarea,
 .selectBox-dropdown{
 	line-height: 1;
+	@include border-radius(5px);
 	height: 34px;
 	font-family: $proximanova-regular;  
 	font-weight:400;
@@ -17,7 +18,7 @@ textarea,
 	width: 100%;
 	@include transition (background-color .1s linear 0s);
 	&:focus{
-		background-color: darken($light-grey,10);
+		background-color: darken($light-grey,5);
 	}
 	@include placeholder {
     color: black;
@@ -27,6 +28,7 @@ textarea{
 	padding: 10px;
 	height: auto;
 	resize: none;
+	height:150px;
 }
 
 .popup-form{
@@ -65,15 +67,14 @@ textarea{
 .selectBox-dropdown{
 	position: relative;
 	cursor: pointer;
-	@include border-radius(5px);
 
 	&:hover, &:active, &:focus{
 		border-style: none;
-		background-color: darken($light-grey,10);
+		background-color: darken($light-grey,5);
 		text-decoration: none;
 	}
 	&.selectBox-menuShowing{
-    	background-color: darken($light-grey,10);
+    	background-color: darken($light-grey,5);
     }
     &.selectBox-menuShowing-bottom{
 
@@ -118,15 +119,16 @@ textarea{
 		}
 		li{
 			&.selectBox-hover a {
-    			background-color: darken(black,10);
+    			background-color: #f7f7f7;
+    			text-decoration: none;
     		}
     		&.selectBox-selected a{
     			//background-color: $green;
     		}
 		}
 		a{
-			font-family: $helvetica;
-			@include font-size(12);
+			font-family: $proximanova-regular;
+			@include font-size(15);
 			padding: 4px 10px;
 		}
 		&.selectBox-options-top{
@@ -162,30 +164,42 @@ textarea{
 //gravity forms
 
 .gform_wrapper{
-	margin:0 0 40px;
+	margin:0;
 	.gform_body{
 		@extend %clearfix;
 	}
 	.gform_footer{
-		text-align: center;
+		text-align: right;
 		margin:20px 0 0;
+	}
+	ul{
+		list-style-type: none;
 	}
 	li{
 		padding: 0 !important;
-		@include span-columns(6);
-		@include omega(2n);
-		@media screen and (max-width: $break-medium) {
-			@include span-columns(12);
-		}
+		margin-bottom: 10px;
+		list-style-type: none;
+		
 		&:before{
 			background:none !important;
 		}
 		&#field_1_5{
 			@include span-columns(12);
 		}
+		&.no-label{
+			label{
+				display: none;
+			}
+		}
+		&.half{
+			select,input{
+				width: 50%;
+			}
+		}
 	}
 	label{
-		font-weight: bold;
+		font-family: $proximanova-bold;
+		@include font-size(15);
 		margin-bottom: 4px;
 		display: block;
 		.gfield_required{
@@ -193,10 +207,13 @@ textarea{
 			padding-left:4px;
 		}
 	}
-	.button.gform_button{
-		@include font-size(28);
-		padding:0 8px;
-		height:38px;
-		line-height: 38px;
+	input,textarea{
+		@include box-shadow (inset 0px 2px 2px 0px rgba(0, 0, 0, 0.1));
 	}
+	select{
+		width: 70%;
+		@media screen and (max-width: $break-small) {
+			width:100%;
+		}
+	}	
 }

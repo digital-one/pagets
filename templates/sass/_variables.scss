@@ -23,7 +23,7 @@
 
 //neat overrides
 $max-width: 1280px; //overide neat outer container width
-$visual-grid: true; 
+$visual-grid: false; 
 
 //colours
 $blue: #005baa;
@@ -42,8 +42,8 @@ $mid-grey: #8b8b8b;
 $proximanova-bold: "proximanova-bold-webfont", sans-serif;
 $proximanova-regular: "proximanova-regular-webfont", sans-serif;
 //break points
-$break-small: 640px;
-$break-medium: 767px; //ipad 
+$break-small: 659px;
+$break-medium: 768px; //ipad 
 $break-large: 979px;
 $break-xlarge: 1132px;
 $break-nav: 1200px;
