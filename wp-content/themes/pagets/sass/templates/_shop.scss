@@ -1,0 +1,64 @@
+.shop{
+	header{
+		@extend %clearfix;
+		padding-bottom: 30px;
+		border-bottom: 1px solid $light-grey;
+		margin-bottom: 45px;
+		@media screen and (max-width: $break-small) {
+			margin-bottom: 0;
+			border-bottom: none;
+			padding-bottom: 0;
+		}
+		.alpha{
+			@include span-columns(9);
+			@media screen and (max-width: $break-medium) {
+				@include span-columns(7);
+			}
+			@media screen and (max-width: $break-small) {
+				@include span-columns(12);
+				padding: 0 15px;
+			}
+		}
+		aside{
+			@media screen and (max-width: $break-medium) {
+				@include span-columns(5);
+			}
+			@media screen and (max-width: $break-small) {
+				display: none;
+			}
+			.box{
+				margin-bottom: 0;
+				@media screen and (max-width: $break-medium) {
+					width:100%;
+				}
+			}
+		}
+	}
+	ul.post-list{
+		li{
+			h3{
+				margin-bottom: 10px; 
+				line-height: 120%;
+			}
+			p.price{
+				@include font-size(24);
+				font-family: $proximanova-bold;
+				margin-bottom: 25px;
+				@media screen and (max-width: $break-small) {
+					@include font-size(20);
+				}
+			}
+			small{
+				font-family: $proximanova-bold;
+				@media screen and (max-width: $break-small) {
+					line-height:120%;
+					margin-top: 10px;
+					display: block;
+				}
+			}
+			form{
+				margin-top: 25px;
+			}
+		}
+	}
+}

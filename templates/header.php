@@ -28,7 +28,7 @@
 <div class="container">
 <h1 id="home-link"><img src="images/pagets.svg" alt="Paget's Association" /></h1>
 <!--secondary nav-->
-<nav id="secondary-nav" role="navigation"><ul><li><a href="#">About Us</a></li><li><a href="#">Membership / Login</a></li><li><a href="#">Remember Someone</a></li><li><a href="#">Shop</a></li><li><a href="#">Contact Us</a></li></ul></nav>
+<nav id="secondary-nav" role="navigation"><ul><li><a href="pagets-disease.php">About Us</a></li><li><a href="register-login.php">Membership / Login</a></li><li><a href="remembrance-garden.php">Remember Someone</a></li><li><a href="shop.php">Shop</a></li><li><a href="contact.php">Contact Us</a></li></ul></nav>
 <form id="search" method="post" action=""><input type="text" placeholder="Search" /><button type="submit">Search</button></form>
 <!--/secondary nav-->
 <div id="ribbon"><div><span>General Info <a href="tel:01617994646">0161 799 4646</a></span><span>Nurse Helpline <a href="tel:07713568197">07713 568197</a></span></div></div>
@@ -77,7 +77,7 @@ M27 0EW
 <nav id="nav" role="navigation" class="panel">
     <a href="#" id="mobile-prev">Previous</a>
   <div class="container">
-<ul><li class="current-menu-item"><a href="">Home</a></li><li class="menu-item-has-children"><a href="">Information &amp; Support</a><ul class="sub-menu"><li><a href="#">Sub link</a></li><li><a href="#">Sub link</a></li><li><a href="#">Sub link</a></li><li><a href="#">Sub link</a></li></ul></li><li><a href="">Research</a></li><li><a href="">Professionals</a></li><li><a href="">News &amp; Events</a></li><li><a href="">Get Involved</a></li></ul>
+<ul><li class="current-menu-item"><a href="/~pagetorg/">Home</a></li><li class="menu-item-has-children"><a href="info-support.php">Information &amp; Support</a><ul class="sub-menu"><li><a href="#">Sub link</a></li><li><a href="#">Sub link</a></li><li><a href="#">Sub link</a></li><li><a href="#">Sub link</a></li></ul></li><li><a href="">Research</a></li><li><a href="professionals.php">Professionals</a></li><li><a href="news-events.php">News &amp; Events</a></li><li><a href="">Get Involved</a></li></ul>
 <a href="" class="donate">Donate</a>
 </div>
 </nav>

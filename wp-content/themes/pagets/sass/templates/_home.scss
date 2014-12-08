@@ -1,0 +1,236 @@
+#slider-wrap{
+	@media screen and (max-width: $break-medium) {
+		padding:0 !important;
+	}
+}
+#slider{
+	height:426px;
+	display:block;
+	background-color:$grey;
+	@extend %clearfix;
+	@media screen and (max-width: $break-medium) {
+		height:256px;
+	}
+	@media screen and (max-width: $break-small) {
+		height:395px;
+	}
+	nav{
+		width:auto;
+		display: inline-block;
+		width:100%;
+		@include abs-pos(auto,auto,25px,0);
+		text-align:center;
+		a{
+			display: inline-block;
+			width:15px;
+			height:15px;
+			@include border-radius(50%);
+			margin:0 3px;
+			border: 2px solid white;
+			@extend %ir;
+			&.active{
+				background-color: white;
+			}
+		}
+	}
+	.slide{
+		height:426px;
+		@media screen and (max-width: $break-medium) {
+			height:256px;
+		}
+		@media screen and (max-width: $break-small) {
+			height:395px;
+		}
+		position: relative;
+		aside{
+			float: left;
+			display: inline-block;
+			@include abs-pos(0,auto,auto,0);
+			background-color: $green;
+			padding: 48px 20px 36px 36px;
+			width:33%;
+			height: 100%;
+			color: white;
+			@media screen and (max-width: $break-medium) {
+				padding:20px 0 0 20px;
+				@include omega;
+			}
+			@media screen and (max-width: $break-small){
+				width:100%;
+				height:245px;
+				background-color: white;
+				color: black;
+				float: none;
+				position: relative;
+				padding: 20px 20px 0;
+			}
+			a.button{
+				@include abs-pos(auto,auto,36px,36px);
+				@media screen and (max-width: $break-medium) {
+					@include abs-pos(auto,auto,20px,20px);
+				}
+			}
+			h3{
+				color: white;
+				text-transform: uppercase;
+				margin-bottom: 34px;
+				line-height: 120%;
+				@media screen and (max-width: $break-medium) {
+					@include font-size(16);
+					margin-bottom: 15px;
+				}
+				@media screen and (max-width: $break-small){
+					color: $blue;
+					@include font-size(20);
+				}
+			}
+			p{
+				@media screen and (max-width: $break-medium) {
+					@include font-size(13);
+					line-height: 120%;
+				}
+			}
+			&:after{
+				content:"";
+				@include abs-pos(0,-64px,auto,auto);
+				width:64px;
+				height:100%;
+				background: url('../images/slider-panel-angle.png') right 50% no-repeat;
+				@media screen and (max-width: $break-medium) {
+					width:40px;
+					@include abs-pos(0,-40px,auto,auto);
+				}
+			}
+		}
+		.image{
+			width:67%;
+			height:100%;
+			float: right;
+			background-color: black;
+			@include bg-cover;
+			@media screen and (max-width: $break-small){
+				width:100%;
+				height: 150px;
+				float: none;
+			}
+		}
+	}
+}
+h3{
+	#index &,#news-events &{
+		@include font-size(36);
+		text-transform: uppercase;
+		text-align:center;
+		margin-bottom: 40px;
+		@media screen and (max-width: $break-medium) {
+			@include font-size(24);
+		}
+	}
+	#index &{
+		padding-bottom:12px;
+		border-bottom: 1px solid $light-grey;
+		margin-bottom: 35px;
+		text-align:left;
+		@media screen and (max-width: $break-small) {
+			margin-bottom: 3px;
+			cursor:pointer;
+			background-color: $light-grey;
+			font-family: $proximanova-bold; 
+			text-transform: uppercase;
+			position: relative;
+			color: $grey;
+			height:45px;
+			line-height: 45px; 
+			display: block;
+			margin-bottom: 6px;
+			@include transition(background-color 0.2s ease-in-out);
+			@include font-size(15);
+			margin-bottom: 0;
+			padding:0 15px;
+			&:after{
+				content:"";
+				@include abs-pos(50%,15px,auto,auto);
+				display: block;
+				width:17px;
+				height:11px;
+				margin-top: -5px;
+				background-image:url('../images/accordion-arrow.svg');
+				.ie8 &{
+					background-image:url('../images/accordion-arrow.png');	
+				}
+				background-position: 0 0;
+				background-repeat: no-repeat;
+				background-size:100% auto;
+			}
+			&:hover,&:active{
+				background-color: black;
+				color: white;
+				&:after{
+					background-position: 0 -11px;
+				}
+			}
+			&.active{
+				background-color: $green;
+				color: white;
+				&:after{
+					background-position: 0 -22px;
+				}
+				&:hover,&:active{
+					background-color: $dark-green;
+				}
+			}
+		}
+	}
+}
+#news-events{
+	background-color: #f3f3f3;
+	padding: 48px 0 0;
+	margin-bottom: 80px;
+	@media screen and (max-width: $break-medium) {
+		padding: 35px 0 0;
+		margin-bottom: 70px;
+	}
+	h3{
+		margin-bottom: 35px;
+		@media screen and (max-width: $break-medium) {
+			margin-bottom: 20px;
+		}
+	}
+	footer{
+		display: block;
+		width:100%;
+		text-align: center;
+		margin:10px 0 0;
+		margin-bottom: -31px;
+		a{
+			display: inline-block;
+			width: 62px;
+			height: 62px;
+			@include border-radius(50%);
+			background-color: $blue;
+			color: white;
+			text-align:center;
+			margin: 0 auto;
+			position: relative;
+			@include transition(background-color 0.3s ease-in-out);
+			&:before{
+				content:"";
+				height:100%;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			&:hover,&:active{
+				background-color: black;
+			}
+			span{
+				vertical-align: middle;
+          		display: inline-block;
+          		width: 99%;
+          		line-height: 99%;
+          		font-family: $proximanova-bold;
+          		text-transform: uppercase;
+          		@include font-size(16);
+			}
+		}
+	}
+}

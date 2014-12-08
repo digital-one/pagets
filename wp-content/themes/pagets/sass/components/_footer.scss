@@ -1,0 +1,294 @@
+footer#footer{
+	.container{
+		@media screen and (max-width: $break-small) {
+			padding:0;
+		}
+	}
+	#bottom{
+		background-color: $blue;
+		color: white;
+		padding:35px 0 50px;
+		@include font-size(16);
+		.container{
+			padding: 0 15px;
+		}
+		.top,.base{
+			@extend %clearfix;
+		}
+		@media screen and (max-width: $break-medium) {
+			@include font-size(15);
+		}
+		@media screen and (max-width: $break-small) {
+			text-align: center;
+			@include font-size(13);
+			p{
+				margin-bottom: 30px;
+			}
+		}
+
+		.column{
+			position: relative;
+			@media screen and (max-width: $break-small) {
+				height:auto;
+			}
+			&.left{
+				@include span-columns(7);
+				@media screen and (max-width: $break-small) {
+					@include span-columns(12);
+					@include omega;
+					float: none;
+				}
+			}
+			&.right{
+				@include span-columns(4);
+				@include shift(1);
+				@include omega;
+				@media screen and (max-width: $break-small) {
+					@include span-columns(12);
+					@include shift(0);
+				}
+			}
+		}
+		.copyright{
+			@include span-columns(8);
+			@media screen and (max-width: $break-small) {
+				margin-top: 30px;
+				@include span-columns(12);
+			}
+		}
+		.share-links{
+			@include span-columns(4);
+			@include omega;
+			@media screen and (max-width: $break-small) {
+				margin-top: 40px;
+				@include span-columns(12);
+				text-align: center;
+			}
+		}
+		small,address{
+			@include font-size(14);
+			color: $light-blue;
+			font-style: normal;
+			display: block;
+			line-height: 140%;
+			margin-bottom: 0;
+			@media screen and (max-width: $break-medium) {
+				@include font-size(12);
+			}
+		}
+		a.ama{
+			width:52px;
+			height:19px;
+			display: block;
+			background:url('../images/ama.png') left top no-repeat;
+			background-size:52px 19px;
+			float:right;
+			@extend %ir;
+			.ie8 &{
+				background:url('../images/ama.png') left top no-repeat;
+			}
+			@media screen and (max-width: $break-small) {
+				float: none;
+				display: inline-block;
+				margin:0 auto;
+			}
+		}
+		#logos{
+			@extend %clearfix;
+			a{
+				span.logo{
+					display: block;
+					padding:0 25px;
+					@media screen and (max-width: $break-medium) {
+						padding:0 40px;
+					}
+				}
+				display: inline-block;
+				float:left;
+				width: 50%;
+				text-align:center;
+				color:white;
+				@include font-size(14);
+				line-height: 110%;
+				@media screen and (max-width: $break-medium) {
+					width:100%;
+					float:none;
+				}
+				img{
+					margin-bottom: 10px;
+					width:100%;
+					max-width: 100%;
+				}
+				&:hover,&:active{
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+a#newsletter{
+	background-color: $green;
+	color: white;
+	position: relative;
+	text-align:center;
+	padding:34px;
+	margin-bottom:50px;
+	display: block;
+	@include transition(background-color 0.3s ease-in-out);
+	@media screen and (max-width: $break-medium) {
+		padding:24px;
+		margin-bottom: 35px;
+	}
+	@media screen and (max-width: $break-small) {
+		padding:20px;
+	}
+	&:after{
+		content: "";
+		width:88px;
+		height:88px;
+		display: inline-block;
+		background:url('../images/click-here-page-fold.jpg') left top no-repeat;
+		@include abs-pos(0,0,auto,auto);
+		@media screen and (max-width: $break-small) {
+			background: none;
+		}
+	}
+	h4{
+		color: white;
+		text-transform: uppercase;
+		@include font-size(30);
+		margin-bottom: 15px;
+		strong{
+			color: $blue;
+		}
+		@media screen and (max-width: $break-medium) {
+			@include font-size(26);
+			margin-bottom: 10px;
+		}
+		@media screen and (max-width: $break-small) {
+			@include font-size(20);
+		}
+	}
+	p{
+		margin-bottom: 0;
+		@media screen and (max-width: $break-medium) {
+			padding: 0 15%;
+		}
+		@media screen and (max-width: $break-small) {
+			padding:0;
+			margin-bottom: 15px;
+		}
+	}
+	&:hover,&:active{
+		background-color: lighten($green,5);
+		text-decoration: none;
+	}
+	.button{
+		margin:0 auto;
+		display: none;
+		@media screen and (max-width: $break-small) {
+			display: inline-block;
+		}
+	}
+}
+.social-links{
+	text-align: center;
+	padding-bottom: 15px;
+	@include centered-menu;
+	h5{
+		margin-bottom: 30px;
+		font-family: $proximanova-bold;
+		text-transform: uppercase;
+		color: $mid-grey;
+		@media screen and (max-width: $break-medium) {
+			@include font-size(15);
+			margin-bottom: 20px;
+		}
+		#mobile-contact-panel &{
+			display: inline-block;
+			float:left;
+			@include font-size(15);
+			line-height: 32px;
+			height:32px;
+			color: white;
+		}
+	}
+	ul{
+		#mobile-contact-panel &{
+			left:auto;
+			float:right;
+			clear:none;
+		}
+		li{
+			margin: 0 5px;
+			#mobile-contact-panel &{
+				margin: 0 3px;
+				right:auto;
+			}
+		}
+		a{
+			width:67px;
+			height:67px;
+			display: block;
+			background-image:url('../images/google-plus.svg');
+			background-position:left top;
+			background-repeat: no-repeat;
+			background-size:67px 67px;
+			@include transition(opacity 0.3s ease-in-out);
+			@extend %ir;
+			#mobile-contact-panel &{
+				width:32px;
+				height:32px;
+				background-image: url('../images/gplus-white.png');
+				background-size:32px 32px;
+			} 
+			@media screen and (max-width: $break-medium) {
+				width:50px;
+				height:50px;
+				background-size: 50px 50px;
+			}
+			&:hover,&:active{
+				@include opacity(.8);
+			}
+			.ie8 &{
+				background-image: url('../images/google-plus.png');
+			}
+			&.facebook{
+				background-image: url('../images/facebook.svg');	
+				.ie8 &{
+					background-image: url('../images/facebook.png');		
+				}
+				#mobile-contact-panel &{
+					background-image: url('../images/facebook-white.png');	
+				}
+			}
+			&.twitter{
+				background-image: url('../images/twitter.svg');	
+				.ie8 &{
+					background-image: url('../images/twitter.png');		
+				}
+				#mobile-contact-panel &{
+					background-image: url('../images/twitter-white.png');	
+				}
+			}
+			&.pinterest{
+				background-image: url('../images/pinterest.svg');	
+				.ie8 &{
+					background-image: url('../images/pinterest.png');		
+				}
+				#mobile-contact-panel &{
+					background-image: url('../images/pinterest-white.png');	
+				}
+			}
+			&.linkedin{
+				background-image: url('../images/linkedin.svg');	
+				.ie8 &{
+					background-image: url('../images/linkedin.png');		
+				}
+				#mobile-contact-panel &{
+					background-image: url('../images/linkedin-white.png');	
+				}
+			}
+		}
+	}
+}

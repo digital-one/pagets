@@ -1,0 +1,99 @@
+h1,h2,h3,h4,h5{
+	@include font-size(38);
+	line-height: 100%;
+	padding:0;
+	margin: 0 0 46px;
+	color: $green;
+	font-weight: normal;
+	@media screen and (max-width: $break-medium) {
+		@include font-size(36);
+		margin-bottom: 36px;
+	}
+	@media screen and (max-width: $break-small){
+		@include font-size(26);
+		margin-bottom: 25px;
+	}
+}
+h2,h3{
+	@include font-size(28);
+}
+h4{
+	@include font-size(24);
+}
+h5{
+	@include font-size(20);
+}
+
+//heading styles
+
+.header-style-1,.header-style-2,.header-style-3,.header-style-4,.header-style-5,.header-style-6{
+	h1,h2,h3,h4,h5{
+		line-height: 90%;
+		font-weight: normal;
+		@include font-size(38);
+		color: $green;
+		margin-bottom: 46px;
+	}
+}
+.header-style-2,.header-style-3,.header-style-4,.header-style-5,.header-style-6{
+	h2,h3,h4,h5{
+		@include font-size(30);
+		margin-bottom: 36px;
+	}
+}
+.header-style-3,.header-style-4{
+	h2,h3,h4,h5{
+		@include font-size(24);
+		font-family: $proximanova-bold;
+	}
+}
+.header-style-4{
+	h2,h3,h4,h5{
+		font-family: $proximanova-regular;
+		text-transform: uppercase;
+	}
+}
+.header-style-5{
+	h2,h3,h4,h5{
+		@include font-size(20);
+	}
+}
+.header-style-6{
+	h2,h3,h4,h5{
+		@include font-size(20);
+		font-style: italic;
+	}
+}
+strong{
+	font-weight: normal;
+	font-family: $proximanova-bold;
+}
+p,ul{
+	margin-bottom: 25px;
+	@media screen and (max-width: $break-small) {
+		margin-bottom: 20px;
+	}	
+}
+blockquote{
+	p{
+		@include font-size(25)
+	}
+}
+a{
+	text-decoration:none;
+	@include transition(color 0.3s ease-in-out);
+	&:link{
+		color: $blue;
+	}
+	&:visited{
+		color: $mid-grey;
+	}
+	&:hover,&:active{
+		color: black;
+		text-decoration: underline;
+	}
+}
+address{
+	font-style: normal;
+	margin-bottom: 25px;
+}

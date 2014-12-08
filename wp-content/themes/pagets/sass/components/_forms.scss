@@ -1,0 +1,219 @@
+input[type="text"], 
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea,
+.selectBox-dropdown{
+	line-height: 1;
+	@include border-radius(5px);
+	height: 34px;
+	font-family: $proximanova-regular;  
+	font-weight:400;
+	background-color: $light-grey;
+	padding: 0 10px;
+	@include font-size(12);
+	border: none;
+	width: 100%;
+	@include transition (background-color .1s linear 0s);
+	&:focus{
+		background-color: darken($light-grey,5);
+	}
+	@include placeholder {
+    color: black;
+  }
+}
+textarea{
+	padding: 10px;
+	height: auto;
+	resize: none;
+	height:150px;
+}
+input,textarea{
+	@include box-shadow (inset 0px 2px 2px 0px rgba(0, 0, 0, 0.1));
+}
+.popup-form{
+	min-width:300px;
+	h3{
+		color: $blue;
+	}
+	li{
+		margin-bottom: 10px;
+	}
+	input.button{
+		border:none;
+		background-color:$grey;
+		@include border-radius(5px);
+		height:30px;
+		line-height: 1;
+		padding: 0 10px;
+		color: white;
+		text-align: center;
+		&:hover,&:active{
+			background-color: $blue;
+		}
+	}
+}
+.validation_error,.validation_message{
+	color: red !important;
+	margin-bottom: 10px;
+}
+.validation_message{
+	margin: 3px 0 0;
+}
+
+//selectbox
+
+
+.selectBox-dropdown{
+	position: relative;
+	cursor: pointer;
+
+	&:hover, &:active, &:focus{
+		border-style: none;
+		background-color: darken($light-grey,5);
+		text-decoration: none;
+	}
+	&.selectBox-menuShowing{
+    	background-color: darken($light-grey,5);
+    }
+    &.selectBox-menuShowing-bottom{
+
+    }
+    &.selectBox-menuShowing-top{
+    	
+    }
+	.selectBox-label{
+		height: 34px;
+		line-height: 34px;
+		@include font-size(15);
+		display: block;
+		font-family: $proximanova-bold;
+		color: $grey;
+	}
+	.selectBox-arrow{
+		height: 6px;
+    	width: 9px;
+    	background: url('../images/selectbox-arrow.png') center center no-repeat;
+    	@include abs-pos(50%,15px,auto,auto);
+    	margin-top:-3px;
+    	display: block;
+	}
+}
+.selectBox-dropdown-menu {
+    position: absolute;
+    z-index: 99999;
+    max-height: 200px;
+    min-height: 1em;
+    background: white !important;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    @include box-shadow(0 2px 6px rgba(0, 0, 0, .2));
+	&.selectBox-options{
+		li,a{
+			list-style: none;
+    		display: block;
+    		cursor: default;
+    		padding: 0;
+    		margin: 0;
+			text-align:left;
+		}
+		li{
+			&.selectBox-hover a {
+    			background-color: #f7f7f7;
+    			text-decoration: none;
+    		}
+    		&.selectBox-selected a{
+    			//background-color: $green;
+    		}
+		}
+		a{
+			font-family: $proximanova-regular;
+			@include font-size(15);
+			padding: 4px 10px;
+		}
+		&.selectBox-options-top{
+    		border-bottom:none;
+			margin-top:1px;
+		}
+		&.selectBox-options-bottom{
+
+		}
+		&.selectBox-optgroup {
+    		color: #666;
+    		background: #EEE;
+    		font-weight: bold;
+    		line-height: 1.5;
+    		padding: 0 .3em;
+    		white-space: nowrap;
+		}
+	}
+}
+.selectBox-inline { 
+    min-width: 150px;
+    outline: none;
+    border: solid 1px #BBB;
+    background: #FFF;
+    display: inline-block;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    overflow: auto;
+}
+
+
+//gravity forms
+
+.gform_wrapper{
+	margin:0;
+	.gform_body{
+		@extend %clearfix;
+	}
+	.gform_footer{
+		text-align: right;
+		margin:20px 0 0;
+	}
+	ul{
+		list-style-type: none;
+	}
+	li{
+		padding: 0 !important;
+		margin-bottom: 10px;
+		list-style-type: none;
+		
+		&:before{
+			background:none !important;
+		}
+		&#field_1_5{
+			@include span-columns(12);
+		}
+		&.no-label{
+			label{
+				display: none;
+			}
+		}
+		&.half{
+			select,input{
+				width: 50%;
+			}
+		}
+	}
+	label{
+		font-family: $proximanova-bold;
+		@include font-size(15);
+		margin-bottom: 4px;
+		display: block;
+		.gfield_required{
+			color: $orange;
+			padding-left:4px;
+		}
+	}
+	
+	select{
+		width: 70%;
+		@media screen and (max-width: $break-small) {
+			width:100%;
+		}
+	}	
+}

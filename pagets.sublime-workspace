@@ -4,24 +4,84 @@
 		"selected_items":
 		[
 			[
+				"ba",
+				"background-position"
+			],
+			[
+				"back",
+				"background-size"
+			],
+			[
+				"menu",
+				"menu-item-has-children"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"pro",
+				"proximanova-bold"
+			],
+			[
+				"fo",
+				"font-family"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"n",
+				"none"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"backgroun",
+				"background-image"
+			],
+			[
 				"pad",
 				"padding-bottom"
 			],
 			[
-				"ba",
-				"background-color"
+				"mar",
+				"margin-bottom"
 			],
 			[
-				"backg",
-				"background-position"
+				"slick",
+				"slick-dots"
 			],
 			[
-				"marg",
-				"margin-top"
+				"padd",
+				"padding-left"
 			],
 			[
 				"font",
 				"font-size"
+			],
+			[
+				"bl",
+				"block"
+			],
+			[
+				"i",
+				"include"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"paddin",
+				"padding-right"
+			],
+			[
+				"marg",
+				"margin-top"
 			],
 			[
 				"fon",
@@ -40,20 +100,8 @@
 				"text-transform"
 			],
 			[
-				"fo",
-				"font-family"
-			],
-			[
 				"pa",
 				"padding-bottom"
-			],
-			[
-				"tex",
-				"text-decoration"
-			],
-			[
-				"mar",
-				"margin-bottom"
 			],
 			[
 				"max",
@@ -64,16 +112,8 @@
 				"font-family"
 			],
 			[
-				"back",
-				"background-color"
-			],
-			[
 				"border-",
 				"border-bottom"
-			],
-			[
-				"padd",
-				"padding"
 			],
 			[
 				"bord",
@@ -124,16 +164,8 @@
 				"isMobileMenu"
 			],
 			[
-				"paddin",
-				"padding-top"
-			],
-			[
 				"wr",
 				"break-word"
-			],
-			[
-				"bor",
-				"border"
 			],
 			[
 				"ur",
@@ -158,14 +190,6 @@
 			[
 				"casestudies",
 				"casestudies_category"
-			],
-			[
-				"n",
-				"nowrap"
-			],
-			[
-				"ma",
-				"margin-bottom"
 			],
 			[
 				"tran",
@@ -490,198 +514,11 @@
 			[
 				"remove",
 				"removeClass"
-			],
-			[
-				"content",
-				"contents"
-			],
-			[
-				"quickmen",
-				"quickmenu_moveto"
-			],
-			[
-				"quick",
-				"quickmenu_show"
-			],
-			[
-				"quic",
-				"quickmenu_show"
-			],
-			[
-				"o",
-				"opacity"
-			],
-			[
-				"is",
-				"is_open"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "templates/sass/templates/_all.scss",
-			"settings":
-			{
-				"buffer_size": 32,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "",
-			"file": "templates/sass/components/_grid.scss",
-			"file_size": 8045,
-			"file_write_time": 1416216539000000,
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "templates/sass/helpers/mixins/_border-radius.scss",
-			"settings":
-			{
-				"buffer_size": 1047,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "templates/sass/_base.scss",
-			"settings":
-			{
-				"buffer_size": 209,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "templates/sass/_reset.scss",
-			"settings":
-			{
-				"buffer_size": 93,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "templates/sass/components/_slider.scss",
-			"settings":
-			{
-				"buffer_size": 1590,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "templates/centre-of-excellence.php",
-			"settings":
-			{
-				"buffer_size": 3486,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "templates/footer.php",
-			"settings":
-			{
-				"buffer_size": 2750,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "templates/header.php",
-			"settings":
-			{
-				"buffer_size": 2449,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Applications/MAMP/htdocs/shark/templates/index.php",
-			"settings":
-			{
-				"buffer_size": 11592,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "templates/sass/templates/_home.scss",
-			"settings":
-			{
-				"buffer_size": 2166,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "templates/sass/_variables.scss",
-			"settings":
-			{
-				"buffer_size": 1579,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "templates/sass/components/_typography.scss",
-			"settings":
-			{
-				"buffer_size": 562,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "templates/sass/components/_global.scss",
-			"settings":
-			{
-				"buffer_size": 4895,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "templates/index.php",
-			"settings":
-			{
-				"buffer_size": 3853,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "templates/sass/components/_navigation.scss",
-			"settings":
-			{
-				"buffer_size": 2558,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "templates/sass/components/_footer.scss",
-			"settings":
-			{
-				"buffer_size": 1178,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "templates/sass/components/_container.scss",
-			"settings":
-			{
-				"buffer_size": 184,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "templates/sass/helpers/mixins/_rgba-bg.scss",
-			"settings":
-			{
-				"buffer_size": 705,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "templates/js/scripts.js",
-			"settings":
-			{
-				"buffer_size": 1056,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -711,26 +548,63 @@
 	},
 	"file_history":
 	[
-		"/Applications/MAMP/htdocs/ama/pagets/templates/js/scripts.js",
-		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/helpers/mixins/_wp-current-page-links.scss",
-		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/components/_header.scss",
 		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/components/_navigation.scss",
-		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/components/_footer.scss",
-		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/helpers/mixins/_inline-menu.scss",
-		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/components/_container.scss",
-		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/helpers/_placeholders.scss",
-		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/components/_typography.scss",
-		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/layout.scss",
-		"/Applications/MAMP/htdocs/ama/pagets/templates/index.php",
-		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/components/_global.scss",
-		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/templates/_home.scss",
-		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/components/_all.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/js/scripts.js",
+		"/Users/neilmills/Desktop/example.js",
+		"/Users/neilmills/Desktop/fullpage config.js",
 		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/components/_slider.scss",
-		"/Applications/MAMP/htdocs/ama/pagets/templates/js/slick/slick.css",
-		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/helpers/mixins/_centered-menu.scss",
-		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/_variables.scss",
-		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/_base.scss",
 		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/components/_forms.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/components/_header.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/header.php",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/_variables.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/professionals.php",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/footer.php",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/components/_global.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/templates/_contact.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/components/_footer.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/helpers/mixins/_wp-current-page-links.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/helpers/mixins/_inline-menu.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/templates/_professionals.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/register-login.php",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/remembrance-garden.php",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/templates/_shop.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/templates/_remembrance-garden.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/shop.php",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/local-support.php",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/index.php",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/contact.php",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/info-support.php",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/templates/_home.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/components/_container.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/organisation-structure.php",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/components/_accordion.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/archive-patron.php",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/templates/_news-events.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/templates/_patrons.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/components/_typography.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/js/slick/slick.css",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/centre-of-excellence.php",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/components/_all.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/news-events.php",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/single-patron.php",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/helpers/mixins/_column-grid.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/single-news.php",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/_base.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/pagets-disease.php",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/images/facebook.png",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/helpers/mixins/_all.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/images/search-icon.png",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/templates/_all.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/helpers/mixins/_fixed-ratio.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/js/masonry.pkgd.min.js",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/helpers/mixins/_rgba-bg.scss",
+		"/Applications/MAMP/htdocs/shark/templates/index.php",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/_reset.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/helpers/mixins/_border-radius.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/components/_grid.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/helpers/_placeholders.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/layout.scss",
+		"/Applications/MAMP/htdocs/ama/pagets/templates/sass/helpers/mixins/_centered-menu.scss",
 		"/Users/neilmills/Library/Caches/Cleanup At Startup/Transmit/12A20691-7910-4A2C-83F3-6CEAB3680264/_scripts.js",
 		"/Applications/MAMP/htdocs/bowman-riley/wp-content/themes/bowmanriley/archive-news.php",
 		"/Applications/MAMP/htdocs/bowman-riley/wp-content/themes/bowmanriley/functions.php",
@@ -801,44 +675,7 @@
 		"/Applications/MAMP/htdocs/bowman-riley/wp-content/themes/bowmanriley/js/admin-scripts.js",
 		"/Applications/MAMP/htdocs/bowman-riley/wp-content/themes/bowmanriley/functions/options.php",
 		"/Applications/MAMP/htdocs/bowman-riley/wp-content/themes/bowmanriley/images/twitter.svg",
-		"/Applications/MAMP/htdocs/bowman-riley/wp-content/themes/bowmanriley/images/search-icon.svg",
-		"/Applications/MAMP/htdocs/bowman-riley/wp-content/themes/bowmanriley/includes/secondary-nav-home.php",
-		"/Applications/MAMP/htdocs/Backups/Stonefix/stonefix/lloyds/js/jquery.confirmBox.js",
-		"/Users/neilmills/Downloads/altinetc_dev.sql",
-		"/Applications/MAMP/htdocs/bowman-riley/bowmanriley.sql",
-		"/Applications/MAMP/htdocs/bowman-riley/wp-content/themes/bowmanriley/includes/secondary-nav.php",
-		"/Applications/MAMP/htdocs/bowman-riley/wp-content/themes/bowmanriley/page-latest-news.php",
-		"/Applications/MAMP/htdocs/bowman-riley/wp-content/themes/bowmanriley/js/jquery.slimscroll.min.js",
-		"/Applications/MAMP/htdocs/bowman-riley/wp-content/themes/bowmanriley/includes/news-nav.php",
-		"/Applications/MAMP/htdocs/bowman-riley/build/header.php",
-		"/Applications/MAMP/htdocs/bowman-riley/wp-content/themes/bowmanriley/----page-our-story.php",
-		"/Users/neilmills/Library/Caches/Cleanup At Startup/Transmit/58C53E6F-9FC9-4C5D-90EA-3A62DD171973/archive-news.php",
-		"/Applications/MAMP/htdocs/bowman-riley/wp-content/themes/bowmanriley/----page-architects.php",
-		"/Applications/MAMP/htdocs/bowman-riley/wp-content/themes/bowmanriley/functions/retina-images.php",
-		"/Applications/MAMP/htdocs/bowman-riley/wp-content/themes/bowmanriley/page-our-architectural-services.php",
-		"/Applications/MAMP/htdocs/bowman-riley/build/work-with-us.php",
-		"/Applications/MAMP/htdocs/bowman-riley/build/our-people-sector.php",
-		"/Applications/MAMP/htdocs/park_manor/wp-content/themes/parkmanor_modified/taxonomy-activity_category.php",
-		"/Applications/MAMP/htdocs/bowman-riley/build/sass/components/_grid.scss",
-		"/Applications/MAMP/htdocs/bowman-riley/build/about.php",
-		"/Applications/MAMP/htdocs/bowman-riley/build/index.php",
-		"/Applications/MAMP/htdocs/bowman-riley/.htaccess",
-		"/Applications/MAMP/htdocs/bowman-riley/sass/components/_global.scss",
-		"/Applications/MAMP/htdocs/bowman-riley/sass/components/_navigation.scss",
-		"/Applications/MAMP/htdocs/bowman-riley/sass/templates/_contact.scss",
-		"/Applications/MAMP/htdocs/bowman-riley/sass/components/_typography.scss",
-		"/Applications/MAMP/htdocs/bowman-riley/contact.php",
-		"/Applications/MAMP/htdocs/bowman-riley/images/bowman-riley-home.svg",
-		"/Applications/MAMP/htdocs/bowman-riley/header.php",
-		"/Applications/MAMP/htdocs/bowman-riley/sass/components/_header.scss",
-		"/Applications/MAMP/htdocs/bowman-riley/sass/components/_container.scss",
-		"/Applications/MAMP/htdocs/bowman-riley/index.php",
-		"/Applications/MAMP/htdocs/bowman-riley/our-people-sector.php",
-		"/Applications/MAMP/htdocs/bowman-riley/sass/templates/_media.scss",
-		"/Applications/MAMP/htdocs/bowman-riley/js/scripts.js",
-		"/Applications/MAMP/htdocs/bowman-riley/wp-content/themes/bowmanriley/index.php",
-		"/Applications/MAMP/htdocs/bowman-riley/sass/templates/_all.scss",
-		"/Applications/MAMP/htdocs/bowman-riley/media.php"
+		"/Applications/MAMP/htdocs/bowman-riley/wp-content/themes/bowmanriley/images/search-icon.svg"
 	],
 	"find":
 	{
@@ -859,6 +696,21 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"('body')",
+			"post-list",
+			"footer",
+			"intro",
+			"signposts",
+			"span",
+			"ama",
+			"#intro",
+			"ama",
+			"footer",
+			"dots",
+			"arrows",
+			"newsletter",
+			"black",
+			"contact",
 			"secondary-nav",
 			"current-menu-item",
 			"current",
@@ -971,22 +823,7 @@
 			"aside",
 			"fixed",
 			"main",
-			"arrow-divide",
-			".cell",
-			"sub-nav",
-			"main",
-			"-50",
-			"main",
-			"svg",
-			"main",
-			"twitter",
-			"latest-work",
-			"share",
-			"svg",
-			"mouseenter",
-			"menu",
-			"sub-menu",
-			"overlay"
+			"arrow-divide"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -1132,552 +969,8 @@
 	"groups":
 	[
 		{
-			"selected": 5,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "templates/sass/templates/_all.scss",
-					"settings":
-					{
-						"buffer_size": 32,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								16,
-								16
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "templates/sass/components/_grid.scss",
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "templates/sass/helpers/mixins/_border-radius.scss",
-					"settings":
-					{
-						"buffer_size": 1047,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								527,
-								527
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "templates/sass/_base.scss",
-					"settings":
-					{
-						"buffer_size": 209,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								157,
-								157
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "templates/sass/_reset.scss",
-					"settings":
-					{
-						"buffer_size": 93,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "templates/sass/components/_slider.scss",
-					"settings":
-					{
-						"buffer_size": 1590,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								998,
-								966
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 274.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "templates/centre-of-excellence.php",
-					"settings":
-					{
-						"buffer_size": 3486,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2009,
-								2009
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 100.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "templates/footer.php",
-					"settings":
-					{
-						"buffer_size": 2750,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								691,
-								691
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "templates/header.php",
-					"settings":
-					{
-						"buffer_size": 2449,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								1130
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "/Applications/MAMP/htdocs/shark/templates/index.php",
-					"settings":
-					{
-						"buffer_size": 11592,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "templates/sass/templates/_home.scss",
-					"settings":
-					{
-						"buffer_size": 2166,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2166,
-								2166
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 782.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "templates/sass/_variables.scss",
-					"settings":
-					{
-						"buffer_size": 1579,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1384,
-								1326
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "templates/sass/components/_typography.scss",
-					"settings":
-					{
-						"buffer_size": 562,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								76,
-								76
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "templates/sass/components/_global.scss",
-					"settings":
-					{
-						"buffer_size": 4895,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4881,
-								4881
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3025.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "templates/index.php",
-					"settings":
-					{
-						"buffer_size": 3853,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1027,
-								1027
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "templates/sass/components/_navigation.scss",
-					"settings":
-					{
-						"buffer_size": 2558,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1590,
-								1645
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1358.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "templates/sass/components/_footer.scss",
-					"settings":
-					{
-						"buffer_size": 1178,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								283,
-								283
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "templates/sass/components/_container.scss",
-					"settings":
-					{
-						"buffer_size": 184,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								93,
-								93
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 18,
-					"file": "templates/sass/helpers/mixins/_rgba-bg.scss",
-					"settings":
-					{
-						"buffer_size": 705,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								57,
-								7
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 19,
-					"file": "templates/js/scripts.js",
-					"settings":
-					{
-						"buffer_size": 1056,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								823,
-								823
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 40.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],

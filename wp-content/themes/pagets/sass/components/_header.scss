@@ -1,0 +1,139 @@
+#header{
+	position: relative;
+	@extend %clearfix;
+	height:140px;
+	@media screen and (max-width: $break-medium) {
+		height: 96px;
+		padding-bottom:10px;
+		background:url('../images/mobile-header-divide.jpg') center bottom repeat-x;
+		#home &{
+			height:86px;
+			padding-bottom:0;
+			background:none;
+		}
+	}
+	@media screen and (max-width: $break-small){
+		height: 82px;
+		&#home &{
+			height: 72px;
+		}
+	}
+	#home-link{
+		margin:0;
+		width:198px;
+		height:79px;
+		display:block;
+		@include abs-pos(34px,auto,auto,0);
+		@media screen and (max-width: $break-medium) {
+			width:114px;
+			height:45px;
+			@include abs-pos(20px,auto,auto,20px);
+		}
+		@media screen and (max-width: $break-small){
+			width: 101px;
+			height: 41px;
+			@include abs-pos(20px,auto,auto,15px);
+		}
+		img{
+			@include fit-grid(width);
+		}
+
+	}
+	#ribbon{
+		background-color: $green;
+		color: white;
+		@include abs-pos(62px,0,auto,auto);
+		padding: 0 23px 0 0;
+		display: inline-block;
+		min-width: 235px;
+		height:52px;
+		text-align:right;
+		@include font-size(15);
+		&:before{
+			content:"";
+			height:100%;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		&:after{
+			content:"";
+			height:100%;
+			width:29px;
+			display: block;
+			@include abs-pos(0,auto,auto,-29px);
+			background:url('../images/ribbon-end.png') left top no-repeat;
+		}
+		div{
+			vertical-align: middle;
+          	display: inline-block;
+          	width: 99%;
+          	span{
+          		display: block;
+          		line-height: 100%;
+          		padding:2px 0;
+          	}
+		}
+		a:link,a:visited{
+			font-family: $proximanova-bold;
+		}
+		a:hover,a:active{
+			text-decoration: none;
+		}
+		@media screen and (max-width: $break-medium) {
+			display: none;
+		}
+	}
+	#search{
+		@include abs-pos(13px,0,auto,auto);
+		width: 142px;
+		input{
+			height:30px;
+			line-height: 1;
+			font-family: $proximanova-bold;
+			background-color: transparent;
+			@include box-shadow(none);
+			@include font-size(16);
+			padding: 0 32px 0 0;
+			@include placeholder {
+    			color: #929292;
+    			@include opacity(1);
+  			}
+		}
+		button{
+			@include abs-pos(0,0,auto,auto);
+			height:30px;
+			width:30px;
+			background:url('../images/search-icon.svg') center center no-repeat;
+			background-size: 15px 15px;
+			border: none;
+			@extend %ir;
+		}
+		@media screen and (max-width: $break-medium) {
+			display: none; 
+		}
+	}
+}
+#mobile-search-panel,#mobile-contact-panel{
+	display: none;
+	background-color: $blue;
+	color: white;
+	margin-top:-10px;
+	position: relative;
+	//@include abs-pos(82px,0,0,0);
+	z-index: 999;
+	padding: 20px 15px;
+	width: 100%;
+	//display: block;
+	height: 100%;
+	h3{
+		color: white;
+		@include font-size(24);
+		font-family: $proximanova-bold;
+	}
+}
+#mobile-contact-panel{
+	background-color: $green;
+	address{
+		margin-bottom: 10px;  
+	}
+}

@@ -1,0 +1,305 @@
+nav#nav{
+	display: block;
+	@media screen and (max-width: $break-medium) {
+		background-color: $green;
+		margin-top:-10px;
+		z-index: 9999;
+		position: relative;
+		padding:66px 0 0;
+		display: none;
+	}
+	font-family: $proximanova-bold;
+	@include font-size(20);
+	@extend .clearfix;
+	padding:0 15px;
+	@media screen and (max-width: $break-medium) {
+		font-family: $proximanova-regular;
+		@include font-size(15);
+	}
+	a#mobile-prev{
+		@include abs-pos(24px,auto,auto,15px); 
+		z-index: 9999;
+		text-transform: uppercase;
+		color: white;
+		display: none;
+		height: 22px;
+		line-height: 22px;
+		background:url('../images/arrow-white-prev.png') left center no-repeat;
+		background-size: 8px 12px;
+		padding-left:15px;
+		&:hover,&:active{
+			@include opacity(.8);
+			text-decoration: none;
+		}
+	}
+	ul{
+		@include wp-current-page-links{
+			background-color: $light-grey;
+			color: $green;
+			@media screen and (max-width: $break-medium) {
+				background-color: lighten($green,10);
+				color: white;
+				font-family: $proximanova-bold;
+			}
+		}
+		float: left;
+		margin-bottom: 0;
+		@media screen and (max-width: $break-medium) {
+			width:100%;
+			display: block;
+			float: none; 
+		}
+		@media screen and (min-width: $break-medium+1) {
+			@include inline-menu;
+		}
+		li{
+			&.menu-item-has-children{
+				position: relative;
+				a{
+					background-image:url('../images/arrow-white.png');
+					background-repeat: no-repeat;
+					background-position: calc(100% - 15px) center;
+					background-size: 8px 12px;
+				}
+				ul a{
+					background-image:none;
+				}
+			}
+			a{
+				@include transition(all 0.3s ease-in-out);
+				&:link,&:visited{
+					color: $blue;
+					height: 50px;
+					line-height: 50px;
+					padding:0 20px;
+					background-color:transparent;
+					@media screen and (max-width: $break-medium) {
+						color: white;
+					}
+				}
+				&:hover,&:active{
+					background-color: black;
+					color: white;
+					text-decoration: none;
+					@media screen and (max-width: $break-medium) {
+						background-color: lighten($green,10);
+					}
+				}
+				@media screen and (max-width: $break-medium) {
+					display: block;
+					width:100%;
+					padding:10px 15px !important;
+					height:auto !important;
+					line-height: 100% !important; 
+					color: white;
+				}
+			}
+			@media screen and (max-width: $break-medium) {
+				display: block;
+				width:100%;
+			}
+			.sub-menu{
+				@include abs-pos(0,auto,auto,0);
+				display: none;
+			}
+		}
+	}
+	.container{
+		padding: 0 12px;
+		@media screen and (max-width: $break-medium) {
+			padding:0;
+		}
+	}
+	a.donate{
+		background-color: $orange;
+		height:50px;
+		line-height: 50px;
+		color: white;
+		display: inline-block;
+		padding:0 20px;
+		@include border-radiuses(6px,0,0,6px);
+		float: right;
+		@include transition(background-color 0.3s ease-in-out);
+		&:hover,&:active{
+			//background-color: lighten($orange,10);
+			background-color: black;
+			text-decoration: none;
+		}
+		@media screen and (max-width: $break-medium) {
+			@include abs-pos(-52px,15px,auto,15px);
+			height:40px;
+			@include border-radius(0);
+			line-height: 40px;
+			text-align: center;
+			text-transform: uppercase;
+			font-family: $proximanova-bold;
+		}
+	}
+}
+nav#secondary-nav{
+	@include abs-pos(12px,162px,auto,auto);
+	ul{
+		@include inline-menu;
+		@include font-size(16);
+		li{
+			margin-right: 20px;
+			a{
+				height:30px;
+				line-height: 30px;
+			}
+		}
+	}
+	@media screen and (max-width: $break-medium) {
+		display: none;
+	}
+}
+nav#footer-nav{
+	@include inline-menu;
+	@extend %clearfix;
+	margin-bottom: 20px;
+	@media screen and (max-width: $break-small) {
+		@include centered-menu;
+	}
+	li{
+		margin-right: 20px;
+		@media screen and (max-width: $break-small) {
+			margin: 0 10px;
+		}
+	}
+	a:link,a:visited{
+		color: white;
+	}
+	a:hover,a:active{
+		color: $light-blue;
+	}
+}
+nav#sub-nav{
+	ul{
+		margin:0;
+		li{
+			a{
+				background-color: $green;
+				display: block;
+				padding: 12px 10px 12px 25px;
+				color: white;
+				@include font-size(17);
+				line-height: 130%;
+				@include transition(background-color 0.2s ease-in-out);
+				&:link,&:visited{
+					
+				}
+				&:hover,&:active{
+					text-decoration: none;
+					background-color:black;
+				}
+			}
+			&.current-menu-item{
+				a{
+					background-color: $light-green;
+					font-family: $proximanova-bold;
+				}
+				.sub-menu{
+					li{
+						a{
+							background-color: $dark-green;
+							font-family: $proximanova-regular;
+							@include font-size(15);
+							&:hover,&:active{
+								background-color: black;
+							}
+						}
+					}
+				}
+			}
+			&.menu-item-has-children.current-page-ancestor{
+				a{
+					background-color: $dark-green;
+					font-family: $proximanova-bold;
+				}
+				.sub-menu{
+					li{
+						a{
+							font-family: $proximanova-regular;
+							@include font-size(15);
+							&:hover,&:active{
+								background-color: black;
+							}
+						}
+						&.current-menu-item{
+							a{
+								background-color: $light-green;
+							}
+						}
+					}	
+				}
+			}
+		}	
+	}
+	@media screen and (max-width: $break-medium) {
+		display: none;
+	}
+}
+nav#mobile-controls{ 
+	@include abs-pos(0,20px,auto,auto);
+	display: none;
+	@media screen and (max-width: $break-medium) {
+		display: block; 
+	}
+	@media screen and (max-width: $break-small){
+		@include abs-pos(0,15px,auto,auto);
+	}
+	li{
+		display:inline;
+		width: 44px;
+		height: 86px;
+		@media screen and (max-width: $break-small){
+			height: 72px;
+		}
+		float: left;
+		margin-left:10px;
+		a{
+			width:44px;
+			height:44px;
+			@include vertical-align;
+			display: block;
+			@extend %ir;
+			background-image:url('../images/mobile-nav-icon.png');
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-color: $blue;
+			@include border-radius(5px);
+		}
+		&.menu{
+			a:hover,a:active{
+				background-color: black;
+			}
+		}
+		&.search,&.tel{
+			a{
+				background-size: 21px 21px;
+				background-color: transparent;
+				background-image:url('../images/search-icon.png');	
+			}
+			&.active{
+				background-image:url('../images/mobile-menu-pointer-blue.jpg');
+				background-repeat: no-repeat;
+				background-position: center bottom;
+				background-size: 18px 9px;
+				a{
+					background-image: url('../images/close-icon.png');
+				}
+			}
+		}
+		&.tel{
+			a{
+				background-image:url('../images/telephone-icon.png');		
+			}
+			&.active{
+				background-image:url('../images/mobile-menu-pointer-green.jpg');
+				a{
+					background-image: url('../images/close-icon.png');
+				}
+			}
+		}
+	}
+}

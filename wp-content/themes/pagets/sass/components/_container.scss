@@ -1,0 +1,97 @@
+.container{
+	@include outer-container;
+	position: relative;
+	@media screen and (max-width: $break-medium) {
+		padding:0 20px;
+	}
+	@media screen and (max-width: $break-small) {
+		padding:0;
+	}
+}
+.content{
+	margin-bottom: 50px;
+	@media screen and (max-width: $break-medium) {
+		margin-top:30px;
+	}
+	@media screen and (max-width: $break-small) {
+		margin-bottom:5px;
+	}
+}
+aside{
+	@include span-columns(3);
+	@media screen and (max-width: $break-medium) {
+		width: 100%;
+		margin:0;
+	}
+	&#right-sidebar{
+		margin-left: -2.35765%;
+		width: calc(23.2318% + 2.35765%);
+		@media screen and (max-width: $break-medium) {
+			width: 100%;
+			margin:0;
+		}
+		@media screen and (max-width: $break-small) {
+			padding:0 15px;
+		}
+	}
+	.wide-sidebar &{
+		@include span-columns(4);
+		@media screen and (max-width: $break-medium) {
+			width: 100%;
+			margin:0;
+		}
+	}
+}
+#main{
+	.two-column &{
+		@include span-columns(9);
+		@media screen and (max-width: $break-medium) {
+			@include span-columns(12);
+			@include omega;
+		}
+	}
+	.two-column.main-right &{
+		@include omega;
+		@media screen and (max-width: $break-small) {
+			padding:0 15px;
+		}
+		
+	}
+	.two-column.wide-sidebar &{
+		@include span-columns(8);
+		@media screen and (max-width: $break-medium) {
+			@include span-columns(12);
+			@include omega;
+		}
+	}
+	.three-column &{
+		@include span-columns(6);
+		@media screen and (max-width: $break-medium){
+			@include span-columns(12);
+			@include omega;
+		}	
+		@media screen and (max-width: $break-small) {
+			padding:0 15px;
+		}
+	}
+	
+}
+.gutter-left{
+	padding:0 0 0 4%;
+	@media screen and (max-width: $break-medium){
+		padding:0 0 4%;
+	}
+}
+.gutter-right{
+	//padding:0 11.4% 0 0;
+	padding:0 8% 0 0;
+	@media screen and (max-width: $break-medium){
+		padding:0 0 4%;
+	}
+}
+.gutter-mid{
+	padding: 0 8% 0 4%;
+	@media screen and (max-width: $break-medium){
+		padding:0 0 4%;
+	}
+}

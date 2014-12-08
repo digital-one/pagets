@@ -1,0 +1,14 @@
+@mixin column-grid($columns, $gutter, $selector){
+	@extend .clearfix;
+    display: block;
+    width: ($gutter + 100%);
+    margin-left:- $gutter; 
+    #{$selector}{
+        overflow: hidden;
+        position: relative;
+        width: (100% - ($columns * $gutter)) / $columns;
+        margin-left: $gutter;
+        margin-bottom: $gutter; 
+        float: left;
+	}
+}

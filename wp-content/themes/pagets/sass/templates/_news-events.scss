@@ -1,0 +1,220 @@
+#news-events-archive{
+	@media screen and (max-width: $break-small) {
+		padding:0 15px;
+	}
+	header{
+		@extend %clearfix;
+		@media screen and (max-width: $break-medium) {
+			margin-bottom: 20px;
+		}
+		h1{
+			display: inline-block;
+			float: left;
+			@media screen and (max-width: $break-medium) {
+				float: none;
+			}
+		}
+		form{
+			float: right;
+			@media screen and (max-width: $break-medium) {
+				float: none;
+				margin-bottom: 20px;
+				@media screen and (max-width: $break-small) {
+					margin-bottom:0;
+				}
+				select{
+					width:40%;
+					margin-right:10px;
+					@media screen and (max-width: $break-small) {
+						width: 100%;
+						margin:0;
+					}
+				}
+				.selectBox{
+					margin-right: 10px;
+					@media screen and (max-width: $break-small) {
+						width:100%;
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+	}
+	#posts{
+		@include column-grid(3, 2%, 'article');
+		article{
+            background-color: white;
+			@include box-shadow (0px 0px 10px 0px rgba(0, 0, 0, 0.2));
+			padding: 25px 25px 25px;
+			@media screen and (max-width: $break-medium) {
+				width:48%;
+			}
+			@media screen and (max-width: $break-small) {
+				width: 98%;
+				padding: 18px;
+				margin-bottom: 20px;
+			}
+			figure{
+				@include fixed-ratio(100%,66.66%,a);
+				background-color: $grey;
+				margin-bottom: 25px;
+				img{
+					width:100%;
+					height:auto; 
+				}
+			}
+			h3{
+				@include font-size(17);
+				font-family: $proximanova-bold;
+				line-height: 140%;
+				margin-bottom: 25px;
+				a{
+
+				}
+			}
+			p{
+				margin-bottom: 20px;
+				@include font-size(17);
+				@media screen and (max-width: $break-small) {
+					@include font-size(14);
+				}
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	a.more-posts{
+		display: block;
+		width:100%;
+		line-height: 16px;
+		padding: 15px;
+		color: $grey;
+		text-transform: uppercase;
+		text-align: center;
+		@include font-size(15);
+		font-family: $proximanova-bold;
+		background-color: $light-grey;
+		@include transition(background-color 0.3s ease-in-out);
+		&:hover,&:active{
+			background-color: darken($light-grey,10);
+			text-decoration: none;
+		}
+		span{
+			display: inline-block;
+			margin:0 auto;
+		}
+		&.loading{
+			cursor: auto;
+			span{
+				padding-left:26px;
+				background: url('../images/loader.png') left top no-repeat;
+			}
+			&:hover,&:active{
+				background-color: $light-grey;
+			}
+		}
+	}
+	footer{
+		@media screen and (max-width: $break-small) {
+			margin-bottom: 20px;
+		}
+	}
+}
+#news-single{
+	.slick-slider{
+		margin-bottom: 50px !important; 
+		@extend %clearfix;
+	}
+	aside{
+		float:left;
+	}
+	#main{
+		float: right;
+	}
+	header{
+		@extend %clearfix;
+		h1{
+			margin-bottom: 15px;
+		}
+		.alpha{
+			@include span-columns(9);
+		}
+		aside{
+			@include span-columns(3);
+			text-align: right;
+		}
+	}
+	h2{
+		@include font-size(20);
+		margin-bottom: 25px;
+		@media screen and (max-width: $break-medium) {
+			@include font-size(18);
+			margin-bottom: 20px;
+		}
+	}
+
+	footer{
+		padding:20px 0;
+		border-top:1px solid $light-grey;
+		margin-top: 30px;
+		@include span-columns(12);
+		.alpha,.beta{
+			@include span-columns(6);
+			text-align: left;
+		}
+		.beta{
+			text-align: right;
+		}
+		a{
+			position: relative;
+			display: inline-block;
+			height:30px;
+			line-height: 30px;
+			padding:0 0 0 17px;
+			&:before{
+				content:"";
+				width:8px;
+				height:12px;
+				@include abs-pos(50%,auto,auto,0);
+				display: block;
+				background-image:url('../images/slider-prev.svg');
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: 8px 12px;
+				margin-top:-6px;
+			}
+		}
+		span{
+			display: block;
+			padding:0 0 0 17px;
+		}
+		.beta{
+			a{
+				padding:0 17px 0 0;
+				&:before{
+					background-image:url('../images/slider-next.svg');
+					@include abs-pos(50%,0,auto,auto);	
+				}
+			}
+			span{
+				padding:0 17px 0 0;
+			}
+		}
+	}
+}
+ul.meta{
+	@include font-size(15);
+	margin-bottom: 20px;
+	#news-single &{
+		margin-bottom: 60px;
+	}
+}
+.addthis_native_toolbox{
+	a{
+		width: 100%;
+		display: block;
+		height:30px;
+	}
+
+}

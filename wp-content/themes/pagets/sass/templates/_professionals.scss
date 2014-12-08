@@ -1,0 +1,85 @@
+#professionals{
+	li{
+		@include span-columns(6);
+		@include omega(2n);
+		@media screen and (max-width: $break-small) {
+			@include span-columns(12);
+			@include omega;
+			float: none;
+			margin-bottom: 3px;
+		}
+		a{
+			display: block;
+			figure{
+				@include fixed-ratio(100%,66.66%,img);
+				background-color: $grey;
+				margin-bottom: 15px;
+				@media screen and (max-width: $break-small) {
+					display: none;
+				}
+			}
+			h4{
+				@include font-size(24);
+				text-transform: uppercase;
+				color: $blue;
+				@media screen and (max-width: $break-medium) {
+					@include font-size(20);
+				}
+				@media screen and (max-width: $break-small) {
+					@include font-size(16);
+					font-family: $proximanova-bold;
+					color: white;
+					margin:0;
+				}
+			}
+			&:hover,&:active{
+				h4{
+					color: black;
+					@media screen and (max-width: $break-small) {
+						color: white;
+					}
+				}
+			}
+			@media screen and (max-width: $break-small) {
+				background-color: $blue;
+				padding:15px;
+				position: relative;
+				&:hover,&:active{
+					background-color: black;
+					color: white !important;
+					text-decoration: none;
+				}
+				&:after{
+					content:"";
+					width:8px;
+					height:11px;
+					background:url('../images/arrow-white.png') center center no-repeat;
+					background-size: 8px 11px;
+					@include abs-pos(50%,15px,auto,auto);
+					margin-top: -5px;
+				}
+			}
+
+		}
+		&:nth-child(2n){
+			margin-right:-3.4%;
+			float: right;
+			@media screen and (max-width: $break-medium) {
+				margin-right:-3%;
+			}
+			@media screen and (max-width: $break-small) {
+				margin-right: 0;
+				float: none;
+			}
+		}
+	}
+	.gutter-right{
+		padding:0 11.4% 0 0;
+		@media screen and (max-width: $break-medium) {
+			padding:0 20px 0 0;
+		}
+		@media screen and (max-width: $break-small) {
+			padding:0;
+		}
+	}
+}

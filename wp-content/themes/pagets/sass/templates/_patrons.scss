@@ -1,0 +1,123 @@
+#patron-archive{
+	#intro{
+		padding:0;
+	}
+	h2{
+		font-family: $proximanova-bold;
+		@include font-size(24);
+		margin-bottom: 30px;
+		@media screen and (max-width: $break-small) {
+			@include font-size(20);
+			margin-bottom: 15px;
+		}
+
+	}
+	section{
+		@extend %clearfix;
+		@media screen and (max-width: $break-small) {
+			margin-bottom:20px;
+		}
+	}
+	article{
+		@include span-columns(4);
+		@include omega(3n);
+		padding:0 0 4% 4%;
+		@media screen and (max-width: $break-small) {
+			@include span-columns(12);
+			@include omega;
+			padding:0;
+			float: none;
+			margin-bottom: 20px;
+		}
+		figure{
+			div{
+				background-color: $grey;
+				@include fixed-ratio(100%,66.66%,img);
+				margin-bottom: 15px;
+				@media screen and (max-width: $break-small) {
+					margin-bottom:10px;
+				}
+			}
+		}
+		h4{
+			@include font-size(20);
+			margin-bottom: 0;
+			@media screen and (max-width: $break-small) {
+				@include font-size(18);
+			}
+		}
+		p{
+			margin-bottom: 0;
+		}
+		small{
+			@include font-size(16);
+			font-family: $proximanova-bold;
+			@media screen and (max-width: $break-small) {
+				@include font-size(14);
+			}
+		}
+	}
+}
+
+
+
+#single-patron{
+	@extend %clearfix;
+	@media screen and (max-width: $break-small) {
+		padding: 0 15px;
+	}
+	header{
+		@extend %clearfix;
+		margin-bottom: 50px;
+		@media screen and (max-width: $break-small) {
+			margin-bottom: 0;
+		}
+		.alpha{
+			@include span-columns(8);
+			@media screen and (max-width: $break-small) {
+				@include span-columns(12);
+			}
+		}
+		.beta{
+			@include span-columns(4); 
+			text-align: right;
+			@media screen and (max-width: $break-small) {
+				@include span-columns(12);
+				text-align: left;
+			}
+		}
+		h1{
+			margin-bottom: 5px;
+		}
+		p{
+			margin-bottom: 0;
+			@media screen and (max-width: $break-small) {
+				margin-bottom: 15px;
+			}
+		}
+		small,h2{
+			font-family: $proximanova-bold;
+		}
+		h2{
+			@include font-size(24);
+			color: black;
+			@media screen and (max-width: $break-medium) {
+				@include font-size(18);
+			}
+		}	
+	}
+	#main{
+		float: left;
+	}
+	aside{
+		float: right;
+		@include omega;
+		}
+	figure{
+		@include fixed-ratio(100%,66.66%,img);
+		background-color: $grey;
+		@media screen and (max-width: $break-medium) {
+				margin-bottom: 30px;	
+			}
+	}
+}
