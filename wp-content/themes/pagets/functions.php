@@ -5,6 +5,7 @@ ini_set('zlib.output_handler', '');
 
 // load widgets
 get_template_part('widgets/widget_newsletter_banner');
+//get_template_part('widgets/widget_signpost_box');
 
 // includes
 get_template_part('functions/sidebars');
@@ -14,13 +15,16 @@ get_template_part('functions/menus');
 get_template_part('functions/retina-images');
 get_template_part('functions/svg-support');
 get_template_part('functions/post-types');
-get_template_part('functions/enqueue-post-scripts');
+get_template_part('functions/enqueue-theme-scripts');
 get_template_part('functions/enqueue-admin-scripts');
 get_template_part('functions/shortcodes');
+get_template_part('functions/tinymce-classes');
 get_template_part('functions/widgets');
 
 add_editor_style('css/layout.css');
 add_editor_style('css/editor-style.css');
+
+
 
 //AJAX
 

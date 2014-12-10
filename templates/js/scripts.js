@@ -107,6 +107,44 @@ var options = $.extend(defaults,options);
  	 ]
 	});
 
+//news events
+
+
+
+morePostsClick = function(e){
+  e.preventDefault();
+  $('a.more-posts').off('click', morePostsClick);
+  var $url = $(this).attr('href'),
+  $element = '#posts',
+  $this = $(this);
+  $(this).addClass('loading');
+
+      $.get($url).done(function(data){
+          $('a.more-posts').on('click', morePostsClick);
+        $(this).removeClass('loading');
+              var $obj = $(data).find($element);
+              var $btn = $(data).find('.more-posts');
+             // $this.replaceWith($btn);
+            $this.attr('href',$btn.attr('href')); //update the paging link
+             $this.attr('class',$btn.attr('class'));
+              var $items = $obj.children();
+
+               $container.append($items).masonry('appended',$items);
+         });
+}
+
+initMasonry = function(){
+  //if($('#enlightenment').length){
+    $container = $('#posts'); //masonry element
+    $container.masonry({
+      itemSelector: 'li',
+      isAnimated: !Modernizr.csstransitions
+    });
+  $('a.more-posts').on('click', morePostsClick);
+//} 
+}
+
+
 //accordion
 
 $('.accordion').accordion();
@@ -135,8 +173,12 @@ $('#index').accordion({
 
 // selectbox replacement
 
-$('select').selectBox();
 
+/*
+$('#filters select').selectBox().change(function () {
+    alert($(this).val());
+});
+*/
 //masonry
 
 if($('#news-events-archive').length){

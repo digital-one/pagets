@@ -3,6 +3,7 @@
 <div class="content container two-column main-left"> 
 <!--main-->
 <div id="main" role="main"> 
+  <div class="gutter-right">
 	<section id="intro">
 <h1>Pagets Disease</h1>
 <p>Typi non habent claritatem insitam; est usus legentis in is qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. </p>
@@ -23,6 +24,7 @@ Typi non habent claritatem insitam; est usus legentis in is qui facit eorum clar
 </dd>
 </dl>
   </section>
+</div>
 </div>
 <!--/main-->
 <!--right sidebar -->

@@ -45,16 +45,20 @@ var options = $.extend(defaults,options);
     var $handles = $(options.handles,$this);
     var $blocks = $(options.blocks,$this);
     $blocks.hide();
-  $handles.eq(0).addClass('active');
-  $blocks.eq(0).slideDown(200);
+  //$handles.eq(0).addClass('active');
+ // $blocks.eq(0).slideDown(200);
   $handles.on('click',function(e){
     e.preventDefault();
     if($(this).hasClass('active')){
       $(this).removeClass('active');
-      $(this).next(options.blocks).slideUp(100);
+      $(this).next(options.blocks).slideUp(100,function(){
+         $(this).next(options.blocks).removeClass('active');
+      });
     } else {
       $(this).addClass('active');
-      $(this).next(options.blocks).slideDown(200);
+      $(this).next(options.blocks).slideDown(200,function(){
+           $(this).next(options.blocks).addClass('active');
+      });
     }
   })
 
@@ -135,7 +139,13 @@ $('#index').accordion({
 
 // selectbox replacement
 
-$('select').selectBox();
+$('#filters select').selectBox().change(function () {
+  var _type = $('#filters select#type').val(),
+      _category = $('#filters select#category').val();
+    location.href='/news-events/archive/type/'+_type+'/category/'+_category+'/'
+});
+
+//$('select').selectBox();
 
 //masonry
 
@@ -144,6 +154,44 @@ var msnry = new Masonry( '#news-events-archive #posts', {
   itemSelector: 'article'
 });
 }
+
+morePostsClick = function(e){
+  e.preventDefault();
+  $('a.more-posts').off('click', morePostsClick);
+  var $url = $(this).attr('href'),
+  $element = '#posts',
+  $this = $(this);
+  $(this).addClass('loading');
+
+      $.get($url).done(function(data){
+          $('a.more-posts').on('click', morePostsClick);
+        $(this).removeClass('loading');
+              var $obj = $(data).find($element);
+              var $btn = $(data).find('.more-posts');
+             // $this.replaceWith($btn);
+             console.log($btn.attr('href'));
+            $this.attr('href',$btn.attr('href')); //update the paging link
+             $this.attr('class',$btn.attr('class'));
+              var $items = $obj.children();
+
+               $container.append($items).masonry('appended',$items);
+         });
+}
+
+initMasonry = function(){
+  //if($('#enlightenment').length){
+    $container = $('#news-events-archive #posts'); //masonry element
+    $container.masonry({
+      itemSelector: 'article',
+      isAnimated: !Modernizr.csstransitions
+    });
+  $('a.more-posts').on('click', morePostsClick);
+//} 
+}
+
+initMasonry();
+
+
 
 activateMobileMenu = function(){
 var $subMenu,

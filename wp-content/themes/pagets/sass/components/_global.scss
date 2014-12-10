@@ -41,7 +41,7 @@
 }
 .arrows ul{
 	li{
-		padding-left:50px;
+		padding:0 5px 0 50px;
 		margin-bottom: 35px;
 		@media screen and (max-width: $break-medium) {
 			padding-left: 35px;
@@ -69,7 +69,7 @@
 	}
 }
 #intro{
-	padding-bottom: 15px;
+	padding-bottom: 45px;
 	@media screen and (max-width: $break-small) {
 		padding: 0 15px 0;
 	}
@@ -108,7 +108,7 @@
 }
 #signposts{
 	@extend %clearfix;
-	margin-bottom: 60px;
+	//margin-bottom: 60px;
 	@media screen and (max-width: $break-medium) {
 		margin-bottom: 0;
 	}
@@ -132,6 +132,7 @@
 	padding: 18px 22px 22px;
 	display: block;
 	margin-bottom: 34px;
+	
 	@include font-size(16);
 	line-height: 135%;
 	@media screen and (max-width: $break-medium) {
@@ -155,19 +156,6 @@
 		margin-bottom: 20px;
 		&:last-child{
 			margin-bottom: 0;
-		}
-	}
-	&.dashed-list{
-		ul{
-			li{
-				padding-left: 10px;
-				position: relative;
-				font-family: $proximanova-bold;
-				&:before{
-					content:"-";
-					@include abs-pos(0,auto,auto,0);
-				}
-			}
 		}
 	}
 	&.keyline{
@@ -199,8 +187,40 @@
 		}
 	}
 }
-
+.dashed-list{
+	ul{
+		li{
+			padding-left: 10px;
+			position: relative;
+			font-family: $proximanova-bold;
+			&:before{
+				content:"-";
+				@include abs-pos(0,auto,auto,0);
+			}
+		}
+	}
+}
+ul.dashed-list{
+	li{
+			padding-left: 10px;
+			position: relative;
+			font-family: $proximanova-bold;
+			&:before{
+				content:"-";
+				@include abs-pos(0,auto,auto,0);
+			}
+		}
+}
 
 #main figure img{
 	@include fit-grid(width);
+}
+address h2{
+	color: $grey;
+	font-family: $proximanova-bold;
+	@include font-size(22);
+	margin-bottom: 15px;
+	@media screen and (max-width: $break-small) {
+		@include font-size(18);
+	}
 }

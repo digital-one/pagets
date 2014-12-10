@@ -7,6 +7,7 @@ add_image_size('news-carousel-tn', 326, 216, true);
 add_image_size('news-tn', 360, 240, true);
 add_image_size('news-gallery', 1280, 426, true);
 add_image_size('news-gallery-tn', 250, 83, true);
+add_image_size('site-logo-tn', 198, 79, true);
 set_post_thumbnail_size( 200, 139,true); 
 
 function custom_image_sizes($sizes) {

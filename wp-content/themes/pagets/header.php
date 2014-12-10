@@ -25,10 +25,12 @@
     <body<?php if(is_front_page()): ?> id="home"<?php endif ?>>
 <header id="header">
 <div class="container">
+       <? list($src,$w,$h) = wp_get_attachment_image_src(get_option('site_logo_svg_attachment_id'),'full'); ?>
     <?php if(is_front_page()): ?>
-<h1 id="home-link"><img src="<?php echo get_template_directory_uri(); ?>/images/pagets.svg" alt="Paget's Association" /></h1>
+
+<h1 id="home-link"><img src="<?php echo $src ?>" alt="Paget's Association" /></h1>
 <?php else: ?>
-<a id="home-link" href="<?php echo home_url() ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/pagets.svg" alt="Paget's Association" /></a>
+<a id="home-link" href="<?php echo home_url() ?>" alt="Paget's Association" /><img src="<?php echo $src ?>" alt="Paget's Association" /></a>
     <?php endif ?>
 <!--secondary nav-->
 <nav id="secondary-nav" role="navigation">
@@ -48,7 +50,7 @@
 </nav>
 <form id="search" method="post" action=""><input type="text" placeholder="Search" /><button type="submit">Search</button></form>
 <!--/secondary nav-->
-<div id="ribbon"><div><span>General Info <a href="tel:01617994646">0161 799 4646</a></span><span>Nurse Helpline <a href="tel:07713568197">07713 568197</a></span></div></div>
+<div id="ribbon"><div><span>General Info <a href="tel:<?php echo str_replace(' ','',get_option('general_info_tel'))?>"><?php echo get_option('general_info_tel')?></a></span><span>Nurse Helpline <a href="tel:<?php echo str_replace(' ','',get_option('nurse_helpline_tel'))?>"><?php echo get_option('nurse_helpline_tel')?></a></span></div></div>
 </div>
 </header>
 <!--/header-->

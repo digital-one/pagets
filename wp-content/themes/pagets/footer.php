@@ -18,11 +18,11 @@
 <nav class="social-links">
   <h5>Follow us</h5>
 <ul>
-  <li><a href="">Google Plus</a></li>
-    <li><a href="" class="facebook">Facebook</a></li>
-      <li><a href="" class="twitter">Twitter</a></li>
-        <li><a href="" class="pinterest">Pinterest</a></li>
-          <li><a href="" class="linkedin">Linkedin</a></li>
+ <?php if(get_option('gplus_url')): ?> <li><a href="<?php echo get_option('gplus_url') ?>" target="_blank">Google Plus</a></li><?php endif ?>
+    <?php if(get_option('facebook_url')): ?> <li><a href="<?php echo get_option('facebook_url') ?>" target="_blank" class="facebook">Facebook</a></li><?php endif ?>
+    <?php if(get_option('twitter_url')): ?>   <li><a href="<?php echo get_option('twitter_url') ?>" target="_blank" class="twitter">Twitter</a></li><?php endif ?>
+     <?php if(get_option('pinterest_url')): ?>    <li><a href="<?php echo get_option('pinterest_url') ?>" target="_blank" class="pinterest">Pinterest</a></li><?php endif ?>
+     <?php if(get_option('linkedin_url')): ?>      <li><a href="<?php echo get_option('linkedin_url') ?>" target="_blank" class="linkedin">Linkedin</a></li><?php endif ?>
         </ul>
       </nav>
 <!--/social-->
@@ -46,7 +46,7 @@
     ?>
 
 	<!--<ul><li><a href="">Site Map</a></li><li><a href="">Privacy Policy</a></li><li><a href="">Terms of Use</a></li></ul>--></nav>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip.</p>
+<p><?php echo get_option('footer_text')?></p>
 </div>
 <div class="column right">
   <div id="logos" class="row">
@@ -57,8 +57,16 @@
 </div>
 <div class="base">
 <div class="copyright fit-to-base">
-<small>&copy; Paget's Association Charity No: 266071</small>
-<address>Suite 5, Moorfield House, Moorside Road, Swinton, Manchester M27 0EW</address>
+<small>&copy; <?php bloginfo('name'); ?> Charity No: <?php echo get_option('charity_no') ?></small>
+<address>
+<?php if(get_option('address_name')):?><?php echo get_option('address_name')?>, <?php endif ?>
+<?php if(get_option('address_line_1')):?><?php echo get_option('address_line_1')?>, <?php endif ?>
+<?php if(get_option('address_line_2')):?><?php echo get_option('address_line_2')?>, <?php endif ?>
+<?php if(get_option('address_line_3')):?><?php echo get_option('address_line_3')?>, <?php endif ?>
+<?php if(get_option('address_town_city')):?><?php echo get_option('address_town_city')?>, <?php endif ?>	
+<?php if(get_option('address_county')):?><?php echo get_option('address_county')?>, <?php endif ?>	
+<?php if(get_option('address_postcode')):?><?php echo get_option('address_postcode')?><?php endif ?>
+</address>
 </div>
 <div class="share-links">
 <a href="" class="ama">AMA</a>
@@ -83,5 +91,6 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/scripts.js"></script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5476fa7267076160" async="async"></script>
 <!--/scripts-->
+<?php wp_footer() ?>
 </body>
 </html>

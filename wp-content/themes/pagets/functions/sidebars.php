@@ -12,7 +12,15 @@ function widgets_init() {
 		'before_title' => '',
 		'after_title' => ''
 	));	
-	
+	register_sidebar(array(
+		'name' => __( 'Footer Signposts', 'pagets_theme'),
+		'id' => 'signposts-footer',
+		'description' => __( 'Signpost boxes above footer', 'pagets_theme'),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => ''
+	));	
 }
 endif;
 ?>

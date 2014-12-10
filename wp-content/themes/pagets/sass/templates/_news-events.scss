@@ -114,6 +114,9 @@
 				background-color: $light-grey;
 			}
 		}
+		&.end{
+			display: none;
+		}
 	}
 	footer{
 		@media screen and (max-width: $break-small) {
