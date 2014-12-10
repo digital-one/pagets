@@ -5,7 +5,7 @@
 	&:before{
 		content:"";
 		padding-top:$ratio-height;
-		display: block;
+		display: inline-block;
 	}
 	#{$first-child}{
 		@include abs-pos(0,auto,auto,0);

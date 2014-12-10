@@ -176,11 +176,24 @@ nav#footer-nav{
 nav#sub-nav{
 	ul{
 		margin:0;
+		&.children{
+			display:none;
+			li{
+				a{
+					background-color: $dark-green;
+					font-family: $proximanova-regular;
+					@include font-size(15);
+					&:hover,&:active{
+						background-color: black;
+					}
+				}
+			}
+		}
 		li{
 			a{
 				background-color: $green;
 				display: block;
-				padding: 12px 10px 12px 25px;
+				padding: 12px 10px 12px 12px;
 				color: white;
 				@include font-size(17);
 				line-height: 130%;
@@ -193,22 +206,10 @@ nav#sub-nav{
 					background-color:black;
 				}
 			}
-			&.current-menu-item{
+			&.current-menu-item, &.current_page_item{
 				a{
 					background-color: $light-green;
 					font-family: $proximanova-bold;
-				}
-				.sub-menu{
-					li{
-						a{
-							background-color: $dark-green;
-							font-family: $proximanova-regular;
-							@include font-size(15);
-							&:hover,&:active{
-								background-color: black;
-							}
-						}
-					}
 				}
 			}
 			&.menu-item-has-children.current-page-ancestor{
@@ -217,20 +218,7 @@ nav#sub-nav{
 					font-family: $proximanova-bold;
 				}
 				.sub-menu{
-					li{
-						a{
-							font-family: $proximanova-regular;
-							@include font-size(15);
-							&:hover,&:active{
-								background-color: black;
-							}
-						}
-						&.current-menu-item{
-							a{
-								background-color: $light-green;
-							}
-						}
-					}	
+					display:block;
 				}
 			}
 		}	

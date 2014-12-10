@@ -114,6 +114,10 @@ M27 0EW
 <!--/main nav-->
 <?php if(!is_front_page()): ?>
 <!--breadcrumb-->
-<div id="breadcrumb"><div class="container"><a href="">Home</a> > <a href="">Information &amp; Support</a> > Local Support</div></div>
+<div id="breadcrumb"><div class="container">
+  <?php if(function_exists('bcn_display')){
+        bcn_display();
+    }?>
+    <!--<a href="">Home</a> > <a href="">Information &amp; Support</a> > Local Support--></div></div>
 <!--/breadcrumb-->
 <?php endif ?>

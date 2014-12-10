@@ -19,12 +19,68 @@ get_template_part('functions/enqueue-theme-scripts');
 get_template_part('functions/enqueue-admin-scripts');
 get_template_part('functions/shortcodes');
 get_template_part('functions/tinymce-classes');
+get_template_part('functions/tinymce-buttons');
 get_template_part('functions/widgets');
 
 add_editor_style('css/layout.css');
 add_editor_style('css/editor-style.css');
 
 
+
+function wp_ultimate_parent() {
+    global $post;
+    // only pages have parents, posts are non hierarchical
+    if (!is_page())
+        return false;
+    // if it has children traverse the tree until reaching the ultimate parent
+    if ($post->post_parent) {
+          $ultimate_parent_id = $parent_id  = $post->post_parent;
+          while ($parent_id) {
+                $page = get_page($parent_id);
+                $parent_id  = $page->post_parent;
+                if (!is_null($parent_id) && $parent_id != 0)
+                    $ultimate_parent_id = $parent_id;
+          }
+          return $ultimate_parent_id;
+    }
+    else return get_the_ID();
+}
+
+
+function get_accordion_pages(){
+  $string="";
+  //get pages which are only displayed in accordion format
+  $args = array(
+  'post_type' => 'page',
+  'meta_key' => '_wp_page_template',
+  'meta_value' => 'template-section-accordion.php'
+  );
+  if($pages = get_posts($args)):
+  $page_ids = array();
+  foreach($pages as $page):
+  $page_ids[] = $page->ID;
+  endforeach;
+  
+  $args = array(
+    'post_type'=>'page',
+    'post_status'=>'publish',
+    'posts_per_page'=> -1
+  );
+
+$accordion_pages = array();
+  if($children = get_posts($args)):
+    foreach($children as $child):
+      if(in_array($child->post_parent,$page_ids)):
+      $accordion_pages[] = $child->ID;
+      endif;
+      endforeach;
+      endif;
+
+      $string = implode(',',$accordion_pages);
+    endif;
+  
+     return $string;
+}
 
 //AJAX
 

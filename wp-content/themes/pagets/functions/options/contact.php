@@ -13,6 +13,7 @@ function save_contact_settings(){
     $address_town_city = esc_attr($_POST["address_town_city"]);
     $address_county = esc_attr($_POST["address_county"]);
     $address_postcode = esc_attr($_POST["address_postcode"]);
+    $address_google_map_url = esc_attr($_POST["address_google_map_url"]);
     $general_info_tel = esc_attr($_POST["general_info_tel"]);
     $nurse_helpline_tel = esc_attr($_POST["nurse_helpline_tel"]);
     $charity_no =  esc_attr($_POST["charity_no"]);
@@ -23,6 +24,7 @@ function save_contact_settings(){
     update_option("address_town_city", $address_town_city);
     update_option("address_county", $address_county);
     update_option("address_postcode", $address_postcode);
+    update_option("address_google_map_url", $address_google_map_url);
     update_option("general_info_tel", $general_info_tel);
     update_option("nurse_helpline_tel", $nurse_helpline_tel);
     update_option("charity_no", $charity_no);
@@ -36,6 +38,7 @@ function theme_contact_settings(){
     $address_town_city = get_option("address_town_city");
     $address_county = get_option("address_county");
     $address_postcode = get_option("address_postcode");
+    $address_google_map_url = get_option("address_google_map_url");
     $general_info_tel = get_option("general_info_tel");
     $nurse_helpline_tel = get_option("nurse_helpline_tel");
     $charity_no = get_option("charity_no");
@@ -114,6 +117,16 @@ function theme_contact_settings(){
                     </th>
                     <td>
                         <input type="text" name="address_postcode" size="46" value="<?php echo $address_postcode;?>"  />
+                    </td>
+                </tr>
+                 <tr valign="top">
+                    <th scope="row">
+                        <label for="address_google-map_url">
+                            Google Maps URL:
+                        </label> 
+                    </th>
+                    <td>
+                        <input type="text" name="address_google_map_url" size="46" value="<?php echo $address_google_map_url;?>"  />
                     </td>
                 </tr>
                 <tr valign="top">

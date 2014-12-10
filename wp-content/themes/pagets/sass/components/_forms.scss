@@ -13,7 +13,7 @@ textarea,
 	font-weight:400;
 	background-color: $light-grey;
 	padding: 0 10px;
-	@include font-size(12);
+	@include font-size(14);
 	border: none;
 	width: 100%;
 	@include transition (background-color .1s linear 0s);

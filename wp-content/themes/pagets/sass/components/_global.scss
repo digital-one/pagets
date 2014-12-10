@@ -151,6 +151,7 @@
 		@include font-size(22);
 		margin-bottom: 20px;
 		line-height: 110%;
+		text-transform: none;
 	}
 	p,ul{
 		margin-bottom: 20px;
@@ -177,7 +178,7 @@
 		@media screen and (max-width: $break-small) {
 			padding:20px;
 		}
-		h2{
+		h2,h3{
 			color: $grey;
 			font-family: $proximanova-bold;
 			@include font-size(22);
@@ -211,6 +212,36 @@ ul.dashed-list{
 			}
 		}
 }
+ul.bullet-list{
+	li{
+			padding-left: 10px;
+			position: relative;
+			margin-bottom:12px;
+			font-family: $proximanova-bold;
+			&:before{
+				content:"•";
+				@include abs-pos(-2px,auto,auto,0);
+			}
+		}
+}
+ul.arrow-list{
+	li{
+			padding-left: 20px;
+			position: relative;
+			color: $blue;
+			margin-bottom:12px;
+			//font-family: $proximanova-bold;
+			&:before{
+				content:"";
+				width:7px;
+				height:10px;
+				display:block;
+				background:url('../images/bullet-arrow.png') center center no-repeat;
+				@include abs-pos(7px,auto,auto,0);
+			}
+		}
+}
+
 
 #main figure img{
 	@include fit-grid(width);
@@ -222,5 +253,34 @@ address h2{
 	margin-bottom: 15px;
 	@media screen and (max-width: $break-small) {
 		@include font-size(18);
+	}
+}
+.video-outer{
+	max-width:600px;
+	margin:0 auto;
+	.video-container{
+		@include responsive-video;
+	}
+}
+ul.child-page-list{
+	li{
+		@extend %clearfix;
+		&.has-feature{
+			figure{
+				@include span-columns(4);
+				background-color: $light-grey;
+				float:right;
+				margin: 0 0 2% 2%;
+				@include bg-cover;
+				&:before{
+					content:"";
+					padding-top:66.66%;
+					display: block;  
+				}
+				@media screen and (max-width: $break-small) {
+					display: none;
+				}
+			}
+		}
 	}
 }

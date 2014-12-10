@@ -1,4 +1,6 @@
-#professionals{
+//#professionals{
+nav#featured-list{
+	@extend .clearfix;
 	li{
 		@include span-columns(6);
 		@include omega(2n);
@@ -12,14 +14,16 @@
 			display: block;
 			figure{
 				@include fixed-ratio(100%,66.66%,img);
-				background-color: $grey;
+				@include bg-cover;
+				background-color: $light-grey;
 				margin-bottom: 15px;
 				@media screen and (max-width: $break-small) {
 					display: none;
 				}
 			}
 			h4{
-				@include font-size(24);
+				@include font-size(20);
+				height:40px;
 				text-transform: uppercase;
 				color: $blue;
 				@media screen and (max-width: $break-medium) {
@@ -73,6 +77,8 @@
 			}
 		}
 	}
+}
+#professionals{
 	.gutter-right{
 		padding:0 11.4% 0 0;
 		@media screen and (max-width: $break-medium) {

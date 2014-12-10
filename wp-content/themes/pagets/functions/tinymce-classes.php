@@ -24,6 +24,16 @@ if ( ! function_exists( 'theme_styles_dropdown' ) ) {
                         'classes'   => array('dashed-list')
                     ),
                     array(
+                        'title'     => __('Bullet List','pagets'),
+                        'selector'    => 'ul',
+                        'classes'   => array('bullet-list')
+                    ),
+                    array(
+                        'title'     => __('Arrow List','pagets'),
+                        'selector'    => 'ul',
+                        'classes'   => array('arrow-list')
+                    ),
+                    array(
                         'title'     => __('Keyline Box','pagets'),
                         'selector'    => 'div',
                         'classes'   => array('box','keyline')

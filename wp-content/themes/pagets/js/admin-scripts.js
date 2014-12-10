@@ -1,5 +1,4 @@
 jQuery(document).ready(function() {
- console.log('ready')
 var wp_media_post_id = wp.media.model.settings.post.id;
 
 jQuery('.attachment-select').on('click',function(e){
@@ -44,4 +43,14 @@ jQuery('.attachment-select').on('click',function(e){
 	          custom_uploader.open();
 
 	      });
+
+
+
+
+
+
+
+
+
+
 });

@@ -44,7 +44,7 @@ var options = $.extend(defaults,options);
     var $this = $(this);
     var $handles = $(options.handles,$this);
     var $blocks = $(options.blocks,$this);
-    $blocks.hide();
+    //$blocks.hide();
   //$handles.eq(0).addClass('active');
  // $blocks.eq(0).slideDown(200);
   $handles.on('click',function(e){
@@ -144,6 +144,8 @@ $('#filters select').selectBox().change(function () {
       _category = $('#filters select#category').val();
     location.href='/news-events/archive/type/'+_type+'/category/'+_category+'/'
 });
+
+$('.gform_wrapper select').selectBox();
 
 //$('select').selectBox();
 

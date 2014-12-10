@@ -1,4 +1,4 @@
-#patron-archive{
+#people-archive{
 	#intro{
 		padding:0;
 	}
@@ -31,7 +31,9 @@
 		}
 		figure{
 			div{
-				background-color: $grey;
+				background-color: $light-grey;
+				@include bg-cover;
+				@extend %ir;     
 				@include fixed-ratio(100%,66.66%,img);
 				margin-bottom: 15px;
 				@media screen and (max-width: $break-small) {
@@ -41,9 +43,20 @@
 		}
 		h4{
 			@include font-size(20);
+			color: $blue;
+			text-transform: capitalize;
 			margin-bottom: 0;
 			@media screen and (max-width: $break-small) {
 				@include font-size(18);
+			}
+		}
+		a{
+			&:hover,&:active{
+				text-decoration: none;
+				h4{
+					color: black;
+					text-decoration: underline;
+				}
 			}
 		}
 		p{
@@ -52,6 +65,7 @@
 		small{
 			@include font-size(16);
 			font-family: $proximanova-bold;
+			color: black;
 			@media screen and (max-width: $break-small) {
 				@include font-size(14);
 			}
@@ -61,7 +75,7 @@
 
 
 
-#single-patron{
+#single-person{
 	@extend %clearfix;
 	@media screen and (max-width: $break-small) {
 		padding: 0 15px;
@@ -114,8 +128,10 @@
 		@include omega;
 		}
 	figure{
+		@extend %ir;
+		@include bg-cover;
 		@include fixed-ratio(100%,66.66%,img);
-		background-color: $grey;
+		background-color: $light-grey;
 		@media screen and (max-width: $break-medium) {
 				margin-bottom: 30px;	
 			}

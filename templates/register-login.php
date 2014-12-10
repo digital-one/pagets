@@ -1,4 +1,5 @@
-<?php include_once('header.php') ?>
+<?php /* Template Name: Register/Login */ ?>
+<?php get_header() ?>
 <!--content-->
 <div id="contact" class="content container">
   <section id="intro">
@@ -112,4 +113,4 @@
 </div>
 </div>
 <!--/content-->
-<?php include_once('footer.php') ?> 
+<?php get_footer() ?> 

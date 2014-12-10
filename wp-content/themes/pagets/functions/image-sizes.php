@@ -7,7 +7,9 @@ add_image_size('news-carousel-tn', 326, 216, true);
 add_image_size('news-tn', 360, 240, true);
 add_image_size('news-gallery', 1280, 426, true);
 add_image_size('news-gallery-tn', 250, 83, true);
+add_image_size('people-image', 410, 280, true);
 add_image_size('site-logo-tn', 198, 79, true);
+add_image_size('page-featured-image',420,280,true);
 set_post_thumbnail_size( 200, 139,true); 
 
 function custom_image_sizes($sizes) {
@@ -20,7 +22,9 @@ $myimgsizes = array(
   "news-carousel-tn" => __("News Carousel Thumbnail" ),
   "news-tn" => __("News Thumbnail" ),
   "news-gallery" => __("News Gallery" ),
-  "news-gallery-tn" => __("News Gallery Thumbnail" )
+  "news-gallery-tn" => __("News Gallery Thumbnail" ),
+  "people-image" => __("People Image" ),
+  "page-featured-image" => __("Page Featured Image" )
   );
      
        $newimgsizes = array_merge($sizes, $myimgsizes);

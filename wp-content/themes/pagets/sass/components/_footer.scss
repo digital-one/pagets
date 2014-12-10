@@ -229,11 +229,15 @@ a#newsletter{
 		a{
 			width:67px;
 			height:67px;
+			.box &{
+				width:40px;
+				height:40px;
+			}
 			display: block;
 			background-image:url('../images/google-plus.svg');
 			background-position:left top;
 			background-repeat: no-repeat;
-			background-size:67px 67px;
+			background-size:100% auto;
 			@include transition(opacity 0.3s ease-in-out);
 			@extend %ir;
 			#mobile-contact-panel &{
