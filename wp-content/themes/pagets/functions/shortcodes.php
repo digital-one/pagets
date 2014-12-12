@@ -58,6 +58,45 @@ $content.='</figcaption>
 
 add_shortcode( 'people-list', 'people_list_shortcode' );
 
+function newsletter_list_shortcode($atts,$content=""){
+  global $post;
+ // echo $post->ID;
+  $args = array(
+    "post_type" => "newsletter",
+    "post_status" => "publish",
+    "order_by" => "meta_value_num",
+    'meta_key' => 'newsletter_date',
+    "order" => "DESC",
+    "posts_per_page" => -1
+    );
+if($newsletters = get_posts($args)):
+  $content='<ul class="child-page-list">';
+  foreach($newsletters as $newsletter):
+    $has_feature = get_post_thumbnail_id($newsletter->ID);
+    $content.='<li';
+    if($has_feature) $content.=' class="has-feature"';
+    $content.= '><h3>'.$newsletter->post_title.'</h3>';
+    if($has_feature):
+  list($src,$w,$h) = wp_get_attachment_image_src(get_post_thumbnail_id($newsletter->ID),'news-tn');
+  $content.='<figure style="background-image:url(\''.$src.'\');"></figure>';
+  endif;
+ // $content.='<div class="alpha">';
+  $content.=$newsletter->post_content;
+  $link = get_field('newsletter_download_file',$newsletter->ID);
+  $content.='<p><a href="'.$link.'" target="_blank">Download</a></p>';
+ // $content.='</div>';
+  
+  $content.='</li>';
+    endforeach;
+     $content.='</ul>';
+  endif;
+  return $content;
+}
+
+add_shortcode( 'newsletter-list', 'newsletter_list_shortcode' );
+
+
+
 function child_pages_list_shortcode($atts,$content=""){
   global $post;
  // echo $post->ID;

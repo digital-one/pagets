@@ -55,7 +55,8 @@ ul.post-list{
 		}
 		figure{
 			@include fixed-ratio(100%,66.66%,img);
-			background-color: $grey;
+			@include bg-cover;
+			background-color: $light-grey;
 			@media screen and (min-width: $break-small+1) and (max-width: $break-medium) {
 				&:before{
 					padding-top:100%;

@@ -157,6 +157,30 @@ var msnry = new Masonry( '#news-events-archive #posts', {
 });
 }
 
+moreListPostsClick = function(e){
+    e.preventDefault();
+    console.log('more')
+$('#memorials a.more-posts').off('click', moreListPostsClick);
+var $url = $(this).attr('href'),
+$element = '.post-list',
+$this = $(this);
+$(this).addClass('loading');
+   $.get($url).done(function(data){
+         $('#memorials a.more-posts').on('click', moreListPostsClick);
+        $(this).removeClass('loading');
+              var $obj = $(data).find($element);
+              var $btn = $(data).find('.more-posts');
+             // $this.replaceWith($btn);
+            $this.attr('href',$btn.attr('href')); //update the paging link
+             $this.attr('class',$btn.attr('class'));
+              var $items = $obj.children();
+              $($element).append($items);
+         });
+
+}
+
+$('#memorials a.more-posts').on('click', moreListPostsClick);
+
 morePostsClick = function(e){
   e.preventDefault();
   $('a.more-posts').off('click', morePostsClick);
@@ -171,7 +195,6 @@ morePostsClick = function(e){
               var $obj = $(data).find($element);
               var $btn = $(data).find('.more-posts');
              // $this.replaceWith($btn);
-             console.log($btn.attr('href'));
             $this.attr('href',$btn.attr('href')); //update the paging link
              $this.attr('class',$btn.attr('class'));
               var $items = $obj.children();
@@ -190,8 +213,10 @@ initMasonry = function(){
   $('a.more-posts').on('click', morePostsClick);
 //} 
 }
+if($('#news-events-archive #posts').length){
+  initMasonry();
+}
 
-initMasonry();
 
 
 
@@ -237,5 +262,123 @@ $('#mobile-controls a').on('click',function(e){
 })
 }
 
+// search overlay
+refreshSearchOverlay = function(){
+  var $width = $('#header .container').width(),
+      $screenWidth = $(window).width(),
+      $left = ($screenWidth - $width)/2;
+  $('#search-overlay').css({
+    width: $width+'px',
+    left: $left+'px'
+  })
+  $('a#overlay-close').css({
+    right: $left+'px'
+  })
+}
+searchOverlay = function(status){
+  switch(status){
+    case 'show':
+    searchOverlay('hide');
+    $("body").append('<div id="overlay"></div>');
+    $('body').append('<form id="search-overlay" class="container"><label for="s">What are you looking for?</label><input type="text" placeholder="Type and hit enter to search" /></form>');
+    $('body').append('<a id="overlay-close">Close</a>');
+    $('#search-overlay input').focus();
+        $("#overlay").css({
+          height: $(document).height()
+      });
+        refreshSearchOverlay();
+
+    break;
+    case 'hide':
+$('#overlay').remove();
+$('#search-overlay').remove();
+$('#overlay-close').remove();
+    break;
+  }
+}
+$('body').on('click','a#overlay-close',function(e){
+  searchOverlay('hide');
+})
+$('li.search-btn a').on('click',function(e){
+  e.preventDefault();
+  searchOverlay('show');
+})
+$(window).on('resize',function(){
+  refreshSearchOverlay();
+})
+
+replaceFileFields =function(){
+
+     $fileFields = $('input[type=file]');
+     $fileFields.each(function(){
+    
+          $(this).wrap('<div class="file-selector-wrapper" />');
+
+          $(this).css({
+               opacity:0,
+               cursor:'pointer',
+               zIndex: 9999,
+               position: 'relative',
+          });
+
+var $wrapper = $(this).parent('.file-selector-wrapper');
+$wrapper.append('<div class="dummy button">Select</div>');
+$wrapper.before(' <img class="preview" src="#" alt="" />');
+var $buttonWidth= $('.dummy.button',$wrapper).outerWidth();
+var $buttonHeight= $('.dummy.button',$wrapper).outerHeight();
+
+$('.preview').hide().css({
+     width:'40%',
+     height: 'auto'
+});
+
+     $wrapper.css({
+          position: 'relative',
+          height: $buttonHeight+'px',
+          width: $buttonWidth+'px',
+          overflow: 'hidden'
+          })
+    
+     $('.dummy.button').css({
+          position:'absolute',
+          left: '0px',
+          top: '0px',
+          zIndex:999
+     })
+        $(this).change(function (e){
+      
+             input = e.currentTarget;
+       var filename = $(this).val();
+       $wrapper.next('.selected-file').html(filename);
+
+                   var reader = new FileReader(); //show preview of selected image
+                    reader.onload = function(e) {
+                    $('.preview').attr('src', e.target.result).show();
+                }
+                reader.readAsDataURL(input.files[0]);
+           
+  
+     });
+
+     })
+
+}
+replaceFileFields();
 activateMobileMenu();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });

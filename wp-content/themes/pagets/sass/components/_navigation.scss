@@ -137,15 +137,38 @@ nav#nav{
 	}
 }
 nav#secondary-nav{
-	@include abs-pos(12px,162px,auto,auto);
+	@include abs-pos(12px,0,auto,auto);
 	ul{
 		@include inline-menu;
 		@include font-size(16);
 		li{
-			margin-right: 20px;
+			margin-right: 25px;
 			a{
 				height:30px;
 				line-height: 30px;
+			}
+			&.hide{
+				display: none;
+			}
+			&.search-btn{ 
+				margin:0 0 0 60px;
+				a{
+					font-family: $proximanova-bold;
+					color: $mid-grey;
+					padding-right:30px;
+					&:hover,&:active{
+						text-decoration: none;
+					}
+					&:after{
+						content:"";
+						height:30px;
+						width:30px;
+						background:url('../images/search-icon.svg') center center no-repeat;
+						background-size: 15px 15px;
+						display: block;
+						@include abs-pos(0,0,auto,auto);
+					}
+				}
 			}
 		}
 	}
@@ -212,13 +235,22 @@ nav#sub-nav{
 					font-family: $proximanova-bold;
 				}
 			}
-			&.menu-item-has-children.current-page-ancestor{
+			&.page_item_has_children.current_page_ancestor{
 				a{
 					background-color: $dark-green;
 					font-family: $proximanova-bold;
+					&:hover,&:active{
+						background-color: black;
+					}
 				}
-				.sub-menu{
+				li.current_page_item a{
+					background-color: $light-green;
+				}
+				.children{
 					display:block;
+					a{
+						font-family: $proximanova-regular;
+					}
 				}
 			}
 		}	

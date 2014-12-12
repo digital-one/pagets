@@ -24,7 +24,7 @@ class Newsletter_Banner_Widget extends WP_Widget {
 		?>
         <!-- offer -->
 	<!--newsletter-->
-<a href="<?php echo get_permalink($page_id)?>" id="newsletter">
+<a href="<?php echo get_permalink(163)?>" id="newsletter">
 <h4><?php echo $heading ?></h4>
 <p><?php echo $text ?></p>
 <span class="button"><?php echo $button_label ?></span>

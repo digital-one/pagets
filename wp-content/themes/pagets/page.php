@@ -1,28 +1,47 @@
 <?php get_header() ?>
-<div class="section" data-anchor="<?php echo $post->post_name ?>" data-title="<?php wp_title()?>">
-	<!-- title -->
-<section class="page-title white">
-<div><h1><?php echo $post->post_title ?></h1><h2 class="underline"><?php echo get_field('sub_heading',$post->ID) ?></h2></div>
-</section> 
-<!-- /title -->
-<?php
-list($src,$w,$h) = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'page-letterbox-image');
-$src = getRetinaSrc($src);
-?>
-<!-- banner -->
-<section class="banner" style="background-image:url('<?php echo $src ?>');"></section>   
-<!-- /banner -->
-<!-- content -->
-<section class="content blue">
-    <div class="column-wrap">
-    <?php
-if(get_field('columns',$post->ID)):
-while(the_repeater_field('columns',$post->ID)): 
-?>
-<div class="column"><h3><?php echo get_sub_field('column_heading') ?></h3><?php echo do_shortcode(get_sub_field('column_content')) ?></div>
-<?php endwhile; ?>
-<?php endif; ?>
-</div></section>
-<!-- /content -->
+<!--content-->
+<div class="content container three-column">
+ <!--left sidebar -->
+<aside id="left-sidebar">
+<nav id="sub-nav">
+	<?php $parent_id =  wp_ultimate_parent() ?>
+	<?php $exclude = get_accordion_pages(); 
+	    $children = wp_list_pages("title_li=&include=".$parent_id."&echo=0");
+	$children .= wp_list_pages('title_li=&child_of='.$parent_id.'&echo=0&exclude='.$exclude);
+  if($parent_id==64):
+$children .= '<li><a href="'.wp_logout_url(home_url()).'">Logout</a></li>';
+    endif;
+  if ($children): ?>
+  <ul>
+  	
+  <?php echo $children; ?>
+  </ul>
+  <?php endif ?>
+
+</nav>
+</aside>
+<!--/left sidebar-->
+<!--main-->
+<div id="main" role="main">
+	<div class="gutter-mid">
+<?php echo do_shortcode($post->post_content) ?>
 </div>
-<?php get_footer() ?>
+</div>
+<!--/main-->
+<!--right sidebar -->
+<aside id="right-sidebar">
+
+	 <?php
+if(get_field('page_banners',$post->ID)): 
+while(the_repeater_field('page_banners',$post->ID)): 
+ $banner = get_sub_field('banner');
+echo do_shortcode($banner->post_content);
+  endwhile;
+  endif;
+  ?>
+
+</aside>
+<!--/right sidebar-->
+</div>
+<!--/content-->
+<?php include_once('footer.php') ?> 

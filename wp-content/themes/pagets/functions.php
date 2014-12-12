@@ -21,10 +21,62 @@ get_template_part('functions/shortcodes');
 get_template_part('functions/tinymce-classes');
 get_template_part('functions/tinymce-buttons');
 get_template_part('functions/widgets');
-
+get_template_part('functions/reset-password');
+get_template_part('functions/class.loginclass');
 add_editor_style('css/layout.css');
 add_editor_style('css/editor-style.css');
 
+
+
+/**
+* Gravity Forms Custom Activation Template
+* http://gravitywiz.com/customizing-gravity-forms-user-registration-activation-page
+*/
+add_action('wp', 'custom_maybe_activate_user', 9);
+function custom_maybe_activate_user() {
+$template_path = STYLESHEETPATH . '/gfur-activate-template/activate.php';
+$is_activate_page = isset( $_GET['page'] ) && $_GET['page'] == 'gf_activation';
+if( ! file_exists( $template_path ) || ! $is_activate_page )
+return;
+require_once( $template_path );
+exit();
+} 
+
+
+class secondaryNav extends Walker_Nav_Menu{
+  function start_el (&$output, $item, $depth, $args){
+ // print_r($item);
+   if(is_user_logged_in()):
+  if($item->object_id==56) array_push($item->classes,"hide");
+endif;
+if(!is_user_logged_in()):
+if($item->object_id==64) array_push($item->classes,"hide");
+endif;
+$item_output = '<a class="new-class" href="' . $item->url. '">' . $item->title . '</a>';
+    $classes = implode(" ",$item->classes);
+    $output .= '<li class="'.$classes.'">' . apply_filters ('walker_nav_menu_start_el', $item_output, $item,  $depth, $args);
+ //   $output .= '<li class="'.$classes.'">' . apply_filters ('walker_nav_menu_start_el', $item_output, $item,  $depth, $args);
+   }
+ }
+
+
+function set_newsletter_admin_order($wp_query) {
+  if (is_admin()) {
+
+    // Get the post type from the query
+    $post_type = $wp_query->query['post_type'];
+
+    if ( $post_type == 'newsletter') {
+
+      // 'orderby' value can be any column name
+      $wp_query->set('orderby', 'meta_value_num');
+      $wp_query->set('meta_key', 'newsletter_date');
+      // 'order' value can be ASC or DESC
+      $wp_query->set('order', 'DESC');
+    }
+  }
+}
+add_filter('pre_get_posts', 'set_newsletter_admin_order');
 
 
 function wp_ultimate_parent() {

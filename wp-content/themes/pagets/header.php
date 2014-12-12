@@ -7,8 +7,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        
-        <title><?php wp_title() ?></title>
+        <title><?php wp_title()?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         
         <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
@@ -40,15 +39,15 @@
   wp_nav_menu( array(
         'menu'=>'Secondary Navigation',
         'container' => false, 
-        'fallback_cb' => 'wp_page_menu'//,
-        //'walker' => new subMenu()
+        'fallback_cb' => 'wp_page_menu',
+        'walker' => new secondaryNav()
         //'menu_class' => 'inline',
         //'link_after' => '<span></span>'
         )
     );
     ?>
 </nav>
-<form id="search" method="post" action=""><input type="text" placeholder="Search" /><button type="submit">Search</button></form>
+
 <!--/secondary nav-->
 <div id="ribbon"><div><span>General Info <a href="tel:<?php echo str_replace(' ','',get_option('general_info_tel'))?>"><?php echo get_option('general_info_tel')?></a></span><span>Nurse Helpline <a href="tel:<?php echo str_replace(' ','',get_option('nurse_helpline_tel'))?>"><?php echo get_option('nurse_helpline_tel')?></a></span></div></div>
 </div>
@@ -65,27 +64,28 @@
 <div id="mobile-contact-panel" class="panel">
 <h3>Contact Us</h3>
 <p class="tel-numbers">
-<span>General Number: <a href="tel:01617994646"><strong>0161 799 4646</strong></a></span>
-<span>Nurse Helpline: <a href="tel:07713568197"><strong>07713 568197</strong></a></span>
+<span>General Number: <a href="tel:<?php echo str_replace(' ','',get_option('general_info_tel')) ?>"><strong><?php echo get_option('general_info_tel') ?></strong></a></span>
+<span>Nurse Helpline: <a href="tel:<?php echo str_replace(' ','',get_option('nurse_helpline_tel')) ?>"><strong><?php echo get_option('nurse_helpline_tel') ?></strong></a></span>
 </p>
 <address>
-The Paget’s Association<br />
-Suite 5, Moorfield House<br />
-Moorside Road<br />
-Swinton<br />
-Manchester<br />
-M27 0EW
+<?php if(get_option('address_name')):?><?php echo get_option('address_name')?><br /> <?php endif ?>
+<?php if(get_option('address_line_1')):?><?php echo get_option('address_line_1')?><br /> <?php endif ?>
+<?php if(get_option('address_line_2')):?><?php echo get_option('address_line_2')?><br /> <?php endif ?>
+<?php if(get_option('address_line_3')):?><?php echo get_option('address_line_3')?><br /> <?php endif ?>
+<?php if(get_option('address_town_city')):?><?php echo get_option('address_town_city')?><br /> <?php endif ?>  
+<?php if(get_option('address_county')):?><?php echo get_option('address_county')?><br /> <?php endif ?>  
+<?php if(get_option('address_postcode')):?><?php echo get_option('address_postcode')?><?php endif ?>
 </address>
 <p><a href="#map" class="map">Open Map</a> </p>
 <p><a href="#" class="full-width button">Email Us</a></p>
 <nav class="social-links">
   <h5>Follow us</h5>
 <ul>
-  <li><a href="">Google Plus</a></li>
-    <li><a href="" class="facebook">Facebook</a></li>
-      <li><a href="" class="twitter">Twitter</a></li>
-        <li><a href="" class="pinterest">Pinterest</a></li>
-          <li><a href="" class="linkedin">Linkedin</a></li>
+ <?php if(get_option('gplus_url')): ?> <li><a href="<?php echo get_option('gplus_url') ?>" target="_blank">Google Plus</a></li><?php endif ?>
+    <?php if(get_option('facebook_url')): ?> <li><a href="<?php echo get_option('facebook_url') ?>" target="_blank" class="facebook">Facebook</a></li><?php endif ?>
+    <?php if(get_option('twitter_url')): ?>   <li><a href="<?php echo get_option('twitter_url') ?>" target="_blank" class="twitter">Twitter</a></li><?php endif ?>
+     <?php if(get_option('pinterest_url')): ?>    <li><a href="<?php echo get_option('pinterest_url') ?>" target="_blank" class="pinterest">Pinterest</a></li><?php endif ?>
+     <?php if(get_option('linkedin_url')): ?>      <li><a href="<?php echo get_option('linkedin_url') ?>" target="_blank" class="linkedin">Linkedin</a></li><?php endif ?>
         </ul>
       </nav>
 </div>

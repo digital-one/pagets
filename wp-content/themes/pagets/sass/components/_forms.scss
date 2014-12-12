@@ -2,6 +2,7 @@ input[type="text"],
 input[type="password"],
 input[type="email"],
 input[type="tel"],
+input[type="file"],
 input[type="number"],
 select,
 textarea,
@@ -171,8 +172,32 @@ input,textarea{
 		@extend %clearfix;
 	}
 	.gform_footer{
-		text-align: right;
 		margin:20px 0 0;
+		button{
+			float:right;
+		}
+		a{
+			float:left;
+			display: inline-block;
+			height:40px;
+			line-height: 40px;
+		}
+	}
+	.clear-multi{
+		@extend %clearfix;
+	}
+	.ginput_complex{
+		label{
+			font-family: $proximanova-regular;
+		}
+	}
+	.gfield_date_dropdown_day,.gfield_date_dropdown_month,.gfield_date_dropdown_year{
+		width:25%;
+		margin-right:2%;
+		float:left;
+		select{
+			width: 100%;
+		}
 	}
 	ul{
 		list-style-type: none;
@@ -196,6 +221,11 @@ input,textarea{
 		&.half{
 			select,input{
 				width: 50%;
+			}
+		}
+		&.small{
+			select,input{
+				width: 25%;
 			}
 		}
 	}

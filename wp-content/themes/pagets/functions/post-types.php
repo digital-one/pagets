@@ -8,7 +8,10 @@ function load_custom_post_types(){
 		'post_types/centres',
 		'post_types/treatments',
 		'post_types/documents',
-		'post_types/people'
+		'post_types/people',
+		'post_types/newsletters',
+		'post_types/products',
+		'post_types/memorials'
 	));
 	foreach($cpt_files as $cpt_file) get_template_part($cpt_file);
 	}
