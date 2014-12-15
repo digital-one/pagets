@@ -28,7 +28,8 @@ $(function(){
 
   var isMobile = $(window).width() < 660,
       $menuItems = $('#nav a'),
-      $menuParentLinks = $('#nav li.menu-item-has-children a');
+      $menuParentLinks = $('#nav li.menu-item-has-children > a'),
+      $backButton = $('#nav #mobile-prev');
 
 
 //accordion plugin
@@ -88,19 +89,13 @@ var options = $.extend(defaults,options);
     	{
       		breakpoint: 1024,
       		settings: {
-        	slidesToShow: 3,
+        	slidesToShow: 2,
         	slidesToScroll: 1,
         	infinite: true,
         	dots: true
       	}
     },
-    	{
-      		breakpoint: 769,
-      		settings: {
-        	slidesToShow: 2,
-        	slidesToScroll: 1
-      	}
-    },
+    	
     	{
       	breakpoint: 480,
       	settings: {
@@ -218,35 +213,35 @@ if($('#news-events-archive #posts').length){
 }
 
 
+showTopTierNav = function(){
+ 
+    $('#nav ul a').show();
+  $childParentLinks = $('li.menu-item-has-children li')
+  $('#nav ul li').hide().not($childParentLinks).show();
+  $backButton.hide();
+   $('.donate').show();
+  $('#nav ul:first li')
+}
+updateBackButtonLink = function(elm){
+  $backButton.off('click').on('click',function(e){
+    e.preventDefault();
+    console.log(elm)
+ if(elm.length)
+    elm.trigger( "click" );
+ else
+    showTopTierNav();
+  })
+}
+
 
 
 activateMobileMenu = function(){
-var $subMenu,
-    $parent,
-    $firstTier;
-    $backButton = $('#nav #mobile-prev');
 
-$menuParentLinks.on('click',function(e){
-  e.preventDefault();
-      $parent = $(this).parent('li');
-      $subMenu = $('.sub-menu',$parent);
-      $firstTier = $('#nav li').not($parent).not($('li',$subMenu));
-      $firstTier.hide();
-      $subMenu.css({ position:'relative'}).fadeIn(200);
-      $('a:first',$parent).hide();
-      $backButton.show();
-      $('a.donate').fadeOut(200);
-})
-$backButton.on('click',function(e){
-  e.preventDefault();
-  $subMenu.hide().css({ position: 'absolute'});
-  $('#nav li').not($('li',$subMenu)).fadeIn(200);
-  $('a:first',$parent).fadeIn(200);
-  $(this).hide();
-  $('a.donate').fadeIn(200);
-})
-
-$('#mobile-controls a').on('click',function(e){
+  var $subMenu,
+      $hiddenLinks,
+      $allLinks = $('#nav ul li'),
+      $backButton = $('#nav #mobile-prev');
+  $('#mobile-controls a').on('click',function(e){
   e.preventDefault();
   var $panel = $('#'+$(this).attr('rel')),
       $parent = $(this).parent('li');
@@ -260,7 +255,83 @@ $('#mobile-controls a').on('click',function(e){
     $parent.addClass('active');
   }
 })
+
+$menuParentLinks.on('click',function(e){
+      e.preventDefault()
+      //e.stopPropagation();
+      $('.donate').hide();
+      $('#nav ul a').show();
+      var $parentLI = $(this).parent('li');
+      $allLinks.css({display:'none'});
+$backButton.show();
+        var $hasNextTier = $('li.menu-item-has-children', $parentLI).length ? true : false;
+  $childParentLinks =  $hasNextTier ? $('li.menu-item-has-children li',$parentLI) : '' //if menu has a further tier, dont show next tier menu, only the link
+   $subMenuLinks = $('li',$parentLI).not($childParentLinks); 
+  $parents = $parentLI.parents('li.menu-item-has-children');  
+      _prevParent = $('a:first',$($parents[$parents.length-1]));
+  updateBackButtonLink($(_prevParent));
+      $parents.each(function(){
+        $(this).show();
+        $('a:first',$(this)).hide();
+      })
+      $parentLI.show();
+      $(this).hide();
+      $subMenuLinks.show();
+    
+    })
+
 }
+
+/*
+
+
+activateMobileMenu = function(){
+
+  var $subMenu,
+      $hiddenLinks,
+      $allLinks = $('#nav ul li'),
+      $backButton = $('#nav #mobile-prev');
+  $('#mobile-controls a').on('click',function(e){
+  e.preventDefault();
+  var $panel = $('#'+$(this).attr('rel')),
+      $parent = $(this).parent('li');
+  if($parent.hasClass('active')){
+    $panel.hide();
+   $parent.removeClass('active');
+  } else {
+    $('.panel').hide();
+    $('#mobile-controls li').removeClass('active');
+    $panel.show();
+    $parent.addClass('active');
+  }
+})
+
+
+  $menuParentLinks.on('click',function(e){
+      e.preventDefault()
+      e.stopPropagation();
+      $('#nav ul a').show();
+      $allLinks.css({display:'none'});
+$backButton.show();
+        var $hasNextTier = $('li.menu-item-has-children', $(this)).length ? true : false;
+  $childParentLinks =  $hasNextTier ? $('li.menu-item-has-children li',$(this)) : '' //if menu has a further tier, dont show next tier menu, only the link
+   $subMenuLinks = $('li',$(this)).not($childParentLinks); 
+  $parents = $(this).parents('li.menu-item-has-children');  
+      _prevParent = $parents[$parents.length-1];
+  updateBackButtonLink($(_prevParent));
+      $parents.each(function(){
+        $(this).show();
+        $('a:first',$(this)).hide();
+      })
+      $(this).show();
+      $('a:first',$(this)).hide();
+      $subMenuLinks.show();
+    
+    })
+
+}
+*/
+
 
 // search overlay
 refreshSearchOverlay = function(){
@@ -280,7 +351,7 @@ searchOverlay = function(status){
     case 'show':
     searchOverlay('hide');
     $("body").append('<div id="overlay"></div>');
-    $('body').append('<form id="search-overlay" class="container"><label for="s">What are you looking for?</label><input type="text" placeholder="Type and hit enter to search" /></form>');
+    $('body').append('<form id="search-overlay" method="post" action="/" class="container"><label for="s">What are you looking for?</label><input type="text" name="s" id="s" placeholder="Type and hit enter to search" /></form>');
     $('body').append('<a id="overlay-close">Close</a>');
     $('#search-overlay input').focus();
         $("#overlay").css({

@@ -95,7 +95,7 @@ if(is_wp_error($user)):
 	$this->message = "Registered email address or password incorrect.";
 else:
   //login ok, redirect
-	wp_redirect(home_url('member-area'));
+	wp_redirect(get_permalink(64));
 		endif;
 		endif;
 		endif;

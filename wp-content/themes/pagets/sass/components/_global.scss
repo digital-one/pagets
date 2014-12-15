@@ -93,7 +93,7 @@
 	div.column{
 		@include span-columns(4);
 		#home &{
-			padding: 0 40px;
+			padding: 0 2%;
 		}
 		@media screen and (max-width: $break-small) {
 			@include span-columns(12);

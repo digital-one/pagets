@@ -1,6 +1,9 @@
 .slick-slider{
 	margin:0 0 30px !important;  
 	@include centered-menu;
+	@media screen and (max-width: $break-medium) {
+		margin:0 !important;
+	}
 }
 #carousel{
 	.slick-list{
@@ -53,6 +56,11 @@
 		}
 	}
 }
+#slider-wrap.container{
+		@media screen and (max-width: $break-xlarge){
+			padding:0;
+		}
+}
 .slick-dots{ 
 	position:absolute !important;
 	bottom:27px;
@@ -61,7 +69,7 @@
 	margin-bottom: 0;
 	@media screen and (max-width: $break-small) {
 		bottom:auto;
-		top:120px;
+		top:240px;
 		#carousel &{
 			top: 0px;
 		}

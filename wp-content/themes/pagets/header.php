@@ -9,7 +9,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title><?php wp_title()?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        
+        <meta name="p:domain_verify" content="6402a01c093e0e45e578dc078821eb46" />
         <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
          <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" />
         <script src="<?php echo get_template_directory_uri(); ?>/js/modernizr.js"></script>
@@ -40,7 +40,7 @@
         'menu'=>'Secondary Navigation',
         'container' => false, 
         'fallback_cb' => 'wp_page_menu',
-        'walker' => new secondaryNav()
+        'walker' => new navWalker()
         //'menu_class' => 'inline',
         //'link_after' => '<span></span>'
         )
@@ -100,7 +100,8 @@
   wp_nav_menu( array(
         'menu'=>'Main Navigation',
         'container' => false, 
-        'fallback_cb' => 'wp_page_menu'//,
+        'fallback_cb' => 'wp_page_menu',
+        'walker' => new navWalker()
         //'walker' => new subMenu()
         //'menu_class' => 'inline',
         //'link_after' => '<span></span>'

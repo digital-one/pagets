@@ -23,9 +23,24 @@ get_template_part('functions/tinymce-buttons');
 get_template_part('functions/widgets');
 get_template_part('functions/reset-password');
 get_template_part('functions/class.loginclass');
+get_template_part('functions/url-rewrites');
 add_editor_style('css/layout.css');
 add_editor_style('css/editor-style.css');
 
+
+
+add_action( 'init', 'my_add_excerpts_to_pages' );
+function my_add_excerpts_to_pages() {
+     add_post_type_support( 'page', 'excerpt' );
+}
+
+function fb_search_filter($query) {
+if ( !$query->is_admin && $query->is_search) {
+$query->set('post_type', array('page', 'people','news') ); // id of page or post
+}
+return $query;
+}
+add_filter( 'pre_get_posts', 'fb_search_filter' );
 
 
 /**
@@ -43,7 +58,7 @@ exit();
 } 
 
 
-class secondaryNav extends Walker_Nav_Menu{
+class navWalker extends Walker_Nav_Menu{
   function start_el (&$output, $item, $depth, $args){
  // print_r($item);
    if(is_user_logged_in()):
@@ -252,6 +267,11 @@ $output.='<li><a href="'.get_term_link($term).'">'.$term->name.'</a></li>';
     }
   }
 }
+
+
+
+
+
 
 
 ?>

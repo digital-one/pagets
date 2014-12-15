@@ -2,6 +2,9 @@
 	position: relative;
 	@extend %clearfix;
 	height:140px;
+	@media screen and (max-width: $break-large) {
+		height: 120px;
+	}
 	@media screen and (max-width: $break-medium) {
 		height: 96px;
 		padding-bottom:10px;
@@ -24,6 +27,13 @@
 		height:79px;
 		display:block;
 		@include abs-pos(34px,auto,auto,0);
+		@media screen and (max-width: $break-xlarge){
+			left:20px;
+		}
+		@media screen and (max-width: $break-large) {
+			width:160px;
+			top:26px;
+		}
 		@media screen and (max-width: $break-medium) {
 			width:114px;
 			height:45px;
@@ -79,7 +89,7 @@
 		a:hover,a:active{
 			text-decoration: none;
 		}
-		@media screen and (max-width: $break-medium) {
+		@media screen and (max-width: $break-nav) {
 			display: none;
 		}
 	}

@@ -271,7 +271,7 @@ if($articles = get_posts($args)):
   $content='<dl>';
  
   foreach($articles as $article):
-     $classnames = [];
+     $classnames = array();
      $has_feature = get_post_thumbnail_id($article->ID) ? true : false;
 
 if($has_feature)  array_push($classnames,'has-feature');
