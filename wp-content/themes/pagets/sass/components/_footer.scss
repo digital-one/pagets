@@ -145,9 +145,11 @@ a#newsletter{
 	&:after{
 		content: "";
 		width:88px;
-		height:88px;
+		height:96px;
 		display: inline-block;
-		background:url('../images/click-here-page-fold.jpg') left top no-repeat;
+		background-image:url('../images/banner-fold.jpg');
+		background-position: left top;
+		background-repeat: no-repeat;
 		@include abs-pos(0,0,auto,auto);
 		@media screen and (max-width: $break-small) {
 			background: none;
@@ -180,8 +182,11 @@ a#newsletter{
 		}
 	}
 	&:hover,&:active{
-		background-color: lighten($green,5);
+		//background-color: lighten($green,5);
 		text-decoration: none;
+		&:after{
+			background-position: right top;
+		}
 	}
 	.button{
 		margin:0 auto;
@@ -247,7 +252,7 @@ a#newsletter{
 			background-image:url('../images/google-plus.svg');
 			background-position:left top;
 			background-repeat: no-repeat;
-			background-size:100% auto;
+			background-size: auto 67px;
 			@include transition(opacity 0.3s ease-in-out);
 			@extend %ir;
 			#mobile-contact-panel &{
@@ -262,7 +267,7 @@ a#newsletter{
 				background-size: 50px 50px;
 			}
 			&:hover,&:active{
-				@include opacity(.8);
+				background-position: right top;
 			}
 			.ie8 &{
 				background-image: url('../images/google-plus.png');

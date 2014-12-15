@@ -16,6 +16,9 @@
 	@media screen and (max-width: $break-small) {
 		margin-bottom:5px;
 	}
+	#home &{
+		margin-bottom:10px;
+	}
 }
 aside{
 	@include span-columns(3);
