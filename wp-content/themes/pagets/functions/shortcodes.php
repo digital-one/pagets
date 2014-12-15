@@ -141,7 +141,7 @@ function ref_docs_shortcode($atts,$content=""){
     "order" => "ASC",
     "posts_per_page" => -1
     );
-if($childre = get_posts($args)):
+if($docs = get_posts($args)):
   foreach($docs as $doc):
     $content.='<article><h5>'.$doc->post_title.'</h5>';
   $content.=$doc->post_content;

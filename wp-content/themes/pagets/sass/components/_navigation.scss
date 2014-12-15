@@ -7,6 +7,7 @@ nav#nav{
 		position: relative;
 		padding:66px 0 0;
 		display: none;
+		border-bottom: 1px solid white;
 	}
 	font-family: $proximanova-bold;
 	@include font-size(20);
@@ -33,6 +34,7 @@ nav#nav{
 		}
 	}
 	ul{
+		width:100%;
 		@include wp-current-page-links{
 			background-color: $light-grey;
 			color: $green;
@@ -60,21 +62,52 @@ nav#nav{
 			}
 			&.menu-item-has-children{
 				position: relative;
-				> a{
-					&:after{
-						content:"";
-						@include abs-pos(50%,15px,auto,auto);
-						margin-top:-6px;
-						width:8px;
-						height:12px;
-						background-image:url('../images/arrow-white.png');
-						background-repeat: no-repeat;
-						background-size: 8px 12px;
-						background-position: center center;
-						display: block;
+				@media screen and (max-width: $break-nav) {
+					> a{
+						&:after{
+							content:"";
+							@include abs-pos(50%,15px,auto,auto);
+							margin-top:-6px;
+							width:8px;
+							height:12px;
+							background-image:url('../images/arrow-white.png');
+							background-repeat: no-repeat;
+							background-size: 8px 12px;
+							background-position: center center;
+							display: block;
+						}
 					}
 				}
 			}
+			&.donate{
+				float: right;
+				a:link,a:visited{
+					background-color: $orange;
+					height:50px;
+					line-height: 50px;
+					color: white;
+					display: inline-block;
+					padding:0 20px;
+					@include border-radiuses(6px,0,0,6px);
+					
+					@include transition(background-color 0.3s ease-in-out);
+					&:hover,&:active{
+				//background-color: lighten($orange,10);
+						background-color: black;
+						text-decoration: none;
+					}
+					@media screen and (max-width: $break-nav) {
+						@include abs-pos(-52px,15px,auto,15px);
+						height:40px;
+						@include border-radius(0);
+						line-height: 40px;
+						text-align: center;
+						text-transform: uppercase;
+						font-family: $proximanova-bold;
+					}
+				}
+			}
+
 			&.current-page-ancestor{
 				@media screen and (max-width: $break-nav) {
 					a:link,a:visited{
@@ -94,7 +127,7 @@ nav#nav{
 					line-height: 50px;
 					padding:0 20px;
 					background-color:transparent;
-					@media screen and (max-width: $break-medium) {
+					@media screen and (max-width: $break-nav) {
 						color: white;
 					}
 				}
@@ -102,11 +135,11 @@ nav#nav{
 					background-color: black;
 					color: white;
 					text-decoration: none;
-					@media screen and (max-width: $break-medium) {
+					@media screen and (max-width: $break-nav) {
 						background-color: lighten($green,10);
 					}
 				}
-				@media screen and (max-width: $break-medium) {
+				@media screen and (max-width: $break-nav) {
 					display: block;
 					width:100%;
 					padding:10px 15px !important;
@@ -115,7 +148,7 @@ nav#nav{
 					color: white;
 				}
 			}
-			@media screen and (max-width: $break-medium) {
+			@media screen and (max-width: $break-nav) {
 				display: block;
 				width:100%;
 			}
@@ -131,7 +164,7 @@ nav#nav{
 	}
 	.container{
 		padding: 0 12px;
-		@media screen and (max-width: $break-medium) {
+		@media screen and (max-width: $break-nav) {
 			padding:0;
 		}
 	}
@@ -150,7 +183,7 @@ nav#nav{
 			background-color: black;
 			text-decoration: none;
 		}
-		@media screen and (max-width: $break-medium) {
+		@media screen and (max-width: $break-nav) {
 			@include abs-pos(-52px,15px,auto,15px);
 			height:40px;
 			@include border-radius(0);

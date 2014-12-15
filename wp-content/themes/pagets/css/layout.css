@@ -786,7 +786,7 @@ html, body, figure, ul, li, p, blockquote {
 }
 
 /* line 25, ../sass/helpers/_placeholders.scss */
-#header, nav#footer-nav, footer#footer #bottom .top, footer#footer #bottom .base, footer#footer #bottom #logos, #index, #signposts, .box, ul.child-page-list li, .gform_wrapper .gform_body, .gform_wrapper .clear-multi, .accordion dl dd.has-feature, #slider, #news-events-archive header, #news-single .slick-slider, #news-single header, #people-archive section, #single-person, #single-person header, ul.post-list li, .shop header {
+#header, #mobile-contact-panel, nav#footer-nav, footer#footer #bottom .top, footer#footer #bottom .base, footer#footer #bottom #logos, #index, #signposts, .box, ul.child-page-list li, .gform_wrapper .gform_body, .gform_wrapper .clear-multi, .accordion dl dd.has-feature, #slider, #news-events-archive header, #news-single .slick-slider, #news-single header, #people-archive section, #single-person, #single-person header, ul.post-list li, .shop header {
   overflow: hidden;
   zoom: 1;
 }
@@ -1290,8 +1290,9 @@ aside#right-sidebar {
 /* line 144, ../sass/components/_header.scss */
 #mobile-contact-panel {
   background-color: #50b848;
+  border-bottom: 1px solid white;
 }
-/* line 146, ../sass/components/_header.scss */
+/* line 148, ../sass/components/_header.scss */
 #mobile-contact-panel address {
   margin-bottom: 10px;
 }
@@ -1313,6 +1314,7 @@ nav#nav {
     position: relative;
     padding: 66px 0 0;
     display: none;
+    border-bottom: 1px solid white;
   }
 }
 @media screen and (max-width: 1130px) {
@@ -1323,7 +1325,7 @@ nav#nav {
     font-size: 1.5rem;
   }
 }
-/* line 19, ../sass/components/_navigation.scss */
+/* line 20, ../sass/components/_navigation.scss */
 nav#nav a#mobile-prev {
   top: 24px;
   right: auto;
@@ -1340,7 +1342,7 @@ nav#nav a#mobile-prev {
   background-size: 8px 12px;
   padding-left: 15px;
 }
-/* line 30, ../sass/components/_navigation.scss */
+/* line 31, ../sass/components/_navigation.scss */
 nav#nav a#mobile-prev:hover, nav#nav a#mobile-prev:active {
   opacity: 0.8;
   -moz-opacity: 0.8;
@@ -1348,8 +1350,9 @@ nav#nav a#mobile-prev:hover, nav#nav a#mobile-prev:active {
   filter: alpha(opacity=80);
   text-decoration: none;
 }
-/* line 35, ../sass/components/_navigation.scss */
+/* line 36, ../sass/components/_navigation.scss */
 nav#nav ul {
+  width: 100%;
   float: left;
   margin-bottom: 0;
 }
@@ -1367,7 +1370,7 @@ nav#nav ul li.current-menu-item a:link, nav#nav ul li.current-menu-item a:visite
   }
 }
 @media screen and (max-width: 1130px) {
-  /* line 35, ../sass/components/_navigation.scss */
+  /* line 36, ../sass/components/_navigation.scss */
   nav#nav ul {
     width: 100%;
     display: block;
@@ -1390,50 +1393,109 @@ nav#nav ul li.current-menu-item a:link, nav#nav ul li.current-menu-item a:visite
   }
 }
 @media screen and (min-width: 1130px) {
-  /* line 56, ../sass/components/_navigation.scss */
+  /* line 58, ../sass/components/_navigation.scss */
   nav#nav ul li.mobile-only {
     display: none;
   }
 }
-/* line 61, ../sass/components/_navigation.scss */
+/* line 63, ../sass/components/_navigation.scss */
 nav#nav ul li.menu-item-has-children {
   position: relative;
 }
-/* line 64, ../sass/components/_navigation.scss */
-nav#nav ul li.menu-item-has-children > a:after {
-  content: "";
-  top: 50%;
-  right: 15px;
-  bottom: auto;
-  left: auto;
-  position: absolute;
-  margin-top: -6px;
-  width: 8px;
-  height: 12px;
-  background-image: url("../images/arrow-white.png");
-  background-repeat: no-repeat;
-  background-size: 8px 12px;
-  background-position: center center;
-  display: block;
+@media screen and (max-width: 1130px) {
+  /* line 67, ../sass/components/_navigation.scss */
+  nav#nav ul li.menu-item-has-children > a:after {
+    content: "";
+    top: 50%;
+    right: 15px;
+    bottom: auto;
+    left: auto;
+    position: absolute;
+    margin-top: -6px;
+    width: 8px;
+    height: 12px;
+    background-image: url("../images/arrow-white.png");
+    background-repeat: no-repeat;
+    background-size: 8px 12px;
+    background-position: center center;
+    display: block;
+  }
+}
+/* line 82, ../sass/components/_navigation.scss */
+nav#nav ul li.donate {
+  float: right;
+}
+/* line 84, ../sass/components/_navigation.scss */
+nav#nav ul li.donate a:link, nav#nav ul li.donate a:visited {
+  background-color: #f1b000;
+  height: 50px;
+  line-height: 50px;
+  color: white;
+  display: inline-block;
+  padding: 0 20px;
+  -webkit-border-top-right-radius: 6px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 6px;
+  -moz-border-radius-topright: 6px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 6px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -moz-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+/* line 94, ../sass/components/_navigation.scss */
+nav#nav ul li.donate a:link:hover, nav#nav ul li.donate a:link:active, nav#nav ul li.donate a:visited:hover, nav#nav ul li.donate a:visited:active {
+  background-color: black;
+  text-decoration: none;
 }
 @media screen and (max-width: 1130px) {
-  /* line 80, ../sass/components/_navigation.scss */
+  /* line 84, ../sass/components/_navigation.scss */
+  nav#nav ul li.donate a:link, nav#nav ul li.donate a:visited {
+    top: -52px;
+    right: 15px;
+    bottom: auto;
+    left: 15px;
+    position: absolute;
+    height: 40px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "proximanova-bold-webfont", sans-serif;
+  }
+}
+@media screen and (max-width: 1130px) {
+  /* line 113, ../sass/components/_navigation.scss */
   nav#nav ul li.current-page-ancestor a:link, nav#nav ul li.current-page-ancestor a:visited {
     background-color: transparent;
     font-family: "proximanova-regular-webfont", sans-serif;
   }
-  /* line 84, ../sass/components/_navigation.scss */
+  /* line 117, ../sass/components/_navigation.scss */
   nav#nav ul li.current-page-ancestor a:hover, nav#nav ul li.current-page-ancestor a:active {
     background-color: #73c66d;
   }
 }
-/* line 89, ../sass/components/_navigation.scss */
+/* line 122, ../sass/components/_navigation.scss */
 nav#nav ul li a {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 91, ../sass/components/_navigation.scss */
+/* line 124, ../sass/components/_navigation.scss */
 nav#nav ul li a:link, nav#nav ul li a:visited {
   color: #005baa;
   height: 50px;
@@ -1441,26 +1503,26 @@ nav#nav ul li a:link, nav#nav ul li a:visited {
   padding: 0 20px;
   background-color: transparent;
 }
-@media screen and (max-width: 768px) {
-  /* line 91, ../sass/components/_navigation.scss */
+@media screen and (max-width: 1130px) {
+  /* line 124, ../sass/components/_navigation.scss */
   nav#nav ul li a:link, nav#nav ul li a:visited {
     color: white;
   }
 }
-/* line 101, ../sass/components/_navigation.scss */
+/* line 134, ../sass/components/_navigation.scss */
 nav#nav ul li a:hover, nav#nav ul li a:active {
   background-color: black;
   color: white;
   text-decoration: none;
 }
-@media screen and (max-width: 768px) {
-  /* line 101, ../sass/components/_navigation.scss */
+@media screen and (max-width: 1130px) {
+  /* line 134, ../sass/components/_navigation.scss */
   nav#nav ul li a:hover, nav#nav ul li a:active {
     background-color: #73c66d;
   }
 }
-@media screen and (max-width: 768px) {
-  /* line 89, ../sass/components/_navigation.scss */
+@media screen and (max-width: 1130px) {
+  /* line 122, ../sass/components/_navigation.scss */
   nav#nav ul li a {
     display: block;
     width: 100%;
@@ -1470,28 +1532,28 @@ nav#nav ul li a:hover, nav#nav ul li a:active {
     color: white;
   }
 }
-@media screen and (max-width: 768px) {
-  /* line 55, ../sass/components/_navigation.scss */
+@media screen and (max-width: 1130px) {
+  /* line 57, ../sass/components/_navigation.scss */
   nav#nav ul li {
     display: block;
     width: 100%;
   }
 }
-/* line 124, ../sass/components/_navigation.scss */
+/* line 157, ../sass/components/_navigation.scss */
 nav#nav ul li .sub-menu li {
   display: none;
 }
-/* line 132, ../sass/components/_navigation.scss */
+/* line 165, ../sass/components/_navigation.scss */
 nav#nav .container {
   padding: 0 12px;
 }
-@media screen and (max-width: 768px) {
-  /* line 132, ../sass/components/_navigation.scss */
+@media screen and (max-width: 1130px) {
+  /* line 165, ../sass/components/_navigation.scss */
   nav#nav .container {
     padding: 0;
   }
 }
-/* line 138, ../sass/components/_navigation.scss */
+/* line 171, ../sass/components/_navigation.scss */
 nav#nav a.donate {
   background-color: #f1b000;
   height: 50px;
@@ -1519,13 +1581,13 @@ nav#nav a.donate {
   -moz-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
-/* line 148, ../sass/components/_navigation.scss */
+/* line 181, ../sass/components/_navigation.scss */
 nav#nav a.donate:hover, nav#nav a.donate:active {
   background-color: black;
   text-decoration: none;
 }
-@media screen and (max-width: 768px) {
-  /* line 138, ../sass/components/_navigation.scss */
+@media screen and (max-width: 1130px) {
+  /* line 171, ../sass/components/_navigation.scss */
   nav#nav a.donate {
     top: -52px;
     right: 15px;
@@ -1546,7 +1608,7 @@ nav#nav a.donate:hover, nav#nav a.donate:active {
   }
 }
 
-/* line 164, ../sass/components/_navigation.scss */
+/* line 197, ../sass/components/_navigation.scss */
 nav#secondary-nav {
   top: 12px;
   right: 0;
@@ -1555,12 +1617,12 @@ nav#secondary-nav {
   position: absolute;
 }
 @media screen and (max-width: 1280px) {
-  /* line 164, ../sass/components/_navigation.scss */
+  /* line 197, ../sass/components/_navigation.scss */
   nav#secondary-nav {
     right: 15px;
   }
 }
-/* line 169, ../sass/components/_navigation.scss */
+/* line 202, ../sass/components/_navigation.scss */
 nav#secondary-nav ul {
   font-size: 16px;
   font-size: 1.6rem;
@@ -1578,34 +1640,34 @@ nav#secondary-nav ul li {
 nav#secondary-nav ul li a {
   display: block;
 }
-/* line 172, ../sass/components/_navigation.scss */
+/* line 205, ../sass/components/_navigation.scss */
 nav#secondary-nav ul li {
   margin-right: 25px;
 }
-/* line 174, ../sass/components/_navigation.scss */
+/* line 207, ../sass/components/_navigation.scss */
 nav#secondary-nav ul li a {
   height: 30px;
   line-height: 30px;
 }
-/* line 178, ../sass/components/_navigation.scss */
+/* line 211, ../sass/components/_navigation.scss */
 nav#secondary-nav ul li.hide {
   display: none;
 }
-/* line 181, ../sass/components/_navigation.scss */
+/* line 214, ../sass/components/_navigation.scss */
 nav#secondary-nav ul li.search-btn {
   margin: 0 0 0 60px;
 }
-/* line 183, ../sass/components/_navigation.scss */
+/* line 216, ../sass/components/_navigation.scss */
 nav#secondary-nav ul li.search-btn a {
   font-family: "proximanova-bold-webfont", sans-serif;
   color: #8b8b8b;
   padding-right: 30px;
 }
-/* line 187, ../sass/components/_navigation.scss */
+/* line 220, ../sass/components/_navigation.scss */
 nav#secondary-nav ul li.search-btn a:hover, nav#secondary-nav ul li.search-btn a:active {
   text-decoration: none;
 }
-/* line 190, ../sass/components/_navigation.scss */
+/* line 223, ../sass/components/_navigation.scss */
 nav#secondary-nav ul li.search-btn a:after {
   content: "";
   height: 30px;
@@ -1620,13 +1682,13 @@ nav#secondary-nav ul li.search-btn a:after {
   position: absolute;
 }
 @media screen and (max-width: 1130px) {
-  /* line 164, ../sass/components/_navigation.scss */
+  /* line 197, ../sass/components/_navigation.scss */
   nav#secondary-nav {
     display: none;
   }
 }
 
-/* line 207, ../sass/components/_navigation.scss */
+/* line 240, ../sass/components/_navigation.scss */
 nav#footer-nav {
   margin-bottom: 20px;
 }
@@ -1644,7 +1706,7 @@ nav#footer-nav li a {
   display: block;
 }
 @media screen and (max-width: 659px) {
-  /* line 207, ../sass/components/_navigation.scss */
+  /* line 240, ../sass/components/_navigation.scss */
   nav#footer-nav {
     width: 100%;
     position: relative;
@@ -1666,45 +1728,45 @@ nav#footer-nav li a {
     right: 50%;
   }
 }
-/* line 214, ../sass/components/_navigation.scss */
+/* line 247, ../sass/components/_navigation.scss */
 nav#footer-nav li {
   margin-right: 20px;
 }
 @media screen and (max-width: 659px) {
-  /* line 214, ../sass/components/_navigation.scss */
+  /* line 247, ../sass/components/_navigation.scss */
   nav#footer-nav li {
     margin: 0 10px;
   }
 }
-/* line 220, ../sass/components/_navigation.scss */
+/* line 253, ../sass/components/_navigation.scss */
 nav#footer-nav a:link, nav#footer-nav a:visited {
   color: white;
 }
-/* line 223, ../sass/components/_navigation.scss */
+/* line 256, ../sass/components/_navigation.scss */
 nav#footer-nav a:hover, nav#footer-nav a:active {
   color: #b4d6f1;
 }
 
-/* line 228, ../sass/components/_navigation.scss */
+/* line 261, ../sass/components/_navigation.scss */
 nav#sub-nav ul {
   margin: 0;
 }
-/* line 230, ../sass/components/_navigation.scss */
+/* line 263, ../sass/components/_navigation.scss */
 nav#sub-nav ul.children {
   display: none;
 }
-/* line 233, ../sass/components/_navigation.scss */
+/* line 266, ../sass/components/_navigation.scss */
 nav#sub-nav ul.children li a {
   background-color: #40a639;
   font-family: "proximanova-regular-webfont", sans-serif;
   font-size: 15px;
   font-size: 1.5rem;
 }
-/* line 237, ../sass/components/_navigation.scss */
+/* line 270, ../sass/components/_navigation.scss */
 nav#sub-nav ul.children li a:hover, nav#sub-nav ul.children li a:active {
   background-color: black;
 }
-/* line 244, ../sass/components/_navigation.scss */
+/* line 277, ../sass/components/_navigation.scss */
 nav#sub-nav ul li a {
   background-color: #50b848;
   display: block;
@@ -1717,45 +1779,45 @@ nav#sub-nav ul li a {
   -moz-transition: background-color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out;
 }
-/* line 255, ../sass/components/_navigation.scss */
+/* line 288, ../sass/components/_navigation.scss */
 nav#sub-nav ul li a:hover, nav#sub-nav ul li a:active {
   text-decoration: none;
   background-color: black;
 }
-/* line 261, ../sass/components/_navigation.scss */
+/* line 294, ../sass/components/_navigation.scss */
 nav#sub-nav ul li.current-menu-item a, nav#sub-nav ul li.current_page_item a {
   background-color: #61ce59;
   font-family: "proximanova-bold-webfont", sans-serif;
 }
-/* line 267, ../sass/components/_navigation.scss */
+/* line 300, ../sass/components/_navigation.scss */
 nav#sub-nav ul li.page_item_has_children.current_page_ancestor a {
   background-color: #40a639;
   font-family: "proximanova-bold-webfont", sans-serif;
 }
-/* line 270, ../sass/components/_navigation.scss */
+/* line 303, ../sass/components/_navigation.scss */
 nav#sub-nav ul li.page_item_has_children.current_page_ancestor a:hover, nav#sub-nav ul li.page_item_has_children.current_page_ancestor a:active {
   background-color: black;
 }
-/* line 274, ../sass/components/_navigation.scss */
+/* line 307, ../sass/components/_navigation.scss */
 nav#sub-nav ul li.page_item_has_children.current_page_ancestor li.current_page_item a {
   background-color: #61ce59;
 }
-/* line 277, ../sass/components/_navigation.scss */
+/* line 310, ../sass/components/_navigation.scss */
 nav#sub-nav ul li.page_item_has_children.current_page_ancestor .children {
   display: block;
 }
-/* line 279, ../sass/components/_navigation.scss */
+/* line 312, ../sass/components/_navigation.scss */
 nav#sub-nav ul li.page_item_has_children.current_page_ancestor .children a {
   font-family: "proximanova-regular-webfont", sans-serif;
 }
 @media screen and (max-width: 768px) {
-  /* line 227, ../sass/components/_navigation.scss */
+  /* line 260, ../sass/components/_navigation.scss */
   nav#sub-nav {
     display: none;
   }
 }
 
-/* line 290, ../sass/components/_navigation.scss */
+/* line 323, ../sass/components/_navigation.scss */
 nav#mobile-controls {
   top: 0;
   right: 20px;
@@ -1765,13 +1827,13 @@ nav#mobile-controls {
   display: none;
 }
 @media screen and (max-width: 1130px) {
-  /* line 290, ../sass/components/_navigation.scss */
+  /* line 323, ../sass/components/_navigation.scss */
   nav#mobile-controls {
     display: block;
   }
 }
 @media screen and (max-width: 659px) {
-  /* line 290, ../sass/components/_navigation.scss */
+  /* line 323, ../sass/components/_navigation.scss */
   nav#mobile-controls {
     top: 0;
     right: 15px;
@@ -1780,7 +1842,7 @@ nav#mobile-controls {
     position: absolute;
   }
 }
-/* line 299, ../sass/components/_navigation.scss */
+/* line 332, ../sass/components/_navigation.scss */
 nav#mobile-controls li {
   display: inline;
   width: 44px;
@@ -1789,24 +1851,24 @@ nav#mobile-controls li {
   margin-left: 10px;
 }
 @media screen and (max-width: 1124px) {
-  /* line 299, ../sass/components/_navigation.scss */
+  /* line 332, ../sass/components/_navigation.scss */
   nav#mobile-controls li {
     height: 120px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 299, ../sass/components/_navigation.scss */
+  /* line 332, ../sass/components/_navigation.scss */
   nav#mobile-controls li {
     height: 96px;
   }
 }
 @media screen and (max-width: 659px) {
-  /* line 299, ../sass/components/_navigation.scss */
+  /* line 332, ../sass/components/_navigation.scss */
   nav#mobile-controls li {
     height: 72px;
   }
 }
-/* line 314, ../sass/components/_navigation.scss */
+/* line 347, ../sass/components/_navigation.scss */
 nav#mobile-controls li a {
   width: 44px;
   height: 44px;
@@ -1827,36 +1889,36 @@ nav#mobile-controls li a {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
-/* line 327, ../sass/components/_navigation.scss */
+/* line 360, ../sass/components/_navigation.scss */
 nav#mobile-controls li.menu a:hover, nav#mobile-controls li.menu a:active {
   background-color: black;
 }
-/* line 332, ../sass/components/_navigation.scss */
+/* line 365, ../sass/components/_navigation.scss */
 nav#mobile-controls li.search a, nav#mobile-controls li.tel a {
   background-size: 21px 21px;
   background-color: transparent;
   background-image: url("../images/search-icon.png");
 }
-/* line 337, ../sass/components/_navigation.scss */
+/* line 370, ../sass/components/_navigation.scss */
 nav#mobile-controls li.search.active, nav#mobile-controls li.tel.active {
   background-image: url("../images/mobile-menu-pointer-blue.jpg");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: 18px 9px;
 }
-/* line 342, ../sass/components/_navigation.scss */
+/* line 375, ../sass/components/_navigation.scss */
 nav#mobile-controls li.search.active a, nav#mobile-controls li.tel.active a {
   background-image: url("../images/close-icon.png");
 }
-/* line 348, ../sass/components/_navigation.scss */
+/* line 381, ../sass/components/_navigation.scss */
 nav#mobile-controls li.tel a {
   background-image: url("../images/telephone-icon.png");
 }
-/* line 351, ../sass/components/_navigation.scss */
+/* line 384, ../sass/components/_navigation.scss */
 nav#mobile-controls li.tel.active {
   background-image: url("../images/mobile-menu-pointer-green.jpg");
 }
-/* line 353, ../sass/components/_navigation.scss */
+/* line 386, ../sass/components/_navigation.scss */
 nav#mobile-controls li.tel.active a {
   background-image: url("../images/close-icon.png");
 }
@@ -2221,21 +2283,31 @@ a#newsletter .button {
   right: 50%;
 }
 /* line 198, ../sass/components/_footer.scss */
+#mobile-contact-panel .social-links {
+  padding: 0;
+}
+/* line 200, ../sass/components/_footer.scss */
+#mobile-contact-panel .social-links div {
+  display: inline-block;
+  margin: 0 auto;
+  width: auto;
+}
+/* line 206, ../sass/components/_footer.scss */
 .social-links h5 {
   margin-bottom: 30px;
   font-family: "proximanova-bold-webfont", sans-serif;
   text-transform: uppercase;
   color: #8b8b8b;
 }
-@media screen and (max-width: 768px) {
-  /* line 198, ../sass/components/_footer.scss */
+@media screen and (max-width: 1130px) {
+  /* line 206, ../sass/components/_footer.scss */
   .social-links h5 {
     font-size: 15px;
     font-size: 1.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
 }
-/* line 207, ../sass/components/_footer.scss */
+/* line 215, ../sass/components/_footer.scss */
 #mobile-contact-panel .social-links h5 {
   display: inline-block;
   float: left;
@@ -2244,23 +2316,25 @@ a#newsletter .button {
   line-height: 32px;
   height: 32px;
   color: white;
+  margin-right: 5px;
 }
-/* line 217, ../sass/components/_footer.scss */
+/* line 226, ../sass/components/_footer.scss */
 #mobile-contact-panel .social-links ul {
   left: auto;
-  float: right;
+  float: left;
   clear: none;
+  margin: 0;
 }
-/* line 222, ../sass/components/_footer.scss */
+/* line 232, ../sass/components/_footer.scss */
 .social-links ul li {
   margin: 0 5px;
 }
-/* line 224, ../sass/components/_footer.scss */
+/* line 234, ../sass/components/_footer.scss */
 #mobile-contact-panel .social-links ul li {
   margin: 0 3px;
   right: auto;
 }
-/* line 229, ../sass/components/_footer.scss */
+/* line 239, ../sass/components/_footer.scss */
 .social-links ul a {
   width: 67px;
   height: 67px;
@@ -2273,12 +2347,12 @@ a#newsletter .button {
   -moz-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
-/* line 232, ../sass/components/_footer.scss */
+/* line 242, ../sass/components/_footer.scss */
 .box .social-links ul a {
   width: 40px;
   height: 40px;
 }
-/* line 243, ../sass/components/_footer.scss */
+/* line 253, ../sass/components/_footer.scss */
 #mobile-contact-panel .social-links ul a {
   width: 32px;
   height: 32px;
@@ -2286,69 +2360,69 @@ a#newsletter .button {
   background-size: 32px 32px;
 }
 @media screen and (max-width: 768px) {
-  /* line 229, ../sass/components/_footer.scss */
+  /* line 239, ../sass/components/_footer.scss */
   .social-links ul a {
     width: 50px;
     height: 50px;
     background-size: 50px 50px;
   }
 }
-/* line 254, ../sass/components/_footer.scss */
+/* line 264, ../sass/components/_footer.scss */
 .social-links ul a:hover, .social-links ul a:active {
   opacity: 0.8;
   -moz-opacity: 0.8;
   -khtml-opacity: 0.8;
   filter: alpha(opacity=80);
 }
-/* line 257, ../sass/components/_footer.scss */
+/* line 267, ../sass/components/_footer.scss */
 .ie8 .social-links ul a {
   background-image: url("../images/google-plus.png");
 }
-/* line 260, ../sass/components/_footer.scss */
+/* line 270, ../sass/components/_footer.scss */
 .social-links ul a.facebook {
   background-image: url("../images/facebook.svg");
 }
-/* line 262, ../sass/components/_footer.scss */
+/* line 272, ../sass/components/_footer.scss */
 .ie8 .social-links ul a.facebook {
   background-image: url("../images/facebook.png");
 }
-/* line 265, ../sass/components/_footer.scss */
+/* line 275, ../sass/components/_footer.scss */
 #mobile-contact-panel .social-links ul a.facebook {
   background-image: url("../images/facebook-white.png");
 }
-/* line 269, ../sass/components/_footer.scss */
+/* line 279, ../sass/components/_footer.scss */
 .social-links ul a.twitter {
   background-image: url("../images/twitter.svg");
 }
-/* line 271, ../sass/components/_footer.scss */
+/* line 281, ../sass/components/_footer.scss */
 .ie8 .social-links ul a.twitter {
   background-image: url("../images/twitter.png");
 }
-/* line 274, ../sass/components/_footer.scss */
+/* line 284, ../sass/components/_footer.scss */
 #mobile-contact-panel .social-links ul a.twitter {
   background-image: url("../images/twitter-white.png");
 }
-/* line 278, ../sass/components/_footer.scss */
+/* line 288, ../sass/components/_footer.scss */
 .social-links ul a.pinterest {
   background-image: url("../images/pinterest.svg");
 }
-/* line 280, ../sass/components/_footer.scss */
+/* line 290, ../sass/components/_footer.scss */
 .ie8 .social-links ul a.pinterest {
   background-image: url("../images/pinterest.png");
 }
-/* line 283, ../sass/components/_footer.scss */
+/* line 293, ../sass/components/_footer.scss */
 #mobile-contact-panel .social-links ul a.pinterest {
   background-image: url("../images/pinterest-white.png");
 }
-/* line 287, ../sass/components/_footer.scss */
+/* line 297, ../sass/components/_footer.scss */
 .social-links ul a.linkedin {
   background-image: url("../images/linkedin.svg");
 }
-/* line 289, ../sass/components/_footer.scss */
+/* line 299, ../sass/components/_footer.scss */
 .ie8 .social-links ul a.linkedin {
   background-image: url("../images/linkedin.png");
 }
-/* line 292, ../sass/components/_footer.scss */
+/* line 302, ../sass/components/_footer.scss */
 #mobile-contact-panel .social-links ul a.linkedin {
   background-image: url("../images/linkedin-white.png");
 }

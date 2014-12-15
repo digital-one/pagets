@@ -11,11 +11,30 @@ if (isset($_POST["update_footer_settings"])) {
    // $site_logo_svg_attachment_id = esc_attr($_POST["site_logo_svg_attachment_id"]);
   //  $site_logo_png_attachment_id = esc_attr($_POST["site_logo_png_attachment_id"]);
     $footer_text = esc_attr($_POST["footer_text"]);
+    $footer_logo_1_attachment_id= esc_attr($_POST["footer_logo_1_attachment_id"]);
+
+    $footer_logo_1_url = esc_attr($_POST["footer_logo_1_url"]);
+    $footer_logo_1_strapline = esc_attr($_POST["footer_logo_1_strapline"]);
+    $footer_logo_2_attachment_id = esc_attr($_POST["footer_logo_2_attachment_id"]);
+    $footer_logo_2_url = esc_attr($_POST["footer_logo_2_url"]);
+    $footer_logo_2_strapline = esc_attr($_POST["footer_logo_2_strapline"]);
+    update_option("footer_logo_1_attachment_id", $footer_logo_1_attachment_id);
+      update_option("footer_logo_1_url", $footer_logo_1_url);
+       update_option("footer_logo_1_strapline", $footer_logo_1_strapline);
+       update_option("footer_logo_2_attachment_id", $footer_logo_2_attachment_id);
+      update_option("footer_logo_2_url", $footer_logo_2_url);
+       update_option("footer_logo_2_strapline", $footer_logo_2_strapline);
     update_option("footer_text", $footer_text);
 }
 
 function theme_footer_settings(){
     $footer_text = get_option("footer_text");
+    $footer_logo_1_attachment_id = get_option("footer_logo_1_attachment_id");
+    $footer_logo_1_url = get_option("footer_logo_1_url");
+    $footer_logo_1_strapline = get_option("footer_logo_1_strapline");
+    $footer_logo_2_attachment_id = get_option("footer_logo_2_attachment_id");
+    $footer_logo_2_url = get_option("footer_logo_2_url");
+    $footer_logo_2_strapline = get_option("footer_logo_2_strapline");
    // $site_logo_svg_attachment_id = get_option("site_logo_svg_attachment_id");
    // $site_logo_png_attachment_id = get_option("site_logo_png_attachment_id");
     ?>
@@ -31,64 +50,93 @@ function theme_footer_settings(){
                         </label> 
                     </th>
                     <td>
-                        <textarea name="footer_text" rows="8" width="100%"><?php echo $footer_text ?></textarea>
+                        <textarea name="footer_text" rows="8"  style="width:80%;"><?php echo $footer_text ?></textarea>
                     </td>
                 </tr>
-                <?php
-                /*
+                
                  <tr valign="top">
                     <th scope="row">
-                        <label for="nurse_helpline_tel">
-                            Nurse Helpline Telephone:
-                        </label> 
-                    </th>
-                    <td>
-                        <input type="text" name="nurse_helpline_tel" size="46"  value="<?php echo $nurse_helpline_tel;?>"  />
-                    </td>
-                </tr>
-                 <tr valign="top">
-                    <th scope="row">
-                        <label for="site_logo_svg_attachment_id">
-                            Site Logo (SVG):
+                        <label for="footer_logo_1_attachment_id">
+                           Footer Logo 1:
                         </label> 
                     </th>
                     <td>
                         <?php
                         $display='none';
                         $src='';
-                        if($site_logo_svg_attachment_id):
+                        if($footer_logo_1_attachment_id):
                             $display='block';
-                        list($src,$w,$h) = wp_get_attachment_image_src($site_logo_svg_attachment_id,'full');
+                        list($src,$w,$h) = wp_get_attachment_image_src($footer_logo_1_attachment_id,'full');
                         endif;
                         ?>
-                        <img src="<?php echo $src; ?>" class="attachment-icon" style="display:<?php echo $display?>" width="198" height="79" /><br />
+                        <img src="<?php echo $src; ?>" class="attachment-icon" style="display:<?php echo $display?>"  /><br />
                         <button type="button" class="attachment-select">Select File</button>
-                        <input type="hidden" class="attachment-id" name="site_logo_svg_attachment_id" value="<?php echo $site_logo_svg_attachment_id ?>" />
+                        <input type="hidden" class="attachment-id" name="footer_logo_1_attachment_id" value="<?php echo $footer_logo_1_attachment_id ?>" />
                     </td>
                 </tr>
-               
                 <tr valign="top">
                     <th scope="row">
-                        <label for="site_logo_png_attachment_id">
-                            Site Logo (PNG):
+                        <label for="footer_logo_1_strapline">
+                            Footer Logo 1 Strapline:
+                        </label> 
+                    </th>
+                    <td>
+                        <input type="text" name="footer_logo_1_strapline" style="width:80%;" value="<?php echo $footer_logo_1_strapline ?>" />
+                    </td>
+                </tr>
+
+                  <tr valign="top">
+                    <th scope="row">
+                        <label for="footer_logo_1_url">
+                            Footer Logo 1 URL:
+                        </label> 
+                    </th>
+                    <td>
+                        <input type="text" name="footer_logo_1_url"  style="width:80%;" width="100%" value="<?php echo $footer_logo_1_url ?>" />
+                    </td>
+                </tr>
+
+
+                <tr valign="top">
+                    <th scope="row">
+                        <label for="footer_logo_2_attachment_id">
+                           Footer Logo 2:
                         </label> 
                     </th>
                     <td>
                         <?php
                         $display='none';
                         $src='';
-                        if($site_logo_png_attachment_id):
+                        if($footer_logo_2_attachment_id):
                             $display='block';
-                        list($src,$w,$h) = wp_get_attachment_image_src($site_logo_png_attachment_id,'full');
+                        list($src,$w,$h) = wp_get_attachment_image_src($footer_logo_2_attachment_id,'full');
                         endif;
                         ?>
-                        <img src="<?php echo $src; ?>" class="attachment-icon" style="display:<?php echo $display?>" width="198" height="79" /><br />
+                        <img src="<?php echo $src; ?>" class="attachment-icon" style="display:<?php echo $display?>"  /><br />
                         <button type="button" class="attachment-select">Select File</button>
-                        <input type="hidden" class="attachment-id" name="site_logo_png_attachment_id" value="<?php echo $site_logo_png_attachment_id ?>" />
+                        <input type="hidden" class="attachment-id" name="footer_logo_2_attachment_id" value="<?php echo $footer_logo_2_attachment_id ?>" />
                     </td>
                 </tr>
-                */
-                ?>
+  <tr valign="top">
+                    <th scope="row">
+                        <label for="footer_logo_2_strapline">
+                            Footer Logo 2 Strapline:
+                        </label> 
+                    </th>
+                    <td>
+                        <input type="text" name="footer_logo_2_strapline"  style="width:80%;"  value="<?php echo $footer_logo_2_strapline ?>" />
+                    </td>
+                </tr>
+                  <tr valign="top">
+                    <th scope="row">
+                        <label for="footer_logo_2_url">
+                            Footer Logo 2 URL:
+                        </label> 
+                    </th>
+                    <td>
+                        <input type="text" name="footer_logo_2_url"  style="width:80%;"  value="<?php echo $footer_logo_2_url ?>" />
+                    </td>
+                </tr>
                 <tr><td>
     <input type="submit" value="Save settings" class="button-primary"/></td></tr>
             </table>

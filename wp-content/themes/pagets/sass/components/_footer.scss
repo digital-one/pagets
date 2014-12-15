@@ -195,14 +195,22 @@ a#newsletter{
 	text-align: center;
 	padding-bottom: 15px;
 	@include centered-menu;
+	#mobile-contact-panel &{
+		padding:0;
+		div{
+			display: inline-block;
+			margin:0 auto;
+			width: auto;
+		}
+	}
 	h5{
 		margin-bottom: 30px;
 		font-family: $proximanova-bold;
 		text-transform: uppercase;
 		color: $mid-grey;
-		@media screen and (max-width: $break-medium) {
+		@media screen and (max-width: $break-nav) {
 			@include font-size(15);
-			margin-bottom: 20px;
+			margin-bottom: 0px;
 		}
 		#mobile-contact-panel &{
 			display: inline-block;
@@ -211,13 +219,15 @@ a#newsletter{
 			line-height: 32px;
 			height:32px;
 			color: white;
+			margin-right: 5px;
 		}
 	}
 	ul{
 		#mobile-contact-panel &{
 			left:auto;
-			float:right;
+			float:left;
 			clear:none;
+			margin:0;
 		}
 		li{
 			margin: 0 5px;

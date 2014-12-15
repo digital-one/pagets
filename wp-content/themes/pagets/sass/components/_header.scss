@@ -143,6 +143,8 @@
 }
 #mobile-contact-panel{
 	background-color: $green;
+	border-bottom:1px solid white;
+	@extend %clearfix;
 	address{
 		margin-bottom: 10px;  
 	}

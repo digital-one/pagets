@@ -26,7 +26,7 @@ $(function(){
 
 //variables
 
-  var isMobile = $(window).width() < 660,
+  var isMobile = $(window).width() <= 1130,
       $menuItems = $('#nav a'),
       $menuParentLinks = $('#nav li.menu-item-has-children > a'),
       $backButton = $('#nav #mobile-prev');
@@ -233,15 +233,18 @@ updateBackButtonLink = function(elm){
   })
 }
 
-
+destroyMobileMenu = function(){
+  $menuParentLinks.off('click');
+  $('#nav').removeAttr('style')
+}
 
 activateMobileMenu = function(){
-
+console.log('activate mobile menu')
   var $subMenu,
       $hiddenLinks,
       $allLinks = $('#nav ul li'),
       $backButton = $('#nav #mobile-prev');
-  $('#mobile-controls a').on('click',function(e){
+  $('#mobile-controls a').off('click').on('click',function(e){
   e.preventDefault();
   var $panel = $('#'+$(this).attr('rel')),
       $parent = $(this).parent('li');
@@ -256,7 +259,7 @@ activateMobileMenu = function(){
   }
 })
 
-$menuParentLinks.on('click',function(e){
+$menuParentLinks.off('click').on('click',function(e){
       e.preventDefault()
       //e.stopPropagation();
       $('.donate').hide();
@@ -281,56 +284,6 @@ $backButton.show();
     })
 
 }
-
-/*
-
-
-activateMobileMenu = function(){
-
-  var $subMenu,
-      $hiddenLinks,
-      $allLinks = $('#nav ul li'),
-      $backButton = $('#nav #mobile-prev');
-  $('#mobile-controls a').on('click',function(e){
-  e.preventDefault();
-  var $panel = $('#'+$(this).attr('rel')),
-      $parent = $(this).parent('li');
-  if($parent.hasClass('active')){
-    $panel.hide();
-   $parent.removeClass('active');
-  } else {
-    $('.panel').hide();
-    $('#mobile-controls li').removeClass('active');
-    $panel.show();
-    $parent.addClass('active');
-  }
-})
-
-
-  $menuParentLinks.on('click',function(e){
-      e.preventDefault()
-      e.stopPropagation();
-      $('#nav ul a').show();
-      $allLinks.css({display:'none'});
-$backButton.show();
-        var $hasNextTier = $('li.menu-item-has-children', $(this)).length ? true : false;
-  $childParentLinks =  $hasNextTier ? $('li.menu-item-has-children li',$(this)) : '' //if menu has a further tier, dont show next tier menu, only the link
-   $subMenuLinks = $('li',$(this)).not($childParentLinks); 
-  $parents = $(this).parents('li.menu-item-has-children');  
-      _prevParent = $parents[$parents.length-1];
-  updateBackButtonLink($(_prevParent));
-      $parents.each(function(){
-        $(this).show();
-        $('a:first',$(this)).hide();
-      })
-      $(this).show();
-      $('a:first',$(this)).hide();
-      $subMenuLinks.show();
-    
-    })
-
-}
-*/
 
 
 // search overlay
@@ -434,9 +387,19 @@ $('.preview').hide().css({
      })
 
 }
-replaceFileFields();
-activateMobileMenu();
 
+updateMenu = function(){
+  isMobile = $(window).width() <= 1130;
+  if(isMobile){
+    activateMobileMenu();
+  } else {
+    destroyMobileMenu();
+  }
+}
+replaceFileFields();
+updateMenu();
+
+$(window).on('resize',updateMenu);
 
 
 

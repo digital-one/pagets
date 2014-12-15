@@ -79,6 +79,7 @@
 <p><a href="#map" class="map">Open Map</a> </p>
 <p><a href="#" class="full-width button">Email Us</a></p>
 <nav class="social-links">
+  <div>
   <h5>Follow us</h5>
 <ul>
  <?php if(get_option('gplus_url')): ?> <li><a href="<?php echo get_option('gplus_url') ?>" target="_blank">Google Plus</a></li><?php endif ?>
@@ -87,6 +88,7 @@
      <?php if(get_option('pinterest_url')): ?>    <li><a href="<?php echo get_option('pinterest_url') ?>" target="_blank" class="pinterest">Pinterest</a></li><?php endif ?>
      <?php if(get_option('linkedin_url')): ?>      <li><a href="<?php echo get_option('linkedin_url') ?>" target="_blank" class="linkedin">Linkedin</a></li><?php endif ?>
         </ul>
+      </div>
       </nav>
 </div>
 <!-- mobile nav -->
@@ -109,7 +111,8 @@
     );
     ?>
 <!--<ul><li class="current-menu-item"><a href="/~pagetorg/">Home</a></li><li class="menu-item-has-children"><a href="info-support.php">Information &amp; Support</a><ul class="sub-menu"><li><a href="#">Sub link</a></li><li><a href="#">Sub link</a></li><li><a href="#">Sub link</a></li><li><a href="#">Sub link</a></li></ul></li><li><a href="">Research</a></li><li><a href="professionals.php">Professionals</a></li><li><a href="news-events.php">News &amp; Events</a></li><li><a href="">Get Involved</a></li></ul>-->
-<a href="<?php echo get_permalink(45) ?>" class="donate">Donate</a>
+
+<?php /*<a href="<?php echo get_permalink(45) ?>" class="donate">Donate</a> */ ?>
 </div>
 </nav>
 <!--/main nav-->
