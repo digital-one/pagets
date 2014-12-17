@@ -1,7 +1,7 @@
 <?php /* Template Name: Accordion Section Page */ ?>
 <?php get_header() ?>
 <!--content-->
-<div class="content container two-column main-left"> 
+<div id="accordion" class="content container two-column main-left"> 
 <!--main-->
 <div id="main" role="main"> 
   <div class="gutter-right">

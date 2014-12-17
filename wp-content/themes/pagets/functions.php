@@ -62,12 +62,12 @@ class navWalker extends Walker_Nav_Menu{
   function start_el (&$output, $item, $depth, $args){
  // print_r($item);
    if(is_user_logged_in()):
-  if($item->object_id==56) array_push($item->classes,"hide");
+  if($item->object_id==62) array_push($item->classes,"hide");
 endif;
 if(!is_user_logged_in()):
 if($item->object_id==64) array_push($item->classes,"hide");
 endif;
-$item_output = '<a class="new-class" href="' . $item->url. '">' . $item->title . '</a>';
+$item_output = '<a  href="' . $item->url. '">' . $item->title . '</a>';
     $classes = implode(" ",$item->classes);
     $output .= '<li class="'.$classes.'">' . apply_filters ('walker_nav_menu_start_el', $item_output, $item,  $depth, $args);
  //   $output .= '<li class="'.$classes.'">' . apply_filters ('walker_nav_menu_start_el', $item_output, $item,  $depth, $args);

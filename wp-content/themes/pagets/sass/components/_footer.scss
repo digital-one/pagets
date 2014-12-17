@@ -97,7 +97,7 @@ footer#footer{
 			@extend %clearfix;
 			a{
 				span.logo{
-					display: block;
+					display: block !important;
 					padding:0 25px;
 					@media screen and (max-width: $break-medium) {
 						padding:0 40px;
@@ -172,10 +172,8 @@ a#newsletter{
 		}
 	}
 	p{
-		margin-bottom: 0;
-		@media screen and (max-width: $break-medium) {
-			padding: 0 15%;
-		}
+		padding: 0 15%;
+		margin-bottom:0;
 		@media screen and (max-width: $break-small) {
 			padding:0;
 			margin-bottom: 15px;
@@ -215,7 +213,7 @@ a#newsletter{
 		color: $mid-grey;
 		@media screen and (max-width: $break-nav) {
 			@include font-size(15);
-			margin-bottom: 0px;
+			margin-bottom: 10px;
 		}
 		#mobile-contact-panel &{
 			display: inline-block;
@@ -225,6 +223,7 @@ a#newsletter{
 			height:32px;
 			color: white;
 			margin-right: 5px;
+			margin-bottom: 0;
 		}
 	}
 	ul{
@@ -247,6 +246,11 @@ a#newsletter{
 			.box &{
 				width:40px;
 				height:40px;
+				background-size: auto 100%;
+				@media screen and (max-width: $break-xlarge) {
+					width: 30px;
+					height: 30px;
+				}
 			}
 			display: block;
 			background-image:url('../images/google-plus.svg');
@@ -264,7 +268,7 @@ a#newsletter{
 			@media screen and (max-width: $break-medium) {
 				width:50px;
 				height:50px;
-				background-size: 50px 50px;
+				background-size: auto 100%;
 			}
 			&:hover,&:active{
 				background-position: right top;

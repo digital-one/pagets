@@ -14,7 +14,8 @@
 		margin-top:30px;
 	}
 	@media screen and (max-width: $break-small) {
-		margin-bottom:5px;
+		//margin-bottom:5px;
+		margin: 5px 0 20px;
 	}
 	#home &{
 		margin-bottom:10px;
@@ -60,6 +61,16 @@ aside{
 		}
 		
 	}
+	#accordion &{
+		@media screen and (max-width: $break-small) {
+			padding:0 !important; 
+		}
+	}
+	#people-archive &{
+		@media screen and (max-width: $break-small) {
+			padding:0 15px;
+		}
+	}
 	.two-column.wide-sidebar &{
 		@include span-columns(8);
 		@media screen and (max-width: $break-medium) {
@@ -74,7 +85,7 @@ aside{
 			@include omega;
 		}	
 		@media screen and (max-width: $break-small) {
-			padding:0 15px;
+			padding:0 15px 30px;
 		}
 	}
 	
@@ -82,7 +93,7 @@ aside{
 .gutter-left{
 	padding:0 0 0 4%;
 	@media screen and (max-width: $break-medium){
-		padding:0 0 4%;
+		padding:0 0 0%;
 	}
 }
 .gutter-right{

@@ -10,7 +10,7 @@
 		padding-bottom:10px;
 		background:url('../images/mobile-header-divide.jpg') center bottom repeat-x;
 		#home &{
-			height:86px;
+			height:72px;
 			padding-bottom:0;
 			background:none;
 		}
@@ -42,7 +42,7 @@
 		@media screen and (max-width: $break-small){
 			width: 101px;
 			height: 41px;
-			@include abs-pos(20px,auto,auto,15px);
+			@include abs-pos(16px,auto,auto,15px);
 		}
 		img{
 			@include fit-grid(width);
@@ -127,7 +127,7 @@
 	display: none;
 	background-color: $blue;
 	color: white;
-	margin-top:-10px;
+	//margin-top:-10px;
 	position: relative;
 	//@include abs-pos(82px,0,0,0);
 	z-index: 999;

@@ -109,7 +109,7 @@ $label = !empty($label) ? $label : $post->post_title;
 			list($src,$w,$h) = wp_get_attachment_image_src(get_post_thumbnail_id($article->ID),'news-carousel-tn');
 		$src = getRetinaSrc($src);
 			?>
-<div class="article"><a href="<?php echo get_permalink($article->ID) ?>"><figure><img src="<?php echo $src ?>" /></figure><p><?php echo $article->post_title ?></p></a></div>
+<div class="article"><a href="<?php echo get_permalink($article->ID) ?>"><figure style="background-image:url('<?php echo $src ?>');"><?php /*<img src="<?php echo $src ?>" />*/ ?></figure><p><?php echo $article->post_title ?></p></a></div>
 <?php
 endforeach;
 endif;

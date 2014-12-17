@@ -15,10 +15,11 @@
 <a href="<?php echo get_permalink(35)?>" class="button">Back to list</a>
 </aside>
 </header>
-  <!--slider-->
-<section id="slider">
   <?php
 if(get_field('gallery_images',$post->ID)): ?>
+  <!--slider-->
+<section id="slider">
+
 <?php while(the_repeater_field('gallery_images',$post->ID)):  ?>
  <?php list($src,$w,$h) = wp_get_attachment_image_src(get_sub_field('gallery_image'),'news-gallery'); ?>
 <!--slide-->
@@ -26,10 +27,10 @@ if(get_field('gallery_images',$post->ID)): ?>
 </div>
 <!--/slide-->
 <?php endwhile ?>
-<?php endif ?>
+
 </section>
 <!--/slider-->
-
+<?php endif ?>
 
 
 <div id="main" role="main">

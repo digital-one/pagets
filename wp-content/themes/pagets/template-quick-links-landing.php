@@ -1,7 +1,7 @@
 <?php /* Template Name: Quick Links Landing Page */ ?>
 <?php get_header() ?>
 <!--content-->
-<div class="content container">
+<div id="accordion" class="content container">
   <!--intro-->
 <section id="intro">
 <?php echo $post->post_content ?>

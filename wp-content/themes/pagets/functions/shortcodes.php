@@ -24,6 +24,22 @@ return $content;
 add_shortcode( 'social-links', 'social_links_shortcode' );
 
 
+function diagram_shortcode($atts,$content=""){
+  global $post;
+if(get_field('desktop_diagram',$post->ID)):
+list($desktop_src,$w,$h) = wp_get_attachment_image_src(get_field('desktop_diagram',$post->ID),'full');
+endif;
+if(get_field('mobile_diagram',$post->ID)):
+list($mobile_src,$w,$h) = wp_get_attachment_image_src(get_field('mobile_diagram',$post->ID),'full');
+endif;
+$content='<figure><img src="" data-mobilesrc="'.$mobile_src.'" data-desktopsrc="'.$desktop_src.'" class="replace-img" /></figure>';
+return $content;
+}
+
+
+add_shortcode( 'diagram', 'diagram_shortcode' );
+
+
 function people_list_shortcode($atts,$content=""){
  
    extract( shortcode_atts( array(

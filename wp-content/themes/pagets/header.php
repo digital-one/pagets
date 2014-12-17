@@ -99,16 +99,23 @@
     <a href="#" id="mobile-prev">Previous</a>
   <div class="container">
     <?php
-  wp_nav_menu( array(
+ $nav =  wp_nav_menu( array(
         'menu'=>'Main Navigation',
         'container' => false, 
         'fallback_cb' => 'wp_page_menu',
+        'echo'       => false,
+        //'items_wrap' => '&nbsp;',
         'walker' => new navWalker()
         //'walker' => new subMenu()
         //'menu_class' => 'inline',
         //'link_after' => '<span></span>'
         )
     );
+$nav = preg_replace(array('#^<ul[^>]*>#','#</ul>$#'), '', $nav);
+if(is_user_logged_in()):
+$nav .= '<li class="mobile-only"><a href="'.wp_logout_url(home_url()).'">Logout</a></li>';
+    endif;
+    echo '<ul>'.$nav.'</ul>';
     ?>
 <!--<ul><li class="current-menu-item"><a href="/~pagetorg/">Home</a></li><li class="menu-item-has-children"><a href="info-support.php">Information &amp; Support</a><ul class="sub-menu"><li><a href="#">Sub link</a></li><li><a href="#">Sub link</a></li><li><a href="#">Sub link</a></li><li><a href="#">Sub link</a></li></ul></li><li><a href="">Research</a></li><li><a href="professionals.php">Professionals</a></li><li><a href="news-events.php">News &amp; Events</a></li><li><a href="">Get Involved</a></li></ul>-->
 

@@ -50,7 +50,7 @@ if($products = get_posts($args)): ?>
 <?php echo $product->post_content ?>
 <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
 <input type="hidden" name="cmd" value="_cart">
-<input type="hidden" name="business" value="neil@digital-one.co.uk">
+<input type="hidden" name="business" value="info@paget.org.uk">
 <input type="hidden" name="lc" value="GB">
 <input type="hidden" name="item_name" value="<?php echo $product->post_title ?>">
 <input type="hidden" name="item_number" value="<?php echo 'PA'.$product->ID?>">

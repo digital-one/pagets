@@ -39,6 +39,13 @@
 		figure{
 			width: 100%;
 			overflow:hidden;
+			background-color:$light-grey;
+			@include bg-cover;
+			&:before{
+				content:"";
+				padding-top:66.66%;
+				display: inline-block;
+			}
 			img{
 				@include fit-grid(width);
 			}
@@ -69,7 +76,7 @@
 	margin-bottom: 0;
 	@media screen and (max-width: $break-small) {
 		bottom:auto;
-		top:240px;
+		top:38vw;
 		#carousel &{
 			top: 0px;
 		}
@@ -127,6 +134,12 @@
 	@extend %ir;
 	#slider &{
 		display: none !important;
+	}
+	#news-single #slider &{
+		display: block !important;
+		@media screen and (max-width: $break-small) {
+			display: none !important;
+		}
 	}
 	@media screen and (max-width: $break-small) {
 		display: none !important;

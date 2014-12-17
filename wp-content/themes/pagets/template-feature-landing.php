@@ -1,7 +1,7 @@
 <?php /* Template Name: Featured Image Landing */ ?>
 <?php get_header() ?>
 <!--content-->
-<div id="professionals" class="content container two-column main-left">
+<div id="accordion" class="content container two-column main-left">
 
 <!--main-->
 <div id="main" role="main" class="professionals">

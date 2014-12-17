@@ -54,20 +54,20 @@
     $logo_1_id = get_option('footer_logo_1_attachment_id');
     $logo_1_url  = get_option('footer_logo_1_url');
     $logo_1_strapline = get_option('footer_logo_1_strapline');
-     $logo_2_id = get_option('footer_logo_2_attachment_id');
+    $logo_2_id = get_option('footer_logo_2_attachment_id');
     $logo_2_url  = get_option('footer_logo_2_url');
     $logo_2_strapline = get_option('footer_logo_2_strapline');
     if(!empty($logo_1_id)):
       list($src,$w,$h) = wp_get_attachment_image_src($logo_1_id,'full');
     ?>
-<a href="<?php echo $logo_1_url ?>" target="_blank"><span class="logo"><img src="<?php echo $src ?>" alt="the best of salford" /></span>
+<a href="<?php echo $logo_1_url ?>" target="_blank"><span class="logo"><img src="<?php echo $src ?>" alt="" /></span>
 <?php if(!empty($logo_1_strapline)): ?><span><?php echo html_entity_decode($logo_1_strapline) ?></span><?php endif ?></a>
 <?php endif ?>
 <?php
  if(!empty($logo_2_id)):
       list($src,$w,$h) = wp_get_attachment_image_src($logo_2_id,'full');
     ?>
-<a href="<?php echo $logo_2_url ?>" target="_blank"><span class="logo"><img src="<?php echo $src ?>" alt="the best of salford" /></span>
+<a href="<?php echo $logo_2_url ?>" target="_blank"><span class="logo"><img src="<?php echo $src ?>" alt="" /></span>
 <?php if(!empty($logo_2_strapline)): ?><span><?php echo html_entity_decode($logo_2_strapline) ?></span><?php endif ?></a>
 <?php endif ?>
 </div>

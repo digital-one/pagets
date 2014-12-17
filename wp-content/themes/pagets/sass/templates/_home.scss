@@ -124,7 +124,8 @@
 			}
 			@media screen and (max-width: $break-small){
 				width:100%;
-				height: 260px;
+				height: 150px; height: 44vw;
+
 				float: none;
 			}
 		}
@@ -155,6 +156,7 @@ h3{
 			cursor:pointer;
 			background-color: $light-grey;
 			font-family: $proximanova-bold; 
+			border-bottom:1px solid white;
 			text-transform: uppercase;
 			position: relative;
 			color: $grey;
@@ -170,29 +172,29 @@ h3{
 				content:"";
 				@include abs-pos(50%,15px,auto,auto);
 				display: block;
-				width:17px;
-				height:11px;
-				margin-top: -5px;
+				width:18px;
+				height:12px;
+				margin-top: -6px;
 				background-image:url('../images/accordion-arrow.svg');
 				.ie8 &{
 					background-image:url('../images/accordion-arrow.png');	
 				}
 				background-position: 0 0;
 				background-repeat: no-repeat;
-				background-size:100% auto;
+				background-size:auto 100%;
 			}
 			&:hover,&:active{
 				background-color: black;
 				color: white;
 				&:after{
-					background-position: 0 -11px;
+					background-position: -18px 0;
 				}
 			}
 			&.active{
 				background-color: $green;
 				color: white;
 				&:after{
-					background-position: 0 -22px;
+					background-position: -36px 0;
 				}
 				&:hover,&:active{
 					background-color: $dark-green;

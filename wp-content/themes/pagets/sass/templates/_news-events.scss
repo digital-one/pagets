@@ -58,6 +58,7 @@
 				@include fixed-ratio(100%,66.66%,a);
 				background-color: $grey;
 				margin-bottom: 25px;
+				@include bg-cover;
 				img{
 					width:100%;
 					height:auto; 
@@ -91,27 +92,64 @@
 	}
 }
 #news-single{
+	@media screen and (max-width: $break-medium) {
+		padding:0 !important;
+	}
 	.slick-slider{
 		margin-bottom: 50px !important; 
 		@extend %clearfix;
+		@media screen and (max-width: $break-small) {
+			margin-bottom: 25px !important;
+		}
+		.slide{
+			@media screen and (max-width: $break-small) {
+				height: 150px; height: 40vw;
+			}
+			@include bg-cover;
+		}
+		.slick-dots{
+			@media screen and (max-width: $break-small) {
+				top:130px;
+			}
+		}
 	}
 	aside{
 		float:left;
+		@media screen and (max-width: $break-medium) {
+			float:none;
+			padding: 0 15px;
+		}
 	}
 	#main{
 		float: right;
+		@media screen and (max-width: $break-medium) {
+			padding:0 15px;
+		}
 	}
 	header{
 		@extend %clearfix;
+		@media screen and (max-width: $break-medium) {
+			padding:0 15px;
+		}
 		h1{
 			margin-bottom: 15px;
 		}
 		.alpha{
 			@include span-columns(9);
+			@media screen and (max-width: $break-small) {
+				@include span-columns(12);
+			}
 		}
 		aside{
 			@include span-columns(3);
 			text-align: right;
+			@media screen and (max-width: $break-small) {
+				@include span-columns(12);
+				float: none;
+				text-align: left;
+				margin-bottom: 20px;
+				padding:0;
+			}
 		}
 	}
 	h2{
@@ -135,6 +173,9 @@
 		.beta{
 			text-align: right;
 		}
+		@media screen and (max-width: $break-medium) {
+			padding: 20px 15px;
+		}
 		a{
 			position: relative;
 			display: inline-block;
@@ -157,6 +198,9 @@
 		span{
 			display: block;
 			padding:0 0 0 17px;
+			@media screen and (max-width: $break-small) {
+				display:none;
+			}
 		}
 		.beta{
 			a{

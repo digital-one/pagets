@@ -25,6 +25,9 @@ h3,h4,h5,h6{
 }
 h3,h4{
 	@include font-size(24);
+	@media screen and (max-width: $break-small){
+		@include font-size(20);
+	}
 }
 h3{
 	font-family: $proximanova-bold;

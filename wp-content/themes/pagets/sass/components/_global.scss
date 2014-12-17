@@ -1,9 +1,30 @@
 #breadcrumb{
 	background-color: $light-grey;
 	height:60px;
-	line-height: 60px;
 	margin-bottom: 50px;
-	@include font-size(15);
+	span{
+		color: $grey;
+		font-family: $proximanova-regular;
+		font-weight:normal;
+		@include font-size(15);
+		float:left;
+		line-height: 60px;
+		&.separator{
+			color: white;
+			font-family: $websymbols;
+			@include font-size(10);
+			padding:0 6px;
+		}
+	}
+	span[typeof='v:Breadcrumb']{
+		padding:0 10px;
+	}
+	a:link,a:visited{
+		color: $blue;
+	}
+	a:hover,a:active{
+		color: black;
+	}
 	.container{
 		padding:0 12px;
 	}
@@ -74,7 +95,10 @@
 #intro{
 	padding-bottom: 45px;
 	@media screen and (max-width: $break-small) {
-		padding: 0 15px 0;
+		padding: 10px 0 30px;
+		#accordion &{
+				padding: 10px 15px 10px;
+		}
 	}
 }
 #index{
@@ -94,6 +118,9 @@
 		@include span-columns(4);
 		#home &{
 			padding: 0 2%;
+			@media screen and (max-width: $break-small) {
+				padding:0;
+			}
 		}
 		@media screen and (max-width: $break-small) {
 			@include span-columns(12);
@@ -149,6 +176,11 @@
 		@include omega;
 		margin-bottom:  20px;
 	}
+	.tel{
+		@media screen and (max-width: $break-large) {
+			display:block;
+		}
+	}
 	h4{
 		font-family: $proximanova-bold;
 		@include font-size(22);
@@ -197,6 +229,7 @@
 			padding-left: 10px;
 			position: relative;
 			font-family: $proximanova-bold;
+			margin-bottom: 5px;
 			&:before{
 				content:"-";
 				@include abs-pos(0,auto,auto,0);
@@ -209,6 +242,7 @@ ul.dashed-list{
 			padding-left: 10px;
 			position: relative;
 			font-family: $proximanova-bold;
+			margin-bottom: 5px;
 			&:before{
 				content:"-";
 				@include abs-pos(0,auto,auto,0);

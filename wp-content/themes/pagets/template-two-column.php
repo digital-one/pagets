@@ -9,6 +9,9 @@
 	<?php $exclude = get_accordion_pages(); 
    $children = wp_list_pages("title_li=&include=".$parent_id."&echo=0");
 	$children .= wp_list_pages('title_li=&child_of='.$parent_id.'&echo=0&exclude='.$exclude);
+   if($parent_id==64):
+$children .= '<li><a href="'.wp_logout_url(home_url()).'">Logout</a></li>';
+    endif;
   if ($children) { ?>
   <ul>
   <?php echo $children; ?>

@@ -24,6 +24,11 @@ $category_ids = get_terms( 'article-category', array(
    }
 
    $page = !empty($wp_query->query_vars['pge']) ? $wp_query->query_vars['pge'] : 1;
+   if($type_id!='all' or $category_id!='all'):
+    $posts_per_page = -1;
+  else:
+    $posts_per_page = 10;
+  endif;
   ?>
 <!--content-->
 <div class="content container">
@@ -68,7 +73,7 @@ foreach($categories as $category):
 
   $args = array(
 'post_type' => 'news',
-'posts_per_page' => 4,
+'posts_per_page' =>  $posts_per_page,
 'post_status' => 'publish',
 'order_by' => 'date',
 'paged' => $page,
@@ -127,7 +132,7 @@ foreach($categories as $category):
   if(get_post_thumbnail_id($article->ID)):
   list($src,$w,$h) = wp_get_attachment_image_src(get_post_thumbnail_id($article->ID),'news-tn');
   ?>
-   <figure><a href="<?php echo get_permalink($article->ID)?>"><img src="<?php echo $src ?>" /></a></figure>
+   <figure style="background-image:url('<?php echo $src ?>');"><a href="<?php echo get_permalink($article->ID)?>"></a></figure> 
  <?php endif ?>
 <p><?php echo $article->post_excerpt ?></p>
 
